@@ -1044,18 +1044,25 @@ font-weight: 100 900;
     }
 
     // Desktop interactions
-    dropdownTriggers.forEach(tr => {
-      const id = tr.getAttribute('data-dropdown');
-      tr.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (window.innerWidth < 993) return;
-        toggleDropdown(id);
-      });
-      tr.addEventListener('mouseenter', () => {
-        if (window.innerWidth < 993) return;
-        toggleDropdown(id);
-      });
-    });
+dropdownTriggers.forEach(tr => {
+  const id = tr.getAttribute('data-dropdown');
+
+  tr.addEventListener('click', (e) => {
+    // Si el click viene desde un enlace del dropdown, deja que navegue
+    if (e.target.closest('.dropdown-item')) return;
+
+    // Solo para abrir/cerrar el dropdown del ítem principal
+    e.preventDefault();
+    if (window.innerWidth < 993) return;
+    toggleDropdown(id);
+  });
+
+  tr.addEventListener('mouseenter', () => {
+    if (window.innerWidth < 993) return;
+    toggleDropdown(id);
+  });
+});
+
 
     const panels = root.querySelectorAll('.dropdown-panel');
     panels.forEach(panel => {
