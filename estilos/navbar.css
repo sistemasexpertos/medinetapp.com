@@ -532,3 +532,34 @@ img {
     margin-left: 0;
   }
 }
+.country-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.country-flag {
+  font-size: 1.1rem;
+  text-decoration: none;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.country-flag:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+@media (max-width: 768px) {
+  .country-switcher {
+    justify-content: center;
+    margin: 1rem 0;
+    margin-right: 0;
+  }
+
+  .country-flag {
+    font-size: 1.3rem;
+  }
+}
+

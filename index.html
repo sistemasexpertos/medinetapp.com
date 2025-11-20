@@ -475,10 +475,19 @@ font-weight: 100 900;
 
       <!-- DERECHA: CTAs -->
       <div class="nav-right" id="iys3xi">
-        <!-- Si quieres que apunten a la reunión, usamos ./reunion -->
-        <a href="./reunion" class="btn-primary" id="inaca5">Agenda una demo</a>
-        <a href="./contacto" class="btn-primary" id="i0l2as">Contactanos</a>
+      <a href="./reunion" class="btn-primary" id="inaca5">Agenda una demo</a>
+      <a href="./contacto" class="btn-primary" id="i0l2as">Contactanos</a>
+
+      <!-- Selector de país escritorio -->
+      <div class="country-selector" id="countrySelectorDesktop">
+        <a href="/" class="country-option" data-country="cl" aria-label="Ver sitio para Chile">
+          🇨🇱 <span>Chile</span>
+        </a>
+        <a href="./pe" class="country-option" data-country="pe" aria-label="Ver sitio para Perú">
+          🇵🇪 <span>Perú</span>
+        </a>
       </div>
+    </div>
 
       <!-- Toggle móvil -->
       <div role="button" aria-label="Abrir menú" tabindex="0" id="ic68b4" class="mobile-menu-toggle">
@@ -881,6 +890,20 @@ font-weight: 100 900;
         <li id="i6l8di">
           <a href="./reunion" id="ie7wep" class="btn-primary">Agenda una demo</a>
         </li>
+
+        <!-- Selector de país móvil -->
+        <li id="icountry-mobile" class="mobile-country-selector">
+          <span class="mobile-country-label">País:</span>
+          <div class="mobile-country-options">
+            <a href="/" aria-label="Ver sitio para Chile" class="country-option">
+              🇨🇱 Chile
+            </a>
+            <a href="./pe" aria-label="Ver sitio para Perú" class="country-option">
+              🇵🇪 Perú
+            </a>
+          </div>
+        </li>
+
       </ul>
     </div>
   </nav>
