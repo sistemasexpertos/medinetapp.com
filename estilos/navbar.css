@@ -562,4 +562,106 @@ img {
     font-size: 1.3rem;
   }
 }
+/* Contenedor general del selector de país */
+.country-switcher {
+  position: relative;
+  margin-right: 1rem;
+}
+
+/* Botón que muestra país actual */
+.country-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.country-toggle .flag-icon img {
+  width: 18px;
+  height: 12px;
+  display: block;
+  border-radius: 2px;
+}
+
+.country-toggle .chevron {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* Menú desplegable */
+.country-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  min-width: 130px;
+  margin: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+  z-index: 999;
+}
+
+.country-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.country-menu li a .flag-icon img {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.country-menu li a:hover {
+  background: #eef2ff;
+}
+
+/* Estado visible (se lo aplicamos con JS) */
+.country-switcher.open .country-menu,
+.mobile-country-switcher.open .country-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Ajustes móvil */
+.mobile-country-switcher {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.mobile-country-switcher .country-toggle {
+  width: 100%;
+  justify-content: center;
+  border-color: rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.06);
+  color: #0f172a;
+}
+
+.mobile-country-switcher .country-menu {
+  position: static;
+  margin-top: 0.4rem;
+  box-shadow: none;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
 

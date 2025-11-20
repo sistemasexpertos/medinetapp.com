@@ -476,15 +476,36 @@ font-weight: 100 900;
       <a href="./reunion" class="btn-primary" id="inaca5">Agenda una demo</a>
       <a href="./contacto" class="btn-primary" id="i0l2as">Contactanos</a>
 
-      <!-- Selector de país escritorio -->
-      <div class="country-selector" id="countrySelectorDesktop">
-        <a href="/" class="country-option" data-country="cl" aria-label="Ver sitio para Chile">
-          🇨🇱 <span>Chile</span>
-        </a>
-        <a href="./pe" class="country-option" data-country="pe" aria-label="Ver sitio para Perú">
-          🇵🇪 <span>Perú</span>
-        </a>
-      </div>
+      <!-- DERECHA: SELECTOR DE PAÍS + CTAs -->
+      <div class="nav-right" id="iys3xi">
+        <!-- Selector de país DESKTOP -->
+        <div class="country-switcher" id="countrySwitcherDesktop">
+          <button class="country-toggle" aria-haspopup="true" aria-expanded="false">
+            <span class="flag-icon">
+              <img src="https://flagcdn.com/w20/cl.png" alt="Chile" />
+            </span>
+            <span class="country-label">Chile</span>
+            <span class="chevron">▾</span>
+          </button>
+          <ul class="country-menu" aria-label="Seleccionar país">
+            <li>
+              <a href="/" data-country="cl">
+                <span class="flag-icon">
+                  <img src="https://flagcdn.com/w20/cl.png" alt="Chile" />
+                </span>
+                Chile
+              </a>
+            </li>
+            <li>
+              <a href="./pe" data-country="pe">
+                <span class="flag-icon">
+                  <img src="https://flagcdn.com/w20/pe.png" alt="Perú" />
+                </span>
+                Perú
+              </a>
+            </li>
+          </ul>
+        </div>
     </div>
 
       <!-- Toggle móvil -->
@@ -889,17 +910,34 @@ font-weight: 100 900;
           <a href="./reunion" id="ie7wep" class="btn-primary">Agenda una demo</a>
         </li>
 
-        <!-- Selector de país móvil -->
-        <li id="icountry-mobile" class="mobile-country-selector">
-          <span class="mobile-country-label">País:</span>
-          <div class="mobile-country-options">
-            <a href="/" aria-label="Ver sitio para Chile" class="country-option">
-              🇨🇱 Chile
-            </a>
-            <a href="./pe" aria-label="Ver sitio para Perú" class="country-option">
-              🇵🇪 Perú
-            </a>
-          </div>
+
+        <!-- SELECTOR DE PAÍS EN MÓVIL -->
+        <li class="mobile-country-switcher">
+          <button type="button" class="country-toggle" aria-haspopup="true" aria-expanded="false">
+            <span class="flag-icon">
+              <img src="https://flagcdn.com/w20/cl.png" alt="Chile" />
+            </span>
+            <span class="country-label">Chile</span>
+            <span class="chevron">▾</span>
+          </button>
+          <ul class="country-menu" aria-label="Seleccionar país">
+            <li>
+              <a href="/" data-country="cl">
+                <span class="flag-icon">
+                  <img src="https://flagcdn.com/w20/cl.png" alt="Chile" />
+                </span>
+                Chile
+              </a>
+            </li>
+            <li>
+              <a href="./pe" data-country="pe">
+                <span class="flag-icon">
+                  <img src="https://flagcdn.com/w20/pe.png" alt="Perú" />
+                </span>
+                Perú
+              </a>
+            </li>
+          </ul>
         </li>
 
       </ul>
@@ -1517,6 +1555,41 @@ dropdownTriggers.forEach(tr => {
     }
   })(document,"script");
 </script>
+<script>
+  (function () {
+    function setupCountryDropdown(wrapperSelector) {
+      var wrappers = document.querySelectorAll(wrapperSelector);
+      wrappers.forEach(function (wrapper) {
+        var toggle = wrapper.querySelector('.country-toggle');
+        var menu = wrapper.querySelector('.country-menu');
+        if (!toggle || !menu) return;
+
+        // Abrir/cerrar
+        toggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var isOpen = wrapper.classList.contains('open');
+          // Cerrar otros
+          document.querySelectorAll(wrapperSelector + '.open').forEach(function (w) {
+            w.classList.remove('open');
+          });
+          if (!isOpen) wrapper.classList.add('open');
+        });
+      });
+
+      // Click fuera cierra
+      document.addEventListener('click', function () {
+        document.querySelectorAll(wrapperSelector + '.open').forEach(function (w) {
+          w.classList.remove('open');
+        });
+      });
+    }
+
+    // Desktop y móvil
+    setupCountryDropdown('.country-switcher');
+    setupCountryDropdown('.mobile-country-switcher');
+  })();
+</script>
+
   </body>
 </html>
 
