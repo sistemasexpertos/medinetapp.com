@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Simulador de Cotización - Medinet</title>
+    <style>
+        /* Variables de estilo basadas en medinetapp.com */
+        :root {
+            --bg-color: rgb(248, 250, 252);
+            --primary-color: rgb(10, 75, 255);
+            --primary-hover: rgb(8, 60, 204);
+            --secondary-color: rgb(255, 255, 255);
+            --text-heading: rgb(34, 34, 34);
+            --text-body: #475569;
+            --border-color: #e2e8f0;
+            --font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-body);
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: var(--text-heading);
+            font-weight: 600;
+        }
+
+        /* Main Card */
+        .calculator-card {
+            background-color: var(--secondary-color);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 2rem;
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-heading);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(10, 75, 255, 0.1);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        input[type="checkbox"] {
+            width: 1.25rem;
+            height: 1.25rem;
+            cursor: pointer;
+            accent-color: var(--primary-color);
+        }
+
+        .btn-calculate {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 1rem;
+        }
+
+        .btn-calculate:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Results Section */
+        #results-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: none;
+            /* Hidden by default */
+        }
+
+        .result-header {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-heading);
+            margin-bottom: 1rem;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .result-row.total {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .result-row.sub-total {
+            font-weight: 600;
+            color: var(--text-heading);
+        }
+
+        .detail-list {
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .warning-msg {
+            background-color: #fff7ed;
+            color: #c2410c;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ffedd5;
+            font-size: 0.9rem;
+        }
+
+        .error-msg {
+            background-color: #fef2f2;
+            color: #b91c1c;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            border: 1px solid #fee2e2;
+            text-align: center;
+            display: none;
+        }
+
+        .segment-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .radio-group {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .calculator-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/logo.png" alt="Medinet Logo"
+            class="logo">
+        <h1>Simula tu cotización </h1>
+    </header>
+
+    <main class="calculator-card">
+        <form id="calculator-form" onsubmit="event.preventDefault(); calcularCotizacion();">
+            <!-- Plan Selector -->
+            <div class="form-group">
+                <label>Selecciona tu Plan:</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="plan" value="basico" checked> Plan Básico
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="plan" value="clinico"> Plan Clínico
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="plan" value="corporativo"> Plan Corporativo
+                    </label>
+                </div>
+            </div>
+
+            <!-- User Inputs -->
+            <div class="form-group">
+                <label for="clinicos">Usuarios Clínicos</label>
+                <input type="number" id="clinicos" min="0" placeholder="Ej: 15" required>
+            </div>
+
+            <div class="form-group">
+                <label for="administrativos">Usuarios Administrativos</label>
+                <input type="number" id="administrativos" min="0" placeholder="Ej: 5" required>
+            </div>
+
+            <!-- Integration Checkbox -->
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="integracion">
+                    <label for="integracion" style="margin-bottom: 0; font-weight: 400;">Requiere integración
+                        personalizada (+11,4%)</label>
+                </div>
+            </div>
+
+            <!-- Optional UF Value -->
+            <div class="form-group">
+                <label for="valor-uf">Valor UF (Opcional)</label>
+                <input type="number" id="valor-uf" min="0" step="0.01" placeholder="Ej: 38000">
+                <small style="color: #64748b; font-size: 0.8rem;">Ingresa el valor de la UF para ver un estimado en
+                    CLP.</small>
+            </div>
+
+            <button type="submit" class="btn-calculate">Calcular cotización</button>
+
+            <div id="error-message" class="error-msg"></div>
+        </form>
+
+        <!-- Results Section -->
+        <div id="results-section">
+            <div id="warning-message" class="warning-msg" style="display: none;"></div>
+
+            <h3 class="result-header">Resumen de Cotización</h3>
+
+            <div class="result-row">
+                <span>Plan Seleccionado:</span>
+                <strong id="res-plan"></strong>
+            </div>
+            <div class="result-row">
+                <span>Total Usuarios:</span>
+                <span><strong id="res-total-usuarios"></strong> <span id="res-segmento"
+                        class="segment-badge"></span></span>
+            </div>
+
+            <hr style="margin: 1rem 0; border: 0; border-top: 1px solid var(--border-color);">
+
+            <!-- Detalle Clínicos -->
+            <div class="result-row sub-total">
+                <span>Usuarios Clínicos (<span id="count-clinicos">0</span>):</span>
+                <span id="subtotal-clinicos">0.00 UF</span>
+            </div>
+            <div id="detalle-clinicos" class="detail-list"></div>
+
+            <!-- Detalle Administrativos -->
+            <div class="result-row sub-total">
+                <span>Usuarios Administrativos (<span id="count-administrativos">0</span>):</span>
+                <span id="subtotal-administrativos">0.00 UF</span>
+            </div>
+            <div id="detalle-administrativos" class="detail-list"></div>
+
+            <!-- Totales -->
+            <div class="result-row">
+                <span>Total sin integración:</span>
+                <span id="total-sin-int">0.00 UF</span>
+            </div>
+
+            <div id="row-integracion" class="result-row" style="display: none; color: var(--primary-color);">
+                <span>+ Integración (11,4%):</span>
+                <span id="monto-integracion">0.00 UF</span>
+            </div>
+
+            <div class="result-row total">
+                <span>Total Mensual Estimado:</span>
+                <span id="total-final-uf">0.00 UF</span>
+            </div>
+
+            <div id="row-clp" class="result-row total"
+                style="display: none; color: #059669; border-top: none; margin-top: 0;">
+                <span>Total Estimado en CLP:</span>
+                <span id="total-final-clp">$0</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Configuración de Precios
+        const PRECIOS = {
+            basico: {
+                clinico: { peq: 0.385, med: 0.333, gra: 0.289 },
+                admin: { peq: 0.185, med: 0.160, gra: 0.139 }
+            },
+            clinico: {
+                clinico: { peq: 0.630, med: 0.548, gra: 0.475 },
+                admin: { peq: 0.310, med: 0.270, gra: 0.234 }
+            },
+            corporativo: {
+                clinico: { peq: 0.732, med: 0.627, gra: 0.549 },
+                admin: { peq: 0.385, med: 0.330, gra: 0.289 }
+            }
+        };
+
+        function calcularCotizacion() {
+            // 1. Obtener valores
+            const planSeleccionado = document.querySelector('input[name="plan"]:checked').value;
+            const numClinicos = parseInt(document.getElementById('clinicos').value) || 0;
+            const numAdministrativos = parseInt(document.getElementById('administrativos').value) || 0;
+            const requiereIntegracion = document.getElementById('integracion').checked;
+            const valorUF = parseFloat(document.getElementById('valor-uf').value) || 0;
+
+            const totalUsuarios = numClinicos + numAdministrativos;
+            const errorMsg = document.getElementById('error-message');
+            const resultsSection = document.getElementById('results-section');
+            const warningMsg = document.getElementById('warning-message');
+
+            // Validaciones
+            if (numClinicos < 0 || numAdministrativos < 0) {
+                errorMsg.textContent = "No se permiten números negativos.";
+                errorMsg.style.display = "block";
+                resultsSection.style.display = "none";
+                return;
+            }
+
+            if (totalUsuarios === 0) {
+                errorMsg.textContent = "Debes ingresar al menos 1 usuario para simular la cotización.";
+                errorMsg.style.display = "block";
+                resultsSection.style.display = "none";
+                return;
+            }
+
+            errorMsg.style.display = "none";
+            resultsSection.style.display = "block";
+
+            // Mensaje de advertencia comercial
+            if (totalUsuarios < 10) {
+                warningMsg.textContent = "El mínimo comercial recomendado es de 10 usuarios. Ajusta la cantidad para una cotización realista.";
+                warningMsg.style.display = "block";
+            } else {
+                warningMsg.style.display = "none";
+            }
+
+            // Determinar Segmento Global
+            let segmentoGlobal = "Pequeño";
+            if (totalUsuarios >= 101) segmentoGlobal = "Grande / Red";
+            else if (totalUsuarios >= 31) segmentoGlobal = "Mediano";
+
+            // 2. Calcular Subtotal Clínicos
+            const preciosPlan = PRECIOS[planSeleccionado];
+            const desgloseClinico = calcularTramos(numClinicos, preciosPlan.clinico);
+
+            // 3. Calcular Subtotal Administrativos
+            const desgloseAdmin = calcularTramos(numAdministrativos, preciosPlan.admin);
+
+            // 4. Totales
+            const totalSinInt = desgloseClinico.total + desgloseAdmin.total;
+
+            // 5. Recargo Integración
+            let recargo = 0;
+            if (requiereIntegracion) {
+                recargo = totalSinInt * 0.114;
+            }
+            const totalFinalUF = totalSinInt + recargo;
+
+            // 6. Renderizar Resultados
+            document.getElementById('res-plan').textContent = planSeleccionado.charAt(0).toUpperCase() + planSeleccionado.slice(1);
+            document.getElementById('res-total-usuarios').textContent = totalUsuarios;
+            document.getElementById('res-segmento').textContent = segmentoGlobal;
+
+            // Render Clínicos
+            document.getElementById('count-clinicos').textContent = numClinicos;
+            document.getElementById('subtotal-clinicos').textContent = desgloseClinico.total.toFixed(2) + " UF";
+            renderDetalleTramos('detalle-clinicos', desgloseClinico.tramos, preciosPlan.clinico);
+
+            // Render Administrativos
+            document.getElementById('count-administrativos').textContent = numAdministrativos;
+            document.getElementById('subtotal-administrativos').textContent = desgloseAdmin.total.toFixed(2) + " UF";
+            renderDetalleTramos('detalle-administrativos', desgloseAdmin.tramos, preciosPlan.admin);
+
+            // Render Totales
+            document.getElementById('total-sin-int').textContent = totalSinInt.toFixed(2) + " UF";
+
+            const rowIntegracion = document.getElementById('row-integracion');
+            if (requiereIntegracion) {
+                rowIntegracion.style.display = "flex";
+                document.getElementById('monto-integracion').textContent = recargo.toFixed(2) + " UF";
+            } else {
+                rowIntegracion.style.display = "none";
+            }
+
+            document.getElementById('total-final-uf').textContent = totalFinalUF.toFixed(2) + " UF";
+
+            // Render CLP
+            const rowCLP = document.getElementById('row-clp');
+            if (valorUF > 0) {
+                const totalCLP = Math.round(totalFinalUF * valorUF);
+                rowCLP.style.display = "flex";
+                document.getElementById('total-final-clp').textContent = "$ " + totalCLP.toLocaleString('es-CL');
+            } else {
+                rowCLP.style.display = "none";
+            }
+        }
+
+        /**
+         * Calcula el costo total y el desglose por tramos para un tipo de usuario.
+         * Lógica:
+         * - Primeros 30: Precio Pequeño
+         * - Siguientes 70 (31-100): Precio Mediano
+         * - Resto (101+): Precio Grande
+         */
+        function calcularTramos(cantidad, precios) {
+            let restante = cantidad;
+            let total = 0;
+            let tramos = { peq: 0, med: 0, gra: 0 };
+
+            // Tramo Pequeño (1-30)
+            const enPeq = Math.min(restante, 30);
+            if (enPeq > 0) {
+                tramos.peq = enPeq;
+                total += enPeq * precios.peq;
+                restante -= enPeq;
+            }
+
+            // Tramo Mediano (31-100) -> max 70 usuarios
+            if (restante > 0) {
+                const enMed = Math.min(restante, 70);
+                tramos.med = enMed;
+                total += enMed * precios.med;
+                restante -= enMed;
+            }
+
+            // Tramo Grande (101+)
+            if (restante > 0) {
+                tramos.gra = restante;
+                total += restante * precios.gra;
+                restante = 0;
+            }
+
+            return { total, tramos };
+        }
+
+        function renderDetalleTramos(elementId, tramos, precios) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = '';
+
+            if (tramos.peq > 0) {
+                container.innerHTML += `<div>• ${tramos.peq} usuarios (Tramo Pequeño) x ${precios.peq.toFixed(3)} UF</div>`;
+            }
+            if (tramos.med > 0) {
+                container.innerHTML += `<div>• ${tramos.med} usuarios (Tramo Mediano) x ${precios.med.toFixed(3)} UF</div>`;
+            }
+            if (tramos.gra > 0) {
+                container.innerHTML += `<div>• ${tramos.gra} usuarios (Tramo Grande) x ${precios.gra.toFixed(3)} UF</div>`;
+            }
+
+            if (tramos.peq === 0 && tramos.med === 0 && tramos.gra === 0) {
+                container.innerHTML = '<div>• 0 usuarios</div>';
+            }
+        }
+    </script>
+</body>
+
+</html>
