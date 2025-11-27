@@ -225,6 +225,88 @@
                 padding: 1.5rem;
             }
         }
+
+        /* Pricing Info Section */
+        .pricing-info {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 3rem;
+            background-color: var(--secondary-color);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .pricing-info h2 {
+            font-size: 1.5rem;
+            color: var(--text-heading);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .pricing-info h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-info p,
+        .pricing-info li {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            margin-bottom: 0.75rem;
+        }
+
+        .pricing-info ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Tables */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            min-width: 600px;
+            /* Ensure table doesn't squish too much */
+        }
+
+        th,
+        td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #eff6ff;
+            /* Light blue bg */
+            color: var(--text-heading);
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .text-red {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .text-center {
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -233,7 +315,7 @@
     <header>
         <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/logo.png" alt="Medinet Logo"
             class="logo">
-        <h1>Simula tu cotización </h1>
+        <h1>Simula tu cotización en segundos</h1>
     </header>
 
     <main class="calculator-card">
@@ -342,6 +424,115 @@
             </div>
         </div>
     </main>
+
+    <section class="pricing-info">
+        <h2>Detalle de Planes y Tramos</h2>
+
+        <h3>1. Tramos de usuarios</h3>
+        <p>Los precios se expresan en <strong>UF mensuales por usuario activo</strong>, sin considerar impuestos.</p>
+        <p><em>Referencia actual: 1 UF = $ 39.643,59 CLP.</em></p>
+
+        <ul>
+            <li><strong>Centro pequeño:</strong> 10 – 30 usuarios activos.</li>
+            <li><strong>Centro mediano:</strong> 31 – 100 usuarios activos.</li>
+            <li><strong>Centro grande / red:</strong> 101+ usuarios activos.</li>
+        </ul>
+
+        <p><strong>Reglas del modelo:</strong></p>
+        <ul>
+            <li>Mientras más usuarios, menor precio por usuario.</li>
+            <li>En un mismo tramo, el Plan Básico es el más económico y el Plan Corporativo el de mayor precio por
+                usuario.</li>
+        </ul>
+
+        <h3>2. Tipos de usuario</h3>
+        <ul>
+            <li><strong>Usuarios clínicos:</strong> médicos, odontólogos, tecnólogos, arsenaleros, anestesistas,
+                enfermeras y otros profesionales de la salud que atienden pacientes.</li>
+            <li><strong>Usuarios administrativos:</strong> caja, recaudación, call center, admisión, contabilidad,
+                jefaturas administrativas, etc.</li>
+        </ul>
+
+        <p><strong>Fórmula de cálculo:</strong></p>
+        <div
+            style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; font-family: monospace; font-size: 0.9rem;">
+            Licenciamiento mensual = (UF/usuario clínico × # usuarios clínicos) + (UF/usuario adm × # usuarios adm)
+        </div>
+
+        <h3>3. Tabla oficial – Usuarios Clínicos</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de centro</th>
+                        <th class="text-center">Plan Básico<br><span
+                                style="font-weight:400; font-size:0.8em">UF/usuario</span></th>
+                        <th class="text-center">Plan Clínico<br><span
+                                style="font-weight:400; font-size:0.8em">UF/usuario</span></th>
+                        <th class="text-center">Plan Corporativo<br><span
+                                style="font-weight:400; font-size:0.8em">UF/usuario</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pequeño</strong> (10–30)</td>
+                        <td class="text-center text-red">0,385 UF</td>
+                        <td class="text-center text-red">0,630 UF</td>
+                        <td class="text-center text-red">0,732 UF</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mediano</strong> (31–100)</td>
+                        <td class="text-center text-red">0,333 UF</td>
+                        <td class="text-center text-red">0,548 UF</td>
+                        <td class="text-center text-red">0,627 UF</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grande / red</strong> (101+)</td>
+                        <td class="text-center text-red">0,289 UF</td>
+                        <td class="text-center text-red">0,475 UF</td>
+                        <td class="text-center text-red">0,549 UF</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>4. Tabla oficial – Usuarios Administrativos</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de centro</th>
+                        <th class="text-center">Plan Básico<br><span
+                                style="font-weight:400; font-size:0.8em">UF/usuario</span></th>
+                        <th class="text-center">Plan Clínico<br><span
+                                style="font-weight:400; font-size:0.8em">UF/usuario</span></th>
+                        <th class="text-center">Plan Corporativo<br><span
+                                style="font-weight:400; font-size:0.8em">UF/usuario</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pequeño</strong> (10–30)</td>
+                        <td class="text-center text-red">0,185 UF</td>
+                        <td class="text-center text-red">0,310 UF</td>
+                        <td class="text-center text-red">0,385 UF</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mediano</strong> (31–100)</td>
+                        <td class="text-center text-red">0,160 UF</td>
+                        <td class="text-center text-red">0,270 UF</td>
+                        <td class="text-center text-red">0,330 UF</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grande / red</strong> (101+)</td>
+                        <td class="text-center text-red">0,139 UF</td>
+                        <td class="text-center text-red">0,234 UF</td>
+                        <td class="text-center text-red">0,289 UF</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
     <script>
         // Configuración de Precios
