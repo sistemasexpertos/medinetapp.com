@@ -107,6 +107,24 @@
             box-shadow: 0 0 0 3px rgba(10, 75, 255, 0.1);
         }
 
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(10, 75, 255, 0.1);
+        }
+
         .checkbox-group {
             display: flex;
             align-items: center;
@@ -307,10 +325,80 @@
         .text-center {
             text-align: center;
         }
+
+        /* Login Overlay */
+        #login-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .login-card {
+            background-color: var(--secondary-color);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .login-card h2 {
+            margin-bottom: 1.5rem;
+            color: var(--text-heading);
+        }
+
+        .login-error {
+            color: #dc2626;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        /* Blur content when locked */
+        body.locked {
+            overflow: hidden;
+        }
+
+        body.locked>header,
+        body.locked>main,
+        body.locked>section {
+            filter: blur(8px);
+            pointer-events: none;
+        }
     </style>
 </head>
 
-<body>
+<body class="locked">
+
+    <div id="login-overlay">
+        <div class="login-card">
+            <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/logo.png" alt="Medinet Logo"
+                class="logo" style="margin-bottom: 1.5rem;">
+            <h2>Acceso Restringido</h2>
+            <form onsubmit="event.preventDefault(); login();">
+                <div class="form-group" style="text-align: left;">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" placeholder="Usuario" required>
+                </div>
+                <div class="form-group" style="text-align: left;">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="btn-calculate">Ingresar</button>
+                <div id="login-error" class="login-error">Credenciales incorrectas</div>
+            </form>
+        </div>
+    </div>
 
     <header>
         <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/logo.png" alt="Medinet Logo"
@@ -352,7 +440,7 @@
                 <div class="checkbox-group">
                     <input type="checkbox" id="integracion">
                     <label for="integracion" style="margin-bottom: 0; font-weight: 400;">Requiere integración
-                        personalizada (+11,4%)</label>
+                        personalizada (+22,8%)</label>
                 </div>
             </div>
 
@@ -408,7 +496,7 @@
             </div>
 
             <div id="row-integracion" class="result-row" style="display: none; color: var(--primary-color);">
-                <span>+ Integración (11,4%):</span>
+                <span>+ Integración (22,8%):</span>
                 <span id="monto-integracion">0.00 UF</span>
             </div>
 
@@ -535,6 +623,22 @@
     </section>
 
     <script>
+        function login() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            const errorMsg = document.getElementById('login-error');
+            const overlay = document.getElementById('login-overlay');
+
+            // Credenciales simples (Hardcoded)
+            if (user === 'medinet' && pass === 'medinet2025') {
+                overlay.style.display = 'none';
+                document.body.classList.remove('locked');
+            } else {
+                errorMsg.style.display = 'block';
+                // Shake effect optional
+            }
+        }
+
         // Configuración de Precios
         const PRECIOS = {
             basico: {
@@ -608,7 +712,7 @@
             // 5. Recargo Integración
             let recargo = 0;
             if (requiereIntegracion) {
-                recargo = totalSinInt * 0.114;
+                recargo = totalSinInt * 0.228;
             }
             const totalFinalUF = totalSinInt + recargo;
 
