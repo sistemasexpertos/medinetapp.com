@@ -1,0 +1,878 @@
+﻿<!DOCTYPE html>
+<html lang="es-PE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Agenda MÃ©dica | ProgramaciÃ³n y GestiÃ³n de Citas MÃ©dicas | Medinet</title>
+    <meta name="description" content="Simplifica la programaciÃ³n y gestiÃ³n de citas mÃ©dicas con la innovadora Agenda MÃ©dica de Medinet. Administra agendas, coordina equipos y optimiza recursos con facilidad. Eleva la experiencia del paciente con seguridad y flexibilidad.">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Agenda MÃ©dica | ProgramaciÃ³n y GestiÃ³n de Citas MÃ©dicas | Medinet" />
+    <meta property="og:description" content="Simplifica la programaciÃ³n y gestiÃ³n de citas mÃ©dicas con la Agenda MÃ©dica de Medinet." />
+    <meta property="og:image" content="https://medinetapp.com/pe/assets/img/og-medinet.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://medinetapp.com/pe/soluciones/agenda-medica/" />
+    <meta property="og:site_name" content="Medinet" />
+    <meta property="og:locale" content="es_PE" />
+
+    <link rel="shortcut icon" href="../../assets/svg/logos/favicon-medinet.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- CSS (orden correcto: vendor -> theme) -->
+    <link rel="stylesheet" href="../../assets/css/vendor.min.css" />
+    <link rel="stylesheet" href="../../assets/css/theme.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KH42KFM');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH42KFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- ========== HEADER (con banderas / PerÃº activo) ========== -->
+    <header id="header"
+      class="navbar navbar-expand-lg navbar-end navbar-light bg-white sticky-top py-1"
+      data-hs-header-options='{"fixMoment":1000,"fixEffect":"slide"}'
+      hsheader="true">
+
+      <div class="container-fluid px-3 px-lg-4">
+        <nav class="js-mega-menu navbar-nav-wrap d-flex align-items-center flex-nowrap w-100">
+
+          <!-- Logo -->
+          <a href="../pe/" aria-label="Medinet"
+             class="navbar-brand p-0 me-3 d-flex align-items-center">
+            <img
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Servicios/logo-medinet.svg"
+              alt="Medinet" width="160" height="32"
+              class="d-inline-block align-text-top" loading="eager" decoding="async">
+          </a>
+
+          <!-- Toggler -->
+          <button class="navbar-toggler ms-auto" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-default"><i class="bi-list"></i></span>
+            <span class="navbar-toggler-toggled"><i class="bi-x"></i></span>
+          </button>
+
+          <!-- Collapse -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-absolute-top-scroller w-100">
+              <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- Soluciones -->
+                <li class="hs-has-mega-menu nav-item">
+                  <a id="landingsMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="../pe/soluciones/software-en-la-medicina" aria-expanded="false">Soluciones</a>
+
+                  <div class="hs-mega-menu dropdown-menu w-100 hs-mega-menu-desktop-lg animated fadeOut"
+                       aria-labelledby="landingsMegaMenu"
+                       style="min-width: 30rem; animation-duration: 300ms; display: none;">
+                    <div class="row">
+                      <div class="col-lg-5 d-none d-lg-block">
+                        <div class="navbar-dropdown-menu-banner bg-light">
+                          <div class="navbar-dropdown-menu-banner-content">
+                            <div class="mb-4">
+                              <span class="h2 d-block">Conoce Medinet</span>
+                              <p>Descubre cÃ³mo Medinet te ayuda a administrar mejor y reducir costos</p>
+                            </div>
+                            <a class="btn btn-primary btn-transition" href="../pe/reunion">
+                              Agendar reuniÃ³n <i class="bi-chevron-right small"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-7">
+                        <div class="navbar-dropdown-menu-inner">
+                          <div class="row">
+                            <div class="col-sm mb-3 mb-sm-0">
+                              <span class="dropdown-header">MÃ³dulos</span>
+                              <a class="dropdown-item" href="../pe/soluciones/agenda-medica">Agenda mÃ©dica</a>
+                              <a class="dropdown-item" href="../pe/soluciones/fichas-clinicas">Historia  clÃ­nica</a>
+                              <a class="dropdown-item" href="../pe/soluciones/cobranza-y-cuenta-medica">Cobranza y cuenta mÃ©dica</a>
+                              <a class="dropdown-item" href="../pe/soluciones/gestion-quirofano">GestiÃ³n de quirÃ³fano</a>
+                              <a class="dropdown-item" href="../pe/soluciones/gestion-camas">GestiÃ³n de camas</a>
+                              <a class="dropdown-item" href="../pe/soluciones/adquisicion-y-dispensacion">AdquisiciÃ³n y dispensaciÃ³n</a>
+                              <a class="dropdown-item" href="../pe/soluciones/reportes">Reportes</a>
+                              <a class="dropdown-item" href="../pe/soluciones/software-urgencia-hospitalaria">Urgencia Hospitalaria</a>
+                              <a class="dropdown-item" href="../pe/soluciones/honorarios-medicos">Honorarios mÃ©dicos</a>
+                            </div>
+
+                            <div class="col-sm">
+                              <div class="mb-3">
+                                <span class="dropdown-header">Roles</span>
+                                <a class="dropdown-item" href="../pe/roles/director-medico">Director mÃ©dico</a>
+                                <a class="dropdown-item" href="../pe/roles/gerente-general">Gerente general (CEO)</a>
+                                <a class="dropdown-item" href="../pe/roles/gerente-finanzas">Gerente de finanzas (CFO)</a>
+                                <a class="dropdown-item" href="../pe/roles/gerente-operaciones">Gerente de operaciones (COO)</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Especialidades -->
+                <li class="hs-has-sub-menu nav-item">
+                  <a id="companyMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="#" aria-expanded="false">Especialidades</a>
+                  <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated"
+                       aria-labelledby="companyMegaMenu"
+                       style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                    <a class="dropdown-item" href="../pe/especialidades/software-para-oftalmologia">OftalmologÃ­a</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-para-psiquiatria">PsiquiatrÃ­a</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-para-bariatrica">BariÃ¡trica</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-gestion-centro-medico">Centros MÃ©dicos</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-para-clinica-estetica">EstÃ©tica</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-dental">Dental</a>
+                  </div>
+                </li>
+
+                <!-- PabellÃ³n -->
+                <li class="hs-has-sub-menu nav-item">
+                  <a id="gestionmenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="#" aria-expanded="false">PabellÃ³n</a>
+                  <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated"
+                       aria-labelledby="gestionmenu"
+                       style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                    <a class="dropdown-item" href="../pe/gestion-pabellon-quirurgico/agenda-quirurgica">Agenda quirÃºrgica</a>
+                    <a class="dropdown-item" href="../pe/gestion-pabellon-quirurgico/tabla-quirurgica">Tabla quirÃºrgica</a>
+                  </div>
+                </li>
+
+                <!-- Servicios -->
+                <li class="hs-has-sub-menu nav-item">
+                  <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="#" aria-expanded="false">Servicios</a>
+                  <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated"
+                       aria-labelledby="pagesMegaMenu"
+                       style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                    <a class="dropdown-item" href="../pe/metodologia/implementacion">ImplementaciÃ³n</a>
+                    <a class="dropdown-item" href="../pe/metodologia/integraciones">Integraciones</a>
+                    <a class="dropdown-item" href="../pe/metodologia/migracion-de-datos">MigraciÃ³n de datos</a>
+                    <a class="dropdown-item" href="../pe/metodologia/soporte">Soporte</a>
+                    <a class="dropdown-item" href="../pe/metodologia/seguridad">Seguridad</a>
+                  </div>
+                </li>
+
+                <!-- Empresa -->
+                <li class="hs-has-sub-menu nav-item">
+                  <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="#" aria-expanded="false">Empresa</a>
+                  <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated fadeOut"
+                       aria-labelledby="blogMegaMenu"
+                       style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                    <a class="dropdown-item" href="../pe/empresa/nosotros">Nosotros</a>
+                    <a class="dropdown-item" href="../pe/empresa/trabajo">Trabajo</a>
+                  </div>
+                </li>
+
+                <!-- Contacto y WhatsApp -->
+                <li class="nav-item ms-lg-3">
+                  <a class="btn btn-primary btn-transition" href="../pe/contacto">Contactar</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                  <a class="btn btn-success btn-transition" id="wa-link"
+                     href="https://wa.me/56959167735" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-whatsapp fs-5"></i> WhatsApp
+                  </a>
+                </li>
+
+                <!-- Selector de paÃ­s -->
+                <li class="nav-item dropdown ms-lg-2">
+                  <a class="nav-link dropdown-toggle" href="#" id="countryMenu" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://flagcdn.com/w20/pe.png" alt="PE" class="me-1"> PerÃº
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="countryMenu">
+                    <li><a class="dropdown-item d-flex align-items-center" href="../cl/">
+                      <img src="https://flagcdn.com/w20/cl.png" alt="CL" class="me-2">Chile</a></li>
+                    <li><a class="dropdown-item d-flex align-items-center active" href="../pe/">
+                      <img src="https://flagcdn.com/w20/pe.png" alt="PE" class="me-2">PerÃº</a></li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="../mx/">
+                      <img src="https://flagcdn.com/w20/mx.png" alt="MX" class="me-2">MÃ©xico</a></li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="../co/">
+                      <img src="https://flagcdn.com/w20/co.png" alt="CO" class="me-2">Colombia</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <!-- /Collapse -->
+
+        </nav>
+      </div>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+    <style>html,body{overflow-x:hidden!important}</style>
+
+    <main id="content" role="main">
+
+      <div class="gradient-y-gray position-relative">
+        <div class="content-space-t-3 content-space-t-lg-5 content-space-b-2 content-space-b-lg-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-5 col-xl-6">
+                <!-- Heading -->
+                <div class="mb-5">
+                  <h1 class="display-4 text-primary">La mejor agenda mÃ©dica para clÃ­nicas en PerÃº</h1>
+                  <p class="lead text-dark">Organiza tus citas mÃ©dicas, mejora la asistencia y gana tiempo desde la primera atenciÃ³n.</p>
+                </div>
+                <!-- End Title & Description -->
+
+                <!-- Video -->
+                <a class="video-player video-player-btn" href="https://www.youtube.com/watch?v=lW1h9e93Y8U" role="button" data-fslightbox="youtube-video">
+                  <span class="video-player-icon shadow-sm me-2"><i class="bi-play-fill"></i></span>
+                  Ve como funciona
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Devices -->
+          <div class="devices-top-start-50 devices-rotated zi-2" style="width: 47rem;">
+            <div class="devices-wrap devices-rotated-body">
+              <!-- Tablet -->
+              <figure class="device-tablet" style="width: 27rem;">
+                <div class="device-tablet-frame">
+                  <img class="device-tablet-img" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/HERO%20TABLET%20HORIZONTAL%20AGENDA%20MEDICA.png" alt="Agenda mÃ©dica - tablet">
+                </div>
+              </figure>
+              <!-- Vertical Tablet -->
+              <figure class="device-vertical-tablet" style="width: 18rem;">
+                <div class="device-vertical-tablet-frame">
+                  <img class="device-vertical-tablet-img" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/TABLET%20VERTCAL%20AGENDA%20%2cMEDICA.png" alt="Agenda mÃ©dica - vertical">
+                </div>
+              </figure>
+              <!-- Mobile -->
+              <figure class="device-mobile align-self-start" style="width: 10rem;">
+                <div class="device-mobile-frame">
+                  <img class="device-mobile-img" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/HERO%20CELULAR%20AGENDMEDICA.png" alt="Agenda mÃ©dica - mÃ³vil">
+                </div>
+              </figure>
+              <!-- Browser -->
+              <figure class="device-browser" style="width: 35rem;">
+                <div class="device-browser-header">
+                  <div class="device-browser-header-btn-list">
+                    <span class="device-browser-header-btn-list-btn"></span>
+                    <span class="device-browser-header-btn-list-btn"></span>
+                    <span class="device-browser-header-btn-list-btn"></span>
+                  </div>
+                  <div class="device-browser-header-browser-bar">www.medinetapp.com</div>
+                </div>
+                <div class="device-browser-frame">
+                  <img class="device-browser-img" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/HERO%20BROWSER%20AGENDA%20MEDICA.png" alt="agenda mÃ©dica">
+                </div>
+              </figure>
+            </div>
+          </div>
+          <!-- End Devices -->
+        </div>
+
+        <!-- Shape -->
+        <div class="shape shape-bottom zi-1" style="margin-bottom: -.125rem">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 100.1"><path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path></svg>
+        </div>
+      </div>
+
+      <div class="clientes-section" style="padding: 80px 0;">
+        <div class="container content-space-2 content-space-lg-3">
+          <div class="row">
+            <div class="col-md-4 pt-7 pt-md-0">
+              <div class="card gradient-x-overlay-lg-dark shadow-lg mt-md-n10" data-aos="fade-up">
+                <div class="card-body">
+                  <div class="mb-7">
+                    <span class="card-subtitle text-warning">ConfÃ­an en nosotros</span>
+                    <h2 class="card-title text-white">ClÃ­nica Lo Arcaya, Renal Mater y San Juan de Dios
+                      son parte de los mÃ¡s de 30 centros que eligen Medinet.</h2>
+                  </div>
+                  <div class="d-grid">
+                    <a class="btn btn-soft-light btn-transition" href="../pe/empresa/nosotros">Ver quiÃ©nes somos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8 pt-7">
+              <div class="row">
+                <div class="col-4 py-3">
+                  <img class="avatar avatar-xl avatar-4x3 avatar-centered" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Modulo%20dental/Logos/LOGOS%20DANIELAMesa%20de%20trabajo%204.svg" alt="clinica-loarcaya">
+                </div>
+                <div class="col-4 py-3">
+                  <img class="avatar avatar-xl avatar-4x3 avatar-centered" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Modulo%20dental/Logos/LOGOS%20DANIELARENAL%20MATER%20ORI.svg" alt="renal-mater">
+                </div>
+                <div class="col-4 py-3">
+                  <img class="avatar avatar-xl avatar-4x3 avatar-centered" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Modulo%20dental/Logos/LOGOS%20DANIELASANATORIO%20MARITIMO%20ORI.svg" alt="sanatorio-maritimo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="position-relative">
+        <div class="container content-space-lg-3">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-9 mb-7 mb-md-0">
+              <div class="w-md-65 mb-7">
+                <h2 class="h1">Simplifica tu clÃ­nica con una agenda mÃ©dica todo en uno</h2>
+                <p>Cada minuto sin una buena agenda mÃ©dica es un paciente menos. Medinet te devuelve el control y mejora la eficiencia de tu centro de salud.</p>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3 mb-3">
+                  <div class="card h-60">
+                    <div class="card-body">
+                      <span class="svg-icon text-primary mb-3 text-center">
+                        <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/alarma.gif" alt="icono" width="100" class="text-primary mb-3">
+                      </span>
+                      <h3 class="h5 card-title"> Disminuye inasistencias con recordatorios automÃ¡ticos</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card h-60">
+                    <div class="card-body">
+                      <span class="svg-icon text-primary mb-3 text-center">
+                        <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/sociedad.gif" alt="icono" width="100" class="text-primary mb-3">
+                      </span>
+                      <h3 class="h5 card-title"> Coordina salas, especialidades y profesionales fÃ¡cilmente</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card h-60">
+                    <div class="card-body">
+                      <span class="svg-icon text-primary mb-3 text-center">
+                        <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/feliz.gif" alt="icono" width="100" class="text-primary mb-3">
+                      </span>
+                      <h3 class="h5 card-title"> Mejora la experiencia del paciente en todo momento</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fin nueva card -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-soft-success ">
+        <div class="container content-space-2">
+          <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+            <h2 class="display-6">Algunas funcionalidades de la agenda</h2>
+          </div>
+
+          <div class="row mb-5 mb-md-9">
+            <div class="col-sm-6 col-md-4 mb-3 mb-sm-7">
+              <div class="d-flex align-items-center mb-2">
+                <div class="flex-shrink-0">
+                  <span class="svg-icon svg-icon-sm text-success">
+                    <!-- icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.3" d="M21 22H3C2.4 22 2 21.6 2 21V5C2 4.4 2.4 4 3 4H21C21.6 4 22 4.4 22 5V21C22 21.6 21.6 22 21 22Z" fill="#035A4B"></path>
+                      <path d="M6 6C5.4 6 5 5.6 5 5V3C5 2.4 5.4 2 6 2C6.6 2 7 2.4 7 3V5C7 5.6 6.6 6 6 6ZM11 5V3C11 2.4 10.6 2 10 2C9.4 2 9 2.4 9 3V5C9 5.6 9.4 6 10 6C10.6 6 11 5.6 11 5ZM15 5V3C15 2.4 14.6 2 14 2C13.4 2 13 2.4 13 3V5C13 5.6 13.4 6 14 6C14.6 6 15 5.6 15 5ZM19 5V3C19 2.4 18.6 2 18 2C17.4 2 17 2.4 17 3V5C17 5.6 17.4 6 18 6C18.6 6 19 5.6 19 5Z" fill="#035A4B"></path>
+                      <path d="M8.8 13.1C9.2 13.1 9.5 13 9.7 12.8C9.9 12.6 10.1 12.3 10.1 11.9C10.1 11.6 10 11.3 9.8 11.1C9.6 10.9 9.3 10.8 9 10.8C8.8 10.8 8.6 10.8 8.4 10.9C8.2 11 8.1 11.1 8 11.2C7.9 11.3 7.8 11.4 7.7 11.6C7.6 11.8 7.5 11.9 7.5 12.1C7.5 12.2 7.4 12.2 7.3 12.3C7.2 12.4 7.1 12.4 6.9 12.4C6.7 12.4 6.6 12.3 6.5 12.2C6.4 12.1 6.3 11.9 6.3 11.7C6.3 11.5 6.4 11.3 6.5 11.1C6.6 10.9 6.8 10.7 7 10.5C7.2 10.3 7.5 10.1 7.9 10C8.3 9.9 8.6 9.8 9.1 9.8C9.5 9.8 9.8 9.9 10.1 10C10.4 10.1 10.7 10.3 10.9 10.4C11.1 10.5 11.3 10.8 11.4 11.1C11.5 11.4 11.6 11.6 11.6 11.9C11.6 12.3 11.5 12.6 11.3 12.9C11.1 13.2 10.9 13.5 10.6 13.7C10.9 13.9 11.2 14.1 11.4 14.3C11.6 14.5 11.8 14.7 11.9 15C12 15.3 12.1 15.5 12.1 15.8C12.1 16.2 12 16.5 11.9 16.8C11.8 17.1 11.5 17.4 11.3 17.7C11.1 18 10.7 18.2 10.3 18.3C9.9 18.4 9.5 18.5 9 18.5C8.5 18.5 8.1 18.4 7.7 18.2C7.3 18 7 17.8 6.8 17.6C6.6 17.4 6.4 17.1 6.3 16.8C6.2 16.5 6.1 16.3 6.1 16.1C6.1 15.9 6.2 15.7 6.3 15.6C6.4 15.5 6.6 15.4 6.8 15.4C6.9 15.4 7 15.4 7.1 15.5C7.2 15.6 7.3 15.6 7.3 15.7C7.5 16.2 7.7 16.6 8 16.9C8.3 17.2 8.6 17.3 9 17.3C9.2 17.3 9.5 17.2 9.7 17.1C9.9 17 10.1 16.8 10.3 16.6C10.5 16.4 10.5 16.1 10.5 15.8C10.5 15.3 10.4 15 10.1 14.7C9.8 14.4 9.5 14.3 9.1 14.3C9 14.3 8.9 14.3 8.7 14.3C8.5 14.3 8.4 14.3 8.4 14.3C8.2 14.3 8 14.2 7.9 14.1C7.8 14 7.7 13.8 7.7 13.7C7.7 13.5 7.8 13.4 7.9 13.2C8 13 8.2 13 8.5 13H8.8V13.1Z" fill="#035A4B"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="flex-grow-1 ms-3"><h4 class="mb-0">Agenda web</h4></div>
+              </div>
+              <p>Entregales a tus pacientes la alternativa de agendar vÃ­a web vÃ­a Medinet.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 mb-3 mb-sm-7">
+              <div class="d-flex align-items-center mb-2">
+                <div class="flex-shrink-0">
+                  <span class="svg-icon svg-icon-sm text-success">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 16C2 16.6 2.4 17 3 17H21C21.6 17 22 16.6 22 16V15H2V16Z" fill="#035A4B"></path>
+                      <path opacity="0.3" d="M21 3H3C2.4 3 2 3.4 2 4V15H22V4C22 3.4 21.6 3 21 3Z" fill="#035A4B"></path>
+                      <path opacity="0.3" d="M15 17H9V20H15V17Z" fill="#035A4B"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="flex-grow-1 ms-3"><h4 class="mb-0">Portal exÃ¡menes</h4></div>
+              </div>
+              <p>Permite a tus pacientes revisar los resultados en lÃ­nea y reduce visitas a tu centro.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 mb-3 mb-sm-7 mb-md-0">
+              <div class="d-flex align-items-center mb-2">
+                <div class="flex-shrink-0">
+                  <span class="svg-icon svg-icon-sm text-success">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="#035A4B"></path>
+                      <path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22Z" fill="#035A4B"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="flex-grow-1 ms-3"><h4 class="mb-0">Agenda profesionales o recursos</h4></div>
+              </div>
+              <p>Asigna horarios disponibles, bloqueos de profesionales y boxes en un solo lugar.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 mb-3 mb-sm-7 mb-md-0">
+              <div class="d-flex align-items-center mb-2">
+                <div class="flex-shrink-0">
+                  <span class="svg-icon svg-icon-sm text-success">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M15 19.5229C15 20.265 15.9624 20.5564 16.374 19.9389L22.2227 11.166C22.5549 10.6676 22.1976 10 21.5986 10H17V4.47708C17 3.73503 16.0376 3.44363 15.626 4.06106L9.77735 12.834C9.44507 13.3324 9.80237 14 10.4014 14H15V19.5229Z" fill="#035A4B"></path>
+                      <path opacity="0.3" d="M3 6.5C3 5.67157 3.67157 5 4.5 5H9.5C10.3284 5 11 5.67157 11 6.5C11 7.32843 10.3284 8 9.5 8H4.5C3.67157 8 3 7.32843 3 6.5Z" fill="#035A4B"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="flex-grow-1 ms-3"><h4 class="mb-0">Recordatorios automatizados</h4></div>
+              </div>
+              <p>Impulsa la confirmaciÃ³n de citas vÃ­a email, WhatsApp y SMS mediante nuestros partners.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 mb-3 mb-sm-7 mb-md-0">
+              <div class="d-flex align-items-center mb-2">
+                <div class="flex-shrink-0">
+                  <span class="svg-icon svg-icon-sm text-success">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11Z" fill="#035A4B"></path>
+                      <path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22Z" fill="#035A4B"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="flex-grow-1 ms-3"><h4 class="mb-0">Tiempos configurables y cobros automatizados</h4></div>
+              </div>
+              <p>Define tiempos estÃ¡ndar para citas y cobra de manera automatizada.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div class="d-flex align-items-center mb-2">
+                <div class="flex-shrink-0">
+                  <span class="svg-icon svg-icon-sm text-success">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.3" d="M19 3.40002C18.4 3.40002 18 3.80002 18 4.40002V8.40002H14V4.40002C14 3.80002 13.6 3.40002 13 3.40002C12.4 3.40002 12 3.80002 12 4.40002V8.40002H8V4.40002C8 3.80002 7.6 3.40002 7 3.40002C6.4 3.40002 6 3.80002 6 4.40002V8.40002H2V4.40002C2 3.80002 1.6 3.40002 1 3.40002C0.4 3.40002 0 3.80002 0 4.40002V19.4C0 20 0.4 20.4 1 20.4H19C19.6 20.4 20 20 20 19.4V4.40002C20 3.80002 19.6 3.40002 19 3.40002ZM18 10.4V13.4H14V10.4H18ZM12 10.4V13.4H8V10.4H12ZM12 15.4V18.4H8V15.4H12ZM6 10.4V13.4H2V10.4H6ZM2 15.4H6V18.4H2V15.4ZM14 18.4V15.4H18V18.4H14Z" fill="#035A4B"></path>
+                      <path d="M19 0.400024H1C0.4 0.400024 0 0.800024 0 1.40002V4.40002C0 5.00002 0.4 5.40002 1 5.40002H19C19.6 5.40002 20 5.00002 20 4.40002V1.40002C20 0.800024 19.6 0.400024 19 0.400024Z" fill="#035A4B"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="flex-grow-1 ms-3"><h4 class="mb-0">Reportes de agenda</h4></div>
+              </div>
+              <p>Filtra y descarga reportes de agenda por profesional, estados y mÃ¡s.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="container content-space-2 content-space-lg-3 medinet-card-container mt-7"
+           style="background:#fff;border-radius:20px;padding:40px;box-shadow:0 10px 30px rgba(0,0,0,.1);position:relative;">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <img class="img-fluid" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/HERO%20BROWSER%20AGENDA%20MEDICA.png" alt="Agenda mÃ©dica en acciÃ³n">
+          </div>
+          <div class="col-lg-5">
+            <div class="ps-lg-1">
+              <span class="badge btn-primary text-uppercase mb-2">Agenda clÃ­nica</span>
+              <h2 class="mb-3 display-7 fw-bold text-primary">Agenda mÃ©dica en acciÃ³n</h2>
+              <ul class="list-unstyled mb-3 list-checked list-checked-soft-bg-success list-checked-lg">
+                <li class="list-checked-item"><p>ConfirmaciÃ³n automÃ¡tica de citas por WhatsApp, SMS y correo electrÃ³nico</p></li>
+                <li class="list-checked-item"><p>Manejo simultÃ¡neo de mÃºltiples profesionales y especialidades</p></li>
+                <li class="list-checked-item"><p>IntegraciÃ³n con ficha clÃ­nica, mÃ³dulo de recaudaciÃ³n y CRM</p></li>
+                <li class="list-checked-item"><p>Vistas semanales, diarias, por lista o profesional, con filtros avanzados</p></li>
+                <li class="list-checked-item"><p>Manejo de citas recurrentes, sobrecupos y planificaciÃ³n de sesiones</p></li>
+              </ul>
+              <a class="scrollToForm btn btn-primary mt-3" href="../pe/contacto">ContÃ¡ctanos <i class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container content-space-2 content-space-lg-3 medinet-card-container mt-7"
+           style="background:#fff;border-radius:20px;padding:40px;box-shadow:0 10px 30px rgba(0,0,0,.1);position:relative;">
+        <div class="row align-items-lg-center flex-lg-row-reverse">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <figure class="device-browser">
+              <div class="device-browser-header">
+                <div class="device-browser-header-btn-list">
+                  <span class="device-browser-header-btn-list-btn"></span>
+                  <span class="device-browser-header-btn-list-btn"></span>
+                  <span class="device-browser-header-btn-list-btn"></span>
+                </div>
+                <div class="device-browser-header-browser-bar">www.medinetapp.com</div>
+              </div>
+              <div class="device-browser-frame">
+                <img class="device-browser-img" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/Captura.png" alt="Agendamiento de exÃ¡menes">
+              </div>
+            </figure>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="ps-lg-1">
+              <span class="badge btn-primary text-uppercase mb-2">Documentos clÃ­nicos</span>
+              <h2 class="mb-3 display-7 text-primary fw-bold">Agendamiento de exÃ¡menes</h2>
+              <ul class="list-unstyled mb-3 list-checked list-checked-soft-bg-success list-checked-lg">
+                <li class="list-checked-item"><p>Coordina mÃºltiples recursos como salas, equipos y personal en una sola vista</p></li>
+                <li class="list-checked-item"><p>Visualiza el estado de cada cita mÃ©dica en tiempo real</p></li>
+                <li class="list-checked-item"><p>Agenda varios exÃ¡menes en una misma sesiÃ³n</p></li>
+                <li class="list-checked-item"><p>Evita errores con bloqueos de agenda y dÃ­as feriados</p></li>
+                <li class="list-checked-item"><p>Imprime y comparte la programaciÃ³n del dÃ­a</p></li>
+              </ul>
+              <a class="scrollToForm btn btn-primary mt-3" href="../pe/contacto">ContÃ¡ctanos <i class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container content-space-2 content-space-lg-3 medinet-card-container mt-7"
+           style="background:#fff;border-radius:20px;padding:40px;box-shadow:0 10px 30px rgba(0,0,0,.1);position:relative;">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <img class="img-fluid" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Agenda%20medica/AGENDA%20EMPOTRADA.png" alt="Agendamiento web para pacientes">
+          </div>
+          <div class="col-lg-5">
+            <div class="ps-lg-1">
+              <span class="badge btn-primary text-uppercase mb-2">Experiencia UX comprobada</span>
+              <h2 class="mb-3 display-7 fw-bold text-primary">Agendamiento web para pacientes</h2>
+              <ul class="list-unstyled mb-3 list-checked list-checked-soft-bg-success list-checked-lg">
+                <li class="list-checked-item"><p>Agendamiento mÃ©dico online 24/7 desde cualquier lugar</p></li>
+                <li class="list-checked-item"><p>Portal web para reservar horas por especialidad o profesional</p></li>
+                <li class="list-checked-item"><p>Visualiza la disponibilidad completa del profesional</p></li>
+                <li class="list-checked-item"><p>Modifica o cancela citas sin necesidad de llamar</p></li>
+                <li class="list-checked-item"><p>Personaliza colores, textos y diseÃ±o de la agenda web</p></li>
+              </ul>
+              <a class="scrollToForm btn btn-primary mt-3" href="../pe/contacto">ContÃ¡ctanos <i class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container content-space-2 content-space-lg-3 medinet-card-container mt-7"
+           style="background:#fff;border-radius:20px;padding:40px;box-shadow:0 10px 30px rgba(0,0,0,.1);position:relative;">
+        <div class="row align-items-lg-center flex-lg-row-reverse">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <img class="img-fluid" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/MODULO%20AGENDA.png" alt="Liderando la gestiÃ³n clÃ­nica">
+          </div>
+          <div class="col-lg-5">
+            <div class="ps-lg-1">
+              <span class="badge btn-primary text-uppercase mb-2">Software mÃ©dico</span>
+              <h2 class="mb-3 display-7 fw-bold text-primary">La agenda mÃ©dica que lidera la gestiÃ³n clÃ­nica</h2>
+              <ul class="list-unstyled mb-3 list-checked list-checked-soft-bg-success list-checked-lg">
+                <li class="list-checked-item"><p>Vista panorÃ¡mica de profesionales, salas y servicios en un solo evento</p></li>
+                <li class="list-checked-item"><p>Agenda personalizable por especialidad y tipo de atenciÃ³n</p></li>
+                <li class="list-checked-item"><p>Control en tiempo real de disponibilidad y estados</p></li>
+                <li class="list-checked-item"><p>Escalable para clÃ­nicas medianas y grandes</p></li>
+              </ul>
+              <a class="scrollToForm btn btn-primary mt-3" href="../pe/contacto">ContÃ¡ctanos <i class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clientes-section mb-3">
+        <div class="container content-space-2 content-space-lg-3" style="background:#334368;border-radius:20px;padding:40px;box-shadow:0 10px 30px rgba(0,0,0,.1);position:relative;">
+          <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-3">
+            <h2 class="h1 medinet-card-title text-white">Software Certificado</h2>
+          </div>
+
+          <div class="row gx-3 mb-5 mb-md-3">
+            <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+              <a class="card-transition h-100" href="../pe/metodologia/seguridad">
+                <img class="card-img-top" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/historia%20clinica/ISO%2027001.svg" alt="iso-27001">
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+              <a class="card-transition h-100" href="../pe/metodologia/seguridad">
+                <img class="card-img-top" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/historia%20clinica/ISO%209001.svg" alt="iso-9001">
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-3 mb-3 mb-sm-0">
+              <a class="card-transition h-100" href="../pe/metodologia/seguridad">
+                <img class="card-img-top" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Software%20medico%20antiguamente%20Soluciones/sellos%20de%20calidadMesa%20de%20trabajo%201%20(3).svg" alt="cens">
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <a class="card-transition h-100" href="../pe/metodologia/seguridad">
+                <img class="card-img-top" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Software%20medico%20antiguamente%20Soluciones/sellos%20de%20calidadMesa%20de%20trabajo%201%20copia%205%20(1).svg" alt="fonasa">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container my-5">
+        <div class="row mb-5">
+          <div class="col text-center">
+            <h2 class="fw-bold medinet-card-title d-none d-md-block">ClÃ­nicas que ya confÃ­an en Medinet</h2>
+          </div>
+          <h2 class="fw-bold medinet-card-title d-block d-md-none text-center">ConfÃ­an en Medinet</h2>
+        </div>
+
+        <div class="row justify-content-center g-4">
+          <div class="col-12 col-md-6">
+            <div class="card border-0">
+              <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/testimonio%20lo%20arcaya.png" class="img-fluid rounded-3 w-100" alt="clinica-loarcaya">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card border-0">
+              <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/testimonio%20renal%20mater.png" class="img-fluid rounded-3 w-100" alt="renal-mater">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-space-b-2" style="background:url(https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/CTAICONOS%20DENTINET.png) center no-repeat;background-size:cover;margin:0;padding:0;color:#fff;">
+        <div class="text-center py-5">
+          <div class="mb-4">
+            <h2 class="text-white">Â¿Listo para transformar la gestiÃ³n de tu clÃ­nica?</h2>
+            <p class="text-white">Solicita una demo gratuita</p>
+          </div>
+          <a class="btn btn-primary btn-transition btn-custom" href="../pe/reunion" style="background-color:#06DEE1;border-color:#06DEE1;color:#fff;">
+            Agenda aquÃ­
+          </a>
+        </div>
+      </div>
+
+      <div class="container content-space-2 content-space-b-lg-3">
+        <div class="w-lg-75 mx-lg-auto">
+          <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+            <h2 class="display-6">Preguntas frecuentes</h2>
+          </div>
+
+          <div class="d-grid gap-10">
+            <div class="d-grid gap-3">
+              <div class="accordion accordion-flush accordion-lg" id="accordionFAQBasics">
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingBasicsOne">
+                    <a class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsOne" aria-expanded="true" aria-controls="collapseBasicsOne">
+                      Â¿Los pacientes pueden pedir cita online?
+                    </a>
+                  </div>
+                  <div id="collapseBasicsOne" class="accordion-collapse collapse show" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQBasics">
+                    <div class="accordion-body">
+                      SÃ­, te entregamos un link que puedes compartir en tu web o donde gustes para que tus pacientes agenden online. Puedes elegir quÃ© doctores, dÃ­as y horas se pueden agendar online, mÃ¡xima flexibilidad.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingBasicsTwo">
+                    <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsTwo" aria-expanded="false" aria-controls="collapseBasicsTwo">
+                      Â¿Puedo recordar y confirmar cita de forma automÃ¡tica?
+                    </a>
+                  </div>
+                  <div id="collapseBasicsTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQBasics">
+                    <div class="accordion-body">
+                      SÃ­, de forma nativa soportamos email, y mediante nuestra red de partners puedes recordar, responder dudas y confirmar automÃ¡ticamente vÃ­a WhatsApp y/o SMS.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingBasicsThree">
+                    <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsThree" aria-expanded="false" aria-controls="collapseBasicsThree">
+                      Â¿Pueden los pacientes descargar sus exÃ¡menes?
+                    </a>
+                  </div>
+                  <div id="collapseBasicsThree" class="accordion-collapse collapse" aria-labelledby="headingBasicsThree" data-bs-parent="#accordionFAQBasics">
+                    <div class="accordion-body">
+                      SÃ­, mediante nuestra funciÃ³n Portal de Pacientes puedes disponibilizar las atenciones realizadas y exÃ¡menes siempre que tus sistemas de exÃ¡menes estÃ©n integrados a Medinet.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingBasicsFour">
+                    <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsFour" aria-expanded="false" aria-controls="collapseBasicsFour">
+                      Â¿Hay estados de cita?
+                    </a>
+                  </div>
+                  <div id="collapseBasicsFour" class="accordion-collapse collapse" aria-labelledby="headingBasicsFour" data-bs-parent="#accordionFAQBasics">
+                    <div class="accordion-body">
+                      SÃ­, manejamos estados como Agendado, En RecepciÃ³n, Pagado, En AtenciÃ³n, Confirmado, Confirmado por WhatsApp, entre otros.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingBasicsFive">
+                    <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsFive" aria-expanded="false" aria-controls="collapseBasicsFive">
+                      Â¿Puedo agendar activos o mÃ¡quinas en vez de profesionales?
+                    </a>
+                  </div>
+                  <div id="collapseBasicsFive" class="accordion-collapse collapse" aria-labelledby="headingBasicsFive" data-bs-parent="#accordionFAQBasics">
+                    <div class="accordion-body">
+                      SÃ­, no solo puedes generar agendas de profesionales, sino tambiÃ©n de box, sillones, mÃ¡quinas de rayos u otros activos que definas.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingBasicsSix">
+                    <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsSix" aria-expanded="false" aria-controls="collapseBasicsSix">
+                      Â¿Puedo aperturar agenda a mÃ©dicos que no trabajan todos los dÃ­as?
+                    </a>
+                  </div>
+                  <div id="collapseBasicsSix" class="accordion-collapse collapse" aria-labelledby="headingBasicsSix" data-bs-parent="#accordionFAQBasics">
+                    <div class="accordion-body">
+                      SÃ­, la agenda puede ser utilizada de forma abierta o puedes aperturar agenda segÃºn contratos, horarios y tipos de citas de cada mÃ©dico.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-5">
+              <p class="fs-5">
+                Â¿Tienes mÃ¡s preguntas? Visita nuestra
+                <a href="../pe/faq" class="fw-bold">pÃ¡gina de preguntas frecuentes</a>
+                y resuelve todas tus inquietudes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-light">
+        <div class="container content-space-2">
+          <div class="w-md-75 w-lg-50 text-center mx-md-auto">
+            <div class="row justify-content-lg-between">
+              <div class="mb-5">
+                <span class="text-cap">BoletÃ­n Medinet</span>
+                <h2>EntÃ©rate de las novedades</h2>
+              </div>
+
+              <form>
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                  hbspt.forms.create({
+                    region: "na1",
+                    portalId: "21935835",
+                    formId: "3a5d3279-4775-4f13-a56d-22a8f843ad50"
+                  });
+                </script>
+              </form>
+
+              <p class="small">Puedes cancelar la suscripciÃ³n en cualquier momento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark">
+      <div class="container pb-1 pb-lg-5">
+        <div class="row content-space-t-2 mb-9">
+          <div class="col-12 col-lg-3 mb-7 mb-lg-0">
+            <div class="mb-5">
+              <a class="navbar-brand" href="../pe/" aria-label="Medinet">
+                <img class="navbar-brand-logo" src="../../assets/svg/logos/logo-medinet-white.svg" alt="Medinet">
+              </a>
+            </div>
+            <ul class="list-unstyled list-py-1">
+              <li><a class="link-sm link-light"><i class="bi bi-envelope me-1"></i> contacto@medinetapp.com</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm mb-7 mb-sm-0">
+            <h5 class="text-white mb-3"><a href="../pe/soluciones/" class="text-white">Soluciones</a></h5>
+            <ul class="list-unstyled list-py-1 mb-0">
+              <li><a class="link-sm link-light" href="../pe/soluciones/agenda-medica">Agenda mÃ©dica</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/fichas-clinicas">Historia clÃ­nica</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/cobranza-y-cuenta-medica">Cobranza y cuenta mÃ©dica</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/gestion-quirofano">GestiÃ³n de quirÃ³fano</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/gestion-camas">GestiÃ³n de camas</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/adquisicion-y-dispensacion">AdquisiciÃ³n y dispensaciÃ³n</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/reportes">Reportes</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/software-urgencia-hospitalaria">Urgencia hospitalaria</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/honorarios-medicos">Honorarios mÃ©dicos</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm mb-7 mb-sm-0">
+            <h5 class="text-white mb-3">Especialidades</h5>
+            <ul class="list-unstyled list-py-1 mb-0">
+              <li><a class="link-sm link-light" href="../pe/especialidades/software-para-oftalmologia">OftalmologÃ­a</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/software-para-psiquiatria">PsiquiatrÃ­a</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/software-para-clinica-estetica">EstÃ©tica</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/oncologia">OncologÃ­a</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/salud-ocupacional">Salud ocupacional</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/software-para-bariatrica">BariÃ¡trica</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm mb-7 mb-sm-0">
+            <h5 class="text-white mb-3">MetodologÃ­a</h5>
+            <ul class="list-unstyled list-py-1 mb-0">
+              <li><a class="link-sm link-light" href="../pe/faq">Preguntas frecuentes</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/implementacion">ImplementaciÃ³n</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/integraciones">Integraciones</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/migracion-de-datos">MigraciÃ³n de datos</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/seguridad">Seguridad</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/soporte">Soporte</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm">
+            <h5 class="text-white mb-3">Empresa</h5>
+            <ul class="list-unstyled list-py-1 mb-5">
+              <li><a class="link-sm link-light" href="../pe/empresa/nosotros">Sobre Medinet</a></li>
+              <li><a class="link-sm link-light" href="../pe/empresa/trabajo">Trabaja con nosotros</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col"><p class="text-white-70 small mb-0">Â© Medinet. 2025. Todos los derechos reservados.</p></div>
+          <div class="col-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item"><a class="btn btn-ghost-light btn-sm btn-icon" href="https://www.facebook.com/medinetappcl"><i class="bi-facebook"></i></a></li>
+              <li class="list-inline-item"><a class="btn btn-ghost-light btn-sm btn-icon" href="https://www.instagram.com/medinetapp/"><i class="bi-instagram"></i></a></li>
+              <li class="list-inline-item"><a class="btn btn-ghost-light btn-sm btn-icon" href="https://www.linkedin.com/company/medinetapp/"><i class="bi-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ========== END FOOTER ========== -->
+
+    <!-- JS -->
+    <script src="../../assets/js/vendor.min.js"></script>
+    <script src="../../assets/vendor/aos/dist/aos.js"></script>
+    <script src="../../assets/js/theme.min.js"></script>
+    <!-- fslightbox (para el video) -->
+    <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
+
+    <script>
+      (function () {
+        new HSHeader("#header").init();
+        new HSMegaMenu(".js-mega-menu", { desktop: { position: "left" } });
+        new HSShowAnimation(".js-animation-link");
+        HSBsValidation.init(".js-validate", {
+          onSubmit: (data) => { data.event.preventDefault(); alert("Submited"); }
+        });
+        AOS.init({ duration: 650, once: true });
+        new HsNavScroller(".js-nav-scroller");
+      })();
+    </script>
+  </body>
+</html>
+

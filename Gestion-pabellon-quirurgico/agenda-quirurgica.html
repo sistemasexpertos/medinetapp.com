@@ -1,0 +1,3048 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agenda Clínica Quirúrgica - Gestión de Citas y Recursos</title>
+  <meta name="description"
+    content="La agenda médica de Medinet centraliza la gestión de citas, horarios y recursos en un sistema intuitivo y personalizable. Organiza tus citas y optimiza el flujo de tus cirugias.">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://medinetapp.com/" />
+  <meta property="og:site_name" content="Medinet" />
+  <meta property="fb:app_id" content="" />
+
+  <link rel="shortcut icon" href="../assets/svg/logos/favicon-medinet.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/theme.min.css">
+  <link rel="stylesheet" href="../assets/css/vendor.min.css">
+  <link rel="stylesheet" href="../estilos/footer.css">
+  <link rel="stylesheet" href="../estilos/navbar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KH42KFM');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    /* Ajuste general para un contenedor específico */
+    .custom-container {
+      max-width: 80%;
+      /* Reduce un 20% el ancho */
+      margin: 0 auto;
+    }
+
+    /* Mantener tamaño original para dispositivos móviles */
+    @media (max-width: 576px) {
+      .custom-container {
+        max-width: 100%;
+        /* Sin cambios en móviles */
+      }
+    }
+  </style>
+
+
+  <style>
+    /* Estilo general del botón */
+    .btn-custom {
+      padding: 0.75rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
+    }
+
+    /* Ajuste del botón para dispositivos móviles */
+    @media (max-width: 768px) {
+      .btn-custom {
+        padding: 0.5rem 1.5rem;
+        /* Reduce el padding */
+        font-size: 0.9rem;
+        /* Reduce el tamaño de fuente */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH42KFM" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <section id="irrp9p" class="gjs-section">
+    <div id="i6y4k" class="gjs-container">
+      <div id="i5efq2" class="navbar">
+        <div data-gjs="navbar" id="ivpro" class="navbar-cnt">
+          <a href="/" class="navbar-brand" id="i2i6o">
+            <h1 id="ih1">Maxwell</h1>
+          </a>
+          <div id="iojx23" class="navbar-menu-toggle">
+            <div data-type-icon="" id="ic1c7s" class="gjs-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ioywh">
+                <path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" id="ig67l"></path>
+              </svg>
+            </div>
+          </div>
+          <div data-gjs="navbar-items" id="ijynh" class="navbar-items-c">
+            <nav id="i96ci" class="navbar-menu-nav">
+              <a id="ilink1" href="#about" class="nav-links">About</a>
+              <a id="ilink2" href="#services" class="nav-links">Service</a>
+              <a id="ilink3" href="#portfolio" class="nav-links">Portfolio</a>
+              <a id="ilink4" href="#resume" class="nav-links">Resume</a>
+              <a id="ilink5" href="#skills" class="nav-links">Skill</a>
+              <a id="ilink6" href="#blog" class="nav-links">Blog</a>
+              <a id="ilink7" href="../contacto" class="nav-links">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="medinet-navbar" aria-label="Medinet navbar" class="gjs-section">
+    <nav role="navigation" aria-label="Main navigation" id="iamr7" class="navbar">
+      <div class="navbar-container" id="ilfcb">
+        <div class="nav-left" id="i344j">
+          <a href="../">
+            <img
+              src="https://cdn.grapesjs.com/workspaces/cmhxptjkg1vmqhtj9atld96o3/assets/e4b04e76-b7e1-4c9e-aca3-fbc78c1787a3__logo-medinet.png"
+              alt="Medinet logo" id="iwn9xz" />
+          </a>
+        </div>
+        <div class="nav-center" id="i6ugl">
+          <ul role="menubar" aria-label="Primary" class="nav-links" id="ipz6n">
+            <!-- SOLUCIONES -->
+            <li data-dropdown="soluciones" tabindex="0" role="menuitem" aria-haspopup="true" aria-expanded="false"
+              id="io4li" class="nav-link dropdown">
+              <span id="ipxsin">Soluciones</span>
+              <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=16&amp;height=16"
+                alt="Abrir menú Soluciones" id="iofm6d" class="chev" />
+              <div id="dropdown-soluciones" role="menu" aria-label="Soluciones" class="dropdown-panel">
+                <div id="i7zxw-2" class="dropdown-columns">
+                  <div id="ibgpgh-2" class="new-dd-title">Módulos</div>
+                  <a href="../soluciones/agenda-medica" id="icdn4e-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="iuu3l4">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="in7ujm">
+                        <rect x="3" y="5" width="18" height="16" rx="2" id="ij7pcl"></rect>
+                        <line x1="8" y1="3" x2="8" y2="7" id="i7vhul"></line>
+                        <line x1="16" y1="3" x2="16" y2="7" id="i4klil"></line>
+                        <line x1="3" y1="10" x2="21" y2="10" id="i6cfsz"></line>
+                        <line x1="12" y1="13" x2="12" y2="19" id="icx7ui"></line>
+                        <line x1="9" y1="16" x2="15" y2="16" id="infnnj"></line>
+                      </svg>
+                    </span>
+                    Agenda médica
+                  </a>
+                  <a href="../soluciones/fichas-clinicas" id="i01wc4-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="ipbp8p">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="ir9ldj">
+                        <path d="M7 3h8a2 2 0 0 1 2 2v16l-4-2-4 2V5a2 2 0 0 1 2-2z" id="iln95l"></path>
+                        <line x1="9" y1="9" x2="15" y2="9" id="i5yrlz"></line>
+                        <line x1="9" y1="12" x2="15" y2="12" id="i0seiw"></line>
+                        <line x1="12" y1="15" x2="12" y2="18" id="ilxtes"></line>
+                        <line x1="10.5" y1="16.5" x2="13.5" y2="16.5" id="iacued"></line>
+                      </svg>
+                    </span>
+                    Ficha clínica
+                  </a>
+                  <a href="../soluciones/cobranza-y-cuenta-medica" id="ivbj76-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="i67k5h">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="i4rwji">
+                        <path d="M7 3h8a2 2 0 0 1 2 2v16l-4-2-4 2V5a2 2 0 0 1 2-2z" id="iodmqr"></path>
+                        <text x="11.5" y="12.5" font-size="8" text-anchor="middle" fill="currentColor"
+                          id="inqem5">$</text>
+                        <line x1="9" y1="8" x2="15" y2="8" id="ihazpm"></line>
+                      </svg>
+                    </span>
+                    Cobranza y cuenta médica
+                  </a>
+                  <a href="../soluciones/gestion-quirofano" id="ikdhfu-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="i2rdkn">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="iav6k6">
+                        <circle cx="12" cy="12" r="7" id="ib8hf7"></circle>
+                        <line x1="12" y1="9" x2="12" y2="15" id="ipdw0q"></line>
+                        <line x1="9" y1="12" x2="15" y2="12" id="i7vprk"></line>
+                      </svg>
+                    </span>
+                    Gestión de quirófano
+                  </a>
+                  <a href="../soluciones/gestion-camas" id="im2qzg-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="i8ii9k">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="iysl6w">
+                        <rect x="3" y="10" width="18" height="5" rx="1" id="ixypjg"></rect>
+                        <line x1="7" y1="10" x2="7" y2="7" id="iivm1u"></line>
+                        <line x1="17" y1="10" x2="17" y2="7" id="ii3nkg"></line>
+                        <line x1="3" y1="15" x2="21" y2="15" id="iyag0g"></line>
+                      </svg>
+                    </span>
+                    Gestión de camas
+                  </a>
+                  <a href="../soluciones/adquisicion-y-dispensacion" id="ikvzr9-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="iaoolv">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="ir4a63">
+                        <path d="M4 7l2-2h12l2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7z" id="i0xkn1"></path>
+                        <polyline points="12,9 12,13 15,11" id="im364v"></polyline>
+                      </svg>
+                    </span>
+                    Adquisición y dispensación
+                  </a>
+                  <a href="../soluciones/reportes" id="isx1ci-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="idj33u">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="iir7x1">
+                        <rect x="4" y="10" width="3" height="8" id="i0av9k"></rect>
+                        <rect x="10.5" y="7" width="3" height="11" id="i8umsp"></rect>
+                        <rect x="17" y="5" width="3" height="13" id="i66wfk"></rect>
+                      </svg>
+                    </span>
+                    Reportes
+                  </a>
+                  <a href="../soluciones/software-urgencia-hospitalaria" id="ivwtaa-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="ikfs9f">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="ike0v7">
+                        <circle cx="12" cy="12" r="7" id="ictk9j"></circle>
+                        <line x1="12" y1="9" x2="12" y2="15" id="icujhr"></line>
+                        <line x1="9" y1="12" x2="15" y2="12" id="inyqtn"></line>
+                      </svg>
+                    </span>
+                    Urgencia Hospitalaria
+                  </a>
+                </div>
+                <div id="iwyhb7-2">
+                  <div id="iuffh7-2" class="new-dd-title">Roles</div>
+                  <a href="../roles/director-medico" id="idlqm1-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="ikyegh">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="ikcfc9">
+                        <circle cx="12" cy="8" r="3" id="i4og2g"></circle>
+                        <path d="M6 20c0-3 3-5 6-5s6 2 6 5" id="iwezmr"></path>
+                        <path d="M9 14c1.5 1 2.5 1 3 3" id="i7fjea"></path>
+                        <circle cx="16.5" cy="16" r="1" id="im9b0q"></circle>
+                        <circle cx="7.5" cy="16" r="1" id="ilfm11"></circle>
+                      </svg>
+                    </span>
+                    Director médico
+                  </a>
+                  <a href="../roles/gerente-general" id="i5bzds-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="iyeztn">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="ik5d98">
+                        <circle cx="12" cy="8" r="3" id="iuv85f"></circle>
+                        <path d="M6 20c0-3 3-5 6-5s6 2 6 5" id="izb9zm"></path>
+                        <path d="M12 12l-2 3h4l-2-3z" id="i221oj"></path>
+                      </svg>
+                    </span>
+                    Gerente general (CEO)
+                  </a>
+                  <a href="../roles/gerente-finanzas" id="igfla9-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="i8pzn5">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="i3o5ad">
+                        <rect x="5" y="4" width="14" height="16" rx="2" id="igokkg"></rect>
+                        <line x1="8" y1="8" x2="10" y2="8" id="i7arz4"></line>
+                        <line x1="12" y1="8" x2="14" y2="8" id="icmtwk"></line>
+                        <line x1="8" y1="12" x2="10" y2="12" id="i30j6k"></line>
+                        <line x1="12" y1="12" x2="14" y2="12" id="ikehal"></line>
+                        <line x1="8" y1="16" x2="14" y2="16" id="ievhfk"></line>
+                      </svg>
+                    </span>
+                    Gerente de finanzas (CFO)
+                  </a>
+                  <a href="../roles/gerente-operaciones" id="iq16c3-2" class="dropdown-item">
+                    <span class="new-dd-icon" id="i3nids">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                        id="ioazt9">
+                        <circle cx="12" cy="12" r="4" id="ipzpjv"></circle>
+                        <path
+                          d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                          id="i0dr3h"></path>
+                      </svg>
+                    </span>
+                    Gerente de operaciones (COO)
+                  </a>
+                </div>
+              </div>
+        </div>
+        </li>
+
+        <!-- ESPECIALIDADES -->
+        <li data-dropdown="especialidades" tabindex="0" role="menuitem" aria-haspopup="true" aria-expanded="false"
+          id="ia10b" class="nav-link dropdown">
+          <span id="iglpc">Especialidades</span>
+          <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=16&amp;height=16"
+            alt="Abrir menú Especialidades" id="ijl1v" class="chev" />
+          <div id="dropdown-especialidades" role="menu" aria-label="Especialidades" class="dropdown-panel">
+            <div id="iup23-2" class="dropdown-columns">
+              <a href="../especialidades/software-para-oftalmologia" id="irozrp-2" class="dropdown-item">
+                <span class="new-dd-icon" id="i6a8f8">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="ihm55g">
+                    <circle cx="12" cy="12" r="8" id="i7xzpg"></circle>
+                    <circle cx="12" cy="12" r="3" id="ib1xtj"></circle>
+                  </svg>
+                </span>
+                Oftalmología
+              </a>
+              <a href="../especialidades/software-para-psiquiatria" id="iux1xy-2" class="dropdown-item">
+                <span class="new-dd-icon" id="i6bsj6">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="i69zhn">
+                    <path d="M12 7c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5z" id="io0fhm"></path>
+                    <path d="M9 9c1-2 5-2 6 0" id="i8psyb"></path>
+                    <path d="M4 20c0-4 4-7 8-7s8 3 8 7" id="ij3fwh"></path>
+                  </svg>
+                </span>
+                Psiquiatría
+              </a>
+              <a href="../especialidades/software-para-bariatrica" id="i0p6va-2" class="dropdown-item">
+                <span class="new-dd-icon" id="iijuhl">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="i5gm62">
+                    <rect x="6" y="9" width="12" height="8" rx="4" id="iavrx8"></rect>
+                    <path d="M6 12h12" id="izuucg"></path>
+                  </svg>
+                </span>
+                Bariátrica
+              </a>
+              <a href="../especialidades/software-gestion-centro-medico" id="ii5q9j-2" class="dropdown-item">
+                <span class="new-dd-icon" id="illec9">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="i88cgw">
+                    <rect x="5" y="8" width="14" height="12" id="ijlfgv"></rect>
+                    <rect x="9" y="11" width="6" height="5" id="i5vdum"></rect>
+                    <line x1="12" y1="5" x2="12" y2="8" id="i4r21b"></line>
+                    <line x1="8" y1="5" x2="16" y2="5" id="iq2yql"></line>
+                    <line x1="7" y1="11" x2="7" y2="13" id="itzuo4"></line>
+                    <line x1="17" y1="11" x2="17" y2="13" id="i8gb9s"></line>
+                    <line x1="12" y1="9" x2="12" y2="9" id="igik2g"></line>
+                  </svg>
+                </span>
+                Centros Médicos
+              </a>
+              <a href="../especialidades/software-para-clinica-estetica" id="iim6lh-2" class="dropdown-item">
+                <span class="new-dd-icon" id="ibucwp">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="iklh6z">
+                    <polygon points="12 3 14.5 9.5 21 10 16 14 17.5 20.5 12 17 6.5 20.5 8 14 3 10 9.5 9.5" id="i0rlhm">
+                    </polygon>
+                  </svg>
+                </span>
+                Estética
+              </a>
+              <a href="../especialidades/software-dental" id="iy5fj2-2" class="dropdown-item">
+                <span class="new-dd-icon" id="if2ftj">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="i0uk0i">
+                    <path d="M8 3c1 3 1 4 4 4s3-1 4-4c2 3 2 9-1 12-2 2-4 2-6 0C5 12 6 6 8 3z" id="ir5jbg"></path>
+                  </svg>
+                </span>
+                Dental
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- PABELLÓN -->
+        <li data-dropdown="pabellon" tabindex="0" role="menuitem" aria-haspopup="true" aria-expanded="false" id="iwa2g"
+          class="nav-link dropdown">
+          <span id="iebol">Pabellón</span>
+          <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=16&amp;height=16"
+            alt="Abrir menú Pabellón" id="iz52m" class="chev" />
+          <div id="dropdown-pabellon" role="menu" aria-label="Pabellón" class="dropdown-panel">
+            <div id="ifwld-2" class="dropdown-columns">
+              <a href="../gestion-pabellon-quirurgico/agenda-quirurgica" id="ilvnm4-2" class="dropdown-item">
+                <span class="new-dd-icon" id="ibjcag">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="id7rug">
+                    <rect x="3" y="5" width="18" height="16" rx="2" id="iak446"></rect>
+                    <line x1="8" y1="3" x2="8" y2="7" id="ik9gm8"></line>
+                    <line x1="16" y1="3" x2="16" y2="7" id="ie3akb"></line>
+                    <line x1="3" y1="10" x2="21" y2="10" id="i4vhmn"></line>
+                    <path d="M9 14l4 0" id="ik334u"></path>
+                    <path d="M14 15l3 2" id="id5932"></path>
+                  </svg>
+                </span>
+                Agenda quirúrgica
+              </a>
+              <a href="../gestion-pabellon-quirurgico/tabla-quirurgica" id="im5ngp-2" class="dropdown-item">
+                <span class="new-dd-icon" id="ixa5t7">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="irir3k">
+                    <rect x="4" y="10" width="16" height="4" rx="2" id="inmwnp"></rect>
+                    <line x1="6" y1="14" x2="6" y2="18" id="ibdzzr"></line>
+                    <line x1="18" y1="14" x2="18" y2="18" id="i4cz86"></line>
+                    <line x1="10" y1="10" x2="10" y2="8" id="ie630o"></line>
+                    <line x1="14" y1="10" x2="14" y2="8" id="ibc89m"></line>
+                  </svg>
+                </span>
+                Tabla quirúrgica
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- METODOLOGÍA -->
+        <li data-dropdown="metodologia" tabindex="0" role="menuitem" aria-haspopup="true" aria-expanded="false"
+          id="i0e3cg" class="nav-link dropdown">
+          <span id="imjvlf">Metodología</span>
+          <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=16&amp;height=16"
+            alt="Abrir menú Metodología" id="i9f2aj" class="chev" />
+          <div id="dropdown-metodologia" role="menu" aria-label="Metodología" class="dropdown-panel">
+            <div id="iutgx3-2" class="dropdown-columns">
+              <a href="../metodologia/implementacion" id="ipya89-2" class="dropdown-item">
+                <span class="new-dd-icon" id="i2fl7q">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="iqqera">
+                    <path d="M5 13l4 4L19 7" id="io0tmc"></path>
+                    <path d="M15 5l4 1-1 4" id="iumee9"></path>
+                  </svg>
+                </span>
+                Implementación
+              </a>
+              <a href="../metodologia/integraciones" id="ipjsue-2" class="dropdown-item">
+                <span class="new-dd-icon" id="iy0pjw">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="ih7fav">
+                    <path d="M9 3h6v6H9z" id="ix1xcy"></path>
+                    <path d="M3 15h6v6H3zM15 15h6v6h-6z" id="inbxrl"></path>
+                    <path d="M9 6l-3 9 9-3" id="iul7wi"></path>
+                  </svg>
+                </span>
+                Integraciones
+              </a>
+              <a href="../metodologia/migracion-de-datos" id="i28ocf-2" class="dropdown-item">
+                <span class="new-dd-icon" id="ihx37l">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="ioxr7i">
+                    <ellipse cx="7" cy="6" rx="4" ry="2" id="iogyw3"></ellipse>
+                    <path d="M3 6v6c0 1.1 1.8 2 4 2s4-.9 4-2V6" id="ihilse"></path>
+                    <ellipse cx="17" cy="14" rx="4" ry="2" id="ipkrvh"></ellipse>
+                    <path d="M13 14v4c0 1.1 1.8 2 4 2s4-.9 4-2v-4" id="ir5vi1"></path>
+                    <path d="M11 10l4 2" id="ifbiuw"></path>
+                  </svg>
+                </span>
+                Migración de datos
+              </a>
+              <a href="../metodologia/soporte" id="ijizyt-2" class="dropdown-item">
+                <span class="new-dd-icon" id="iztjpc">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="iozl95">
+                    <path d="M7 20a5 5 0 0 1 10 0" id="iyryo2"></path>
+                    <circle cx="12" cy="9" r="3" id="i1ekzs"></circle>
+                    <path d="M4 10v4M20 10v4" id="iu1kqs"></path>
+                  </svg>
+                </span>
+                Soporte
+              </a>
+              <a href="../metodologia/seguridad" id="il6pm4-2" class="dropdown-item">
+                <span class="new-dd-icon" id="iyc72k">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="iccq3k">
+                    <path d="M12 3l8 4v5c0 5-3.6 7.7-8 9-4.4-1.3-8-4-8-9V7l8-4z" id="isv8oe"></path>
+                    <path d="M12 9v6" id="i3orpi"></path>
+                    <path d="M10 11h4" id="ip8edj"></path>
+                  </svg>
+                </span>
+                Seguridad
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- EMPRESA -->
+        <li data-dropdown="empresa" tabindex="0" role="menuitem" aria-haspopup="true" aria-expanded="false"
+          id="i0e3cg-2" class="nav-link dropdown">
+          <span id="io96vl">Empresa</span>
+          <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=16&amp;height=16"
+            alt="Abrir menú Empresa" id="iyqmtz" class="chev" />
+          <div id="dropdown-empresa" role="menu" aria-label="Empresa" class="dropdown-panel">
+            <div id="iutgx3-2-2" class="dropdown-columns">
+              <a href="../empresa/nosotros" id="ifs9oq-2" class="dropdown-item">
+                <span class="new-dd-icon" id="icfqtg">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="i5mhzg">
+                    <circle cx="7" cy="10" r="2" id="i380hk"></circle>
+                    <circle cx="17" cy="10" r="2" id="idmpfe"></circle>
+                    <circle cx="12" cy="7" r="2" id="imenx7"></circle>
+                    <path d="M5 20c0-3 2-5 4-5M15 15c2 0 4 2 4 5M9 13c2-2 4-2 6 0" id="i531mq"></path>
+                  </svg>
+                </span>
+                Nosotros
+              </a>
+              <a href="../empresa/trabajo" id="iewinz-2" class="dropdown-item">
+                <span class="new-dd-icon" id="i1b2o1">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+                    id="i9rw1x">
+                    <rect x="7" y="7" width="10" height="8" rx="2" id="ikyfif"></rect>
+                    <path d="M7 7l2-3h6l2 3" id="ii4szu"></path>
+                    <line x1="10" y1="11" x2="14" y2="11" id="iwnx5k"></line>
+                  </svg>
+                </span>
+                Trabajo
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li role="menuitem" class="nav-link" id="i3vozq"></li>
+        </ul>
+      </div>
+
+      <!-- DERECHA: CTAs -->
+      <div class="nav-right" id="iys3xi">
+        <a href="../reunion" class="btn-primary" id="inaca5">Agenda una demo</a>
+        <a href="../contacto" class="btn-primary" id="i0l2as">Contactanos</a>
+
+        <!-- DERECHA: SELECTOR DE PAÍS + CTAs -->
+        <div class="nav-right" id="iys3xi">
+          <!-- Selector de país DESKTOP -->
+          <div class="country-switcher" id="countrySwitcherDesktop">
+            <button class="country-toggle" aria-haspopup="true" aria-expanded="false">
+              <span class="flag-icon">
+                <img src="https://flagcdn.com/w20/cl.png" alt="Chile" />
+              </span>
+              <span class="country-label">Chile</span>
+              <span class="chevron">▾</span>
+            </button>
+            <ul class="country-menu" aria-label="Seleccionar país">
+              <li>
+                <a href="../" data-country="cl">
+                  <span class="flag-icon">
+                    <img src="https://flagcdn.com/w20/cl.png" alt="Chile" />
+                  </span>
+                  Chile
+                </a>
+              </li>
+              <li>
+                <a href="../pe" data-country="pe">
+                  <span class="flag-icon">
+                    <img src="https://flagcdn.com/w20/pe.png" alt="Perú" />
+                  </span>
+                  Perú
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Toggle móvil -->
+        <div role="button" aria-label="Abrir menú" tabindex="0" id="ic68b4" class="mobile-menu-toggle">
+          <div class="bar" id="itlftf"></div>
+          <div class="bar" id="i1ui3b"></div>
+          <div class="bar" id="ifhbx1"></div>
+        </div>
+      </div>
+
+      <!-- MENÚ MÓVIL -->
+      <div aria-hidden="true" class="mobile-menu" id="i9pxqk">
+        <ul id="inz8jf">
+          <!-- Soluciones móvil -->
+          <li id="i7psti">
+            <button type="button" data-mobile-dropdown="soluciones" aria-expanded="false" id="iihjp9"
+              class="mobile-menu-btn">
+              Soluciones
+              <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=18&amp;height=18"
+                alt="Menu agenda medica" id="iyi55f" class="arrow-ic" />
+            </button>
+            <ul aria-hidden="true" id="ipg1zx" class="mobile-submenu">
+              <li id="iko5nu-2">
+                <a href="../soluciones/agenda-medica" id="i19fcu-2">
+                  <span class="new-dd-icon" id="ifwu4r">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="iofmey">
+                      <rect x="3" y="5" width="18" height="16" rx="2" id="iag4bs"></rect>
+                      <line x1="8" y1="3" x2="8" y2="7" id="iheopp"></line>
+                      <line x1="16" y1="3" x2="16" y2="7" id="iqqbo4"></line>
+                      <line x1="3" y1="10" x2="21" y2="10" id="izshcx"></line>
+                      <line x1="12" y1="13" x2="12" y2="19" id="izixcl"></line>
+                      <line x1="9" y1="16" x2="15" y2="16" id="i60wlf"></line>
+                    </svg>
+                  </span>
+                  Agenda médica
+                </a>
+              </li>
+              <li id="ixqd4c-2">
+                <a href="../soluciones/fichas-clinicas" id="id5mu2-2">
+                  <span class="new-dd-icon" id="ikjpzj">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="i8ltkw">
+                      <path d="M7 3h8a2 2 0 0 1 2 2v16l-4-2-4 2V5a2 2 0 0 1 2-2z" id="ij5zjj"></path>
+                      <line x1="9" y1="9" x2="15" y2="9" id="ihw68y"></line>
+                      <line x1="12" y1="12" x2="12" y2="15" id="ialkyh"></line>
+                      <line x1="10.5" y1="13.5" x2="13.5" y2="13.5" id="iouqan"></line>
+                    </svg>
+                  </span>
+                  Ficha clínica
+                </a>
+              </li>
+              <li id="ij3f8j-2">
+                <a href="../soluciones/cobranza-y-cuenta-medica" id="i8i06g-2">
+                  <span class="new-dd-icon" id="iqi73q">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="iryh7h">
+                      <path d="M7 3h8a2 2 0 0 1 2 2v16l-4-2-4 2V5a2 2 0 0 1 2-2z" id="ib24zy"></path>
+                      <text x="11.5" y="12.5" font-size="8" text-anchor="middle" fill="currentColor"
+                        id="im2fka">$</text>
+                    </svg>
+                  </span>
+                  Cobranza y cuenta médica
+                </a>
+              </li>
+              <li id="icalvg-2">
+                <a href="../soluciones/gestion-quirofano" id="ir0uvt-2">
+                  <span class="new-dd-icon" id="irfxlc">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="ipnxta">
+                      <circle cx="12" cy="12" r="7" id="ixv69h"></circle>
+                      <line x1="12" y1="9" x2="12" y2="15" id="i9grha"></line>
+                      <line x1="9" y1="12" x2="15" y2="12" id="i6jb3l"></line>
+                    </svg>
+                  </span>
+                  Gestión de quirófano
+                </a>
+              </li>
+              <li id="imsol1-2">
+                <a href="../soluciones/gestion-camas" id="iaynhg-2">
+                  <span class="new-dd-icon" id="iircts">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="i6cskl">
+                      <rect x="3" y="10" width="18" height="5" rx="1" id="iltzm3"></rect>
+                      <line x1="7" y1="10" x2="7" y2="7" id="ioou3k"></line>
+                      <line x1="17" y1="10" x2="17" y2="7" id="inkxod"></line>
+                    </svg>
+                  </span>
+                  Gestión de camas
+                </a>
+              </li>
+              <li id="imsol2-2">
+                <a href="../soluciones/adquisicion-y-dispensacion" id="ir8b8q-2">
+                  <span class="new-dd-icon" id="imx9sw">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="izvm1f">
+                      <path d="M4 7l2-2h12l2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7z" id="iy96ak"></path>
+                      <polyline points="12,9 12,13 15,11" id="ied5tz"></polyline>
+                    </svg>
+                  </span>
+                  Adquisición y dispensación
+                </a>
+              </li>
+              <li id="imsol3-2">
+                <a href="../soluciones/reportes" id="il7aep-2">
+                  <span class="new-dd-icon" id="ihgzfg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="ixow9e">
+                      <rect x="4" y="10" width="3" height="8" id="i73c74"></rect>
+                      <rect x="10.5" y="7" width="3" height="11" id="i9rwlg"></rect>
+                      <rect x="17" y="5" width="3" height="13" id="ih14jc"></rect>
+                    </svg>
+                  </span>
+                  Reportes
+                </a>
+              </li>
+              <li id="imsol4-2">
+                <a href="../soluciones/software-urgencia-hospitalaria" id="iounqi-2">
+                  <span class="new-dd-icon" id="im47ll">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="isahbr">
+                      <circle cx="12" cy="12" r="7" id="ij8fqm"></circle>
+                      <line x1="12" y1="9" x2="12" y2="15" id="ilbvda"></line>
+                      <line x1="9" y1="12" x2="15" y2="12" id="i6on3g"></line>
+                    </svg>
+                  </span>
+                  Urgencia Hospitalaria
+                </a>
+              </li>
+
+              <!-- Roles móvil dentro de Soluciones -->
+              <li id="imsol5-2">
+                <a href="../roles/director-medico" id="iy70kk-2">
+                  <span class="new-dd-icon" id="iomtjc">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="ia9zmh">
+                      <circle cx="12" cy="8" r="3" id="inr3ny"></circle>
+                      <path d="M6 20c0-3 3-5 6-5s6 2 6 5" id="i0scpt"></path>
+                      <circle cx="16.5" cy="16" r="1" id="i298in"></circle>
+                      <circle cx="7.5" cy="16" r="1" id="iprcjj"></circle>
+                    </svg>
+                  </span>
+                  Director médico
+                </a>
+              </li>
+              <li id="imsol6-2">
+                <a href="../roles/gerente-general" id="i1od1g-2">
+                  <span class="new-dd-icon" id="ibf77g">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="iatp29">
+                      <circle cx="12" cy="8" r="3" id="i73tae"></circle>
+                      <path d="M6 20c0-3 3-5 6-5s6 2 6 5" id="i3i7df"></path>
+                      <path d="M12 12l-2 3h4l-2-3z" id="i3gzok"></path>
+                    </svg>
+                  </span>
+                  Gerente general (CEO)
+                </a>
+              </li>
+              <li id="imsol7-2">
+                <a href="../roles/gerente-finanzas" id="ike7lk-2">
+                  <span class="new-dd-icon" id="i0qo2g">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="itf6cf">
+                      <rect x="5" y="4" width="14" height="16" rx="2" id="icuuwy"></rect>
+                      <line x1="8" y1="8" x2="10" y2="8" id="igf802"></line>
+                      <line x1="12" y1="8" x2="14" y2="8" id="i8w8ys"></line>
+                      <line x1="8" y1="12" x2="10" y2="12" id="id5ut8"></line>
+                      <line x1="12" y1="12" x2="14" y2="12" id="iqqnjl"></line>
+                      <line x1="8" y1="16" x2="14" y2="16" id="itkztx"></line>
+                    </svg>
+                  </span>
+                  Gerente de finanzas (CFO)
+                </a>
+              </li>
+              <li id="imsol8-2">
+                <a href="../roles/gerente-operaciones" id="i30n62-2">
+                  <span class="new-dd-icon" id="iryzql">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="ir0n5k">
+                      <circle cx="12" cy="12" r="4" id="iyexz5"></circle>
+                      <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"
+                        id="iv6zvr"></path>
+                    </svg>
+                  </span>
+                  Gerente de operaciones (COO)
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Especialidades móvil -->
+          <li id="i1ik5j">
+            <button type="button" data-mobile-dropdown="especialidades" aria-expanded="false" id="iakvyh"
+              class="mobile-menu-btn">
+              Especialidades
+              <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=18&amp;height=18"
+                alt="abrir menu especialidades" id="iq337w" class="arrow-ic" />
+            </button>
+            <ul aria-hidden="true" id="ip09sb" class="mobile-submenu">
+              <li id="idye2p-2">
+                <a href="../especialidades/software-para-oftalmologia" id="ilira2-2">
+                  <span class="new-dd-icon" id="iukjui">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="iodkpr">
+                      <circle cx="12" cy="12" r="8" id="i854fj"></circle>
+                      <circle cx="12" cy="12" r="3" id="iyh7mn"></circle>
+                    </svg>
+                  </span>
+                  Oftalmología
+                </a>
+              </li>
+              <li id="irx8gs-2">
+                <a href="../especialidades/software-para-psiquiatria" id="io1a4y-2">
+                  <span class="new-dd-icon" id="i4fy3k">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="iqox3p">
+                      <path d="M12 7c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5z" id="i4dejl"></path>
+                      <path d="M9 9c1-2 5-2 6 0" id="iyjqzx"></path>
+                      <path d="M4 20c0-4 4-7 8-7s8 3 8 7" id="i0v3yz"></path>
+                    </svg>
+                  </span>
+                  Psiquiatría
+                </a>
+              </li>
+              <li id="i0hgp1-2">
+                <a href="../especialidades/software-para-bariatrica" id="imxtkp-2">
+                  <span class="new-dd-icon" id="i7y7fj">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="i9qk8k">
+                      <rect x="6" y="9" width="12" height="8" rx="4" id="imy3lg"></rect>
+                      <path d="M6 12h12" id="ifc4ew"></path>
+                    </svg>
+                  </span>
+                  Bariátrica
+                </a>
+              </li>
+              <li id="ipkb75-2">
+                <a href="../especialidades/software-gestion-centro-medico" id="io8vak-2">
+                  <span class="new-dd-icon" id="i7911y">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="iqgg34">
+                      <rect x="5" y="8" width="14" height="12" id="imrdam"></rect>
+                      <rect x="9" y="11" width="6" height="5" id="iinyo1"></rect>
+                      <line x1="12" y1="5" x2="12" y2="8" id="ium6c6"></line>
+                      <line x1="8" y1="5" x2="16" y2="5" id="iruch9"></line>
+                    </svg>
+                  </span>
+                  Centros Médicos
+                </a>
+              </li>
+              <li id="is98do-2">
+                <a href="../especialidades/software-para-clinica-estetica" id="ijeibi-2">
+                  <span class="new-dd-icon" id="ir1mjc">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="i1fse6">
+                      <polygon points="12 3 14.5 9.5 21 10 16 14 17.5 20.5 12 17 6.5 20.5 8 14 3 10 9.5 9.5"
+                        id="i9wzr6"></polygon>
+                    </svg>
+                  </span>
+                  Estética
+                </a>
+              </li>
+              <li id="iq3fp5-2">
+                <a href="../especialidades/software-dental" id="icto43-2">
+                  <span class="new-dd-icon" id="i8j0em">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="i55a3z">
+                      <path d="M8 3c1 3 1 4 4 4s3-1 4-4c2 3 2 9-1 12-2 2-4 2-6 0C5 12 6 6 8 3z" id="icoy0y"></path>
+                    </svg>
+                  </span>
+                  Dental
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Pabellón móvil -->
+          <li id="im1pw5">
+            <button type="button" data-mobile-dropdown="pabellon" aria-expanded="false" id="iy2g0g"
+              class="mobile-menu-btn">
+              Pabellón
+              <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=18&amp;height=18"
+                alt="abrir menu pabellon" id="iauv62" class="arrow-ic" />
+            </button>
+            <ul aria-hidden="true" id="i4v3qt" class="mobile-submenu">
+              <li id="i9uifk-2">
+                <a href="../gestion-pabellon-quirurgico/agenda-quirurgica" id="igpvkm-2">
+                  <span class="new-dd-icon" id="inqiwf">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="ihlnyz">
+                      <rect x="3" y="5" width="18" height="16" rx="2" id="ijfdxq"></rect>
+                      <line x1="8" y1="3" x2="8" y2="7" id="inw6nd"></line>
+                      <line x1="16" y1="3" x2="16" y2="7" id="imqn37"></line>
+                      <line x1="3" y1="10" x2="21" y2="10" id="itdu3m"></line>
+                      <path d="M9 14l4 0" id="ilrb6w"></path>
+                      <path d="M14 15l3 2" id="igqy39"></path>
+                    </svg>
+                  </span>
+                  Agenda quirúrgica
+                </a>
+              </li>
+              <li id="ie34uf-2">
+                <a href="../gestion-pabellon-quirurgico/tabla-quirurgica" id="ivojzl-2">
+                  <span class="new-dd-icon" id="iouurn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="iriflh">
+                      <rect x="4" y="10" width="16" height="4" rx="2" id="ind6h6"></rect>
+                      <line x1="6" y1="14" x2="6" y2="18" id="i8s7k4"></line>
+                      <line x1="18" y1="14" x2="18" y2="18" id="if687e"></line>
+                      <line x1="10" y1="10" x2="10" y2="8" id="iyvr4a"></line>
+                      <line x1="14" y1="10" x2="14" y2="8" id="isl9i7"></line>
+                    </svg>
+                  </span>
+                  Tabla quirúrgica
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Metodología móvil -->
+          <li id="idz13x">
+            <button type="button" data-mobile-dropdown="metodologia" aria-expanded="false" id="iv3tx7"
+              class="mobile-menu-btn">
+              Metodología
+              <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=18&amp;height=18"
+                alt="abrir menu metodologia" id="imoi75" class="arrow-ic" />
+            </button>
+            <ul aria-hidden="true" id="ice7yu" class="mobile-submenu">
+              <li id="iwstkv-2">
+                <a href="../metodologia/implementacion" id="i10r2k-2">
+                  <span class="new-dd-icon" id="iuc3j8">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="i0ibt8">
+                      <path d="M5 13l4 4L19 7" id="isj7s5"></path>
+                      <path d="M15 5l4 1-1 4" id="ii7cxj"></path>
+                    </svg>
+                  </span>
+                  Implementación
+                </a>
+              </li>
+              <li id="idakoj-2">
+                <a href="../metodologia/integraciones" id="i2sv3n-2">
+                  <span class="new-dd-icon" id="i6nbj3">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="ixa8dk">
+                      <path d="M9 3h6v6H9z" id="ipzdc7"></path>
+                      <path d="M3 15h6v6H3zM15 15h6v6h-6z" id="ilragy"></path>
+                      <path d="M9 6l-3 9 9-3" id="i69ba8"></path>
+                    </svg>
+                  </span>
+                  Integraciones
+                </a>
+              </li>
+              <li id="ipa2uo-2">
+                <a href="../metodologia/migracion-de-datos" id="ithr5g-2">
+                  <span class="new-dd-icon" id="ioptfo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="iird9l">
+                      <ellipse cx="7" cy="6" rx="4" ry="2" id="iizi12"></ellipse>
+                      <path d="M3 6v6c0 1.1 1.8 2 4 2s4-.9 4-2V6" id="iwle3i"></path>
+                      <ellipse cx="17" cy="14" rx="4" ry="2" id="iamuk7"></ellipse>
+                      <path d="M13 14v4c0 1.1 1.8 2 4 2s4-.9 4-2v-4" id="iac2jv"></path>
+                      <path d="M11 10l4 2" id="iezwal"></path>
+                    </svg>
+                  </span>
+                  Migración de datos
+                </a>
+              </li>
+              <li id="ibe68q-2">
+                <a href="../metodologia/soporte" id="iu7ae5-2">
+                  <span class="new-dd-icon" id="i4i004">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="ih2258">
+                      <path d="M7 20a5 5 0 0 1 10 0" id="i2fvu3"></path>
+                      <circle cx="12" cy="9" r="3" id="illrpp"></circle>
+                      <path d="M4 10v4M20 10v4" id="i3p5vj"></path>
+                    </svg>
+                  </span>
+                  Soporte
+                </a>
+              </li>
+              <li id="i9met1-2">
+                <a href="../metodologia/seguridad" id="ihs68b-2">
+                  <span class="new-dd-icon" id="ixpv7x">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="ituror">
+                      <path d="M12 3l8 4v5c0 5-3.6 7.7-8 9-4.4-1.3-8-4-8-9V7l8-4z" id="isgbgc"></path>
+                      <path d="M12 9v6" id="infvvc"></path>
+                      <path d="M10 11h4" id="i8cx1e"></path>
+                    </svg>
+                  </span>
+                  Seguridad
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Empresa móvil -->
+          <li id="ileuht">
+            <button type="button" data-mobile-dropdown="empresa" aria-expanded="false" id="iempbtn"
+              class="mobile-menu-btn">
+              Empresa
+              <img src="https://api.iconify.design/mdi:chevron-down.svg?color=currentColor&amp;width=18&amp;height=18"
+                alt="abrir menu empresa" id="iempic" class="arrow-ic" />
+            </button>
+            <ul aria-hidden="true" id="iempmenu" class="mobile-submenu">
+              <li id="iemp1-2">
+                <a href="../empresa/nosotros" id="ibdwtt-2">
+                  <span class="new-dd-icon" id="ikmgts">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="i2lozj">
+                      <circle cx="7" cy="10" r="2" id="i1aazf"></circle>
+                      <circle cx="17" cy="10" r="2" id="iwq3qp"></circle>
+                      <circle cx="12" cy="7" r="2" id="itievf"></circle>
+                      <path d="M5 20c0-3 2-5 4-5M15 15c2 0 4 2 4 5M9 13c2-2 4-2 6 0" id="i10pmi"></path>
+                    </svg>
+                  </span>
+                  Nosotros
+                </a>
+              </li>
+              <li id="iemp2-2">
+                <a href="../empresa/trabajo" id="i0bflm-2">
+                  <span class="new-dd-icon" id="ipwa8t">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="i2h5oc">
+                      <rect x="7" y="7" width="10" height="8" rx="2" id="i5r8li"></rect>
+                      <path d="M7 7l2-3h6l2 3" id="i8rspk"></path>
+                      <line x1="10" y1="11" x2="14" y2="11" id="i3m2qz"></line>
+                    </svg>
+                  </span>
+                  Trabajo
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CTA inferiores móvil -->
+          <li id="i7x5pi">
+            <a href="../contacto" id="iqsmdc" class="btn-link">Contactanos</a>
+          </li>
+          <li id="i6l8di">
+            <a href="../reunion" id="ie7wep" class="btn-primary">Agenda una demo</a>
+          </li>
+
+
+          <!-- SELECTOR DE PAÍS EN MÓVIL -->
+          <li class="mobile-country-switcher">
+            <button type="button" class="country-toggle" aria-haspopup="true" aria-expanded="false">
+              <span class="flag-icon">
+                <img src="https://flagcdn.com/w20/cl.png" alt="Chile" />
+              </span>
+              <span class="country-label">Chile</span>
+              <span class="chevron">▾</span>
+            </button>
+            <ul class="country-menu" aria-label="Seleccionar país">
+              <li>
+                <a href="../" data-country="cl">
+                  <span class="flag-icon">
+                    <img src="https://flagcdn.com/w20/cl.png" alt="Chile" />
+                  </span>
+                  Chile
+                </a>
+              </li>
+              <li>
+                <a href="../pe" data-country="pe">
+                  <span class="flag-icon">
+                    <img src="https://flagcdn.com/w20/pe.png" alt="Perú" />
+                  </span>
+                  Perú
+                </a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+
+
+
+
+    <main id="content" role="main">
+
+      <!-- Hero -->
+      <!-- Hero -->
+      <!-- Hero -->
+      <div class="overflow-hidden">
+        <div class="container content-space-t-4 content-space-b-3">
+          <div class="row justify-content-lg-between align-items-md-center">
+            <div class="col-lg-6 mb-7 mb-md-0">
+              <!-- Heading -->
+              <div class="mb-5 ps-lg-5">
+                <h1 class="display-3 fw-bold text-dark mb-4">Gestiona tus cirugías con la mejor agenda clínica</h1>
+                <p class="lead text-muted" style="line-height: 1.8;">
+                  Gestiona <span class="fw-semibold text-primary">horarios, recursos</span> y estados de citas desde una
+                  <span class="fw-semibold text-primary">única plataforma</span>,
+                  simplifica la planificación quirúrgica y mejora la experiencia de tus pacientes.
+                </p>
+                <div class="d-grid d-sm-flex gap-3 mt-4">
+                  <a class="btn btn-primary btn-lg rounded-pill px-5" href="../contacto"
+                    style="background-color: #7098FF; border-color: #7098FF; transition: background-color 0.3s ease;">
+                    Solicita una demostración personalizada
+                  </a>
+                  <a class="btn btn-link text-primary fw-semibold" href="../gestion-pabellon-quirurgico/">
+                    Gestión de pabellón quirúrgico <i class="bi-chevron-right small ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- End Text Column -->
+
+            <!-- Image Column -->
+            <div class="col-lg-6 text-center">
+              <div class="position-relative">
+                <img class="img-fluid rounded-2" src="../assets/svg/img/ipq/HERO.png" alt="Image Description"
+                  style="max-width: 80%; height: auto; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;"
+                  onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                <div class="position-absolute top-0 end-0 w-100 h-100 bg-soft-primary rounded-2 zi-n1 mt-5 me-n5"></div>
+              </div>
+            </div>
+            <!-- End Image Column -->
+          </div>
+          <!-- End Row -->
+        </div>
+      </div>
+      <!-- End Hero -->
+
+
+      <!-- End Hero -->
+      <div class="container-fluid content-space-2 content-space-lg-3 bg-light">
+        <div class="container-fluid content-space-2 content-space-lg-3">
+          <!-- Heading -->
+          <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+            <h1>Beneficios del Software</h1>
+          </div>
+          <!-- End Heading -->
+
+          <div class="row justify-content-lg-center">
+            <div class="col-md-6 col-lg-5 mb-3 mb-md-5 mb-lg-7">
+              <!-- Icon Blocks -->
+              <div class="d-flex pe-md-5">
+                <div class="flex-shrink-0">
+                  <div class="svg-icon text-primary">
+                    <svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.61 95.61">
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #377dff;
+                          }
+
+                          .cls-2 {
+                            fill: #c3d8ff;
+                          }
+                        </style>
+                      </defs>
+                      <g id="Capa_1-2" data-name="Capa 1">
+                        <g>
+                          <path class="cls-2"
+                            d="M90.33,0H5.28C2.38,0,0,2.38,0,5.28v85.04c0,2.91,2.38,5.28,5.28,5.28h85.04c2.91,0,5.28-2.38,5.28-5.28V5.28c0-2.91-2.38-5.28-5.28-5.28ZM27.1,89.12H7.53v-15.16h19.57v15.16ZM27.1,62.97H7.53v-15.16h19.57v15.16ZM27.1,36.82H7.53v-15.16h19.57v15.16ZM57.59,89.12h-19.57v-15.16h19.57v15.16ZM57.59,62.97h-19.57v-15.16h19.57v15.16ZM57.59,36.82h-19.57v-15.16h19.57v15.16ZM88.08,89.12h-19.57v-15.16h19.57v15.16ZM88.08,62.97h-19.57v-15.16h19.57v15.16ZM88.08,36.82h-19.57v-15.16h19.57v15.16Z" />
+                          <rect class="cls-1" x="0" y="0" width="95.61" height="26.21" rx="5.28" ry="5.28" />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="flex-grow-1 ms-3">
+                  <h4>Agenda quirúrgica</h4>
+                  <p>Organiza procedimientos con datos precisos de pacientes, recursos y horarios</p>
+                </div>
+              </div>
+              <!-- End Icon Blocks -->
+            </div>
+
+            <div class="col-md-6 col-lg-5 mb-3 mb-md-5 mb-lg-7">
+              <!-- Icon Blocks -->
+              <div class="d-flex ps-md-5">
+                <div class="flex-shrink-0">
+                  <div class="svg-icon text-primary">
+                    <svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.52 94.5">
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #377dff;
+                          }
+
+                          .cls-2 {
+                            fill: #c3d8ff;
+                          }
+                        </style>
+                      </defs>
+                      <g id="Capa_1-2" data-name="Capa 1">
+                        <g>
+                          <path class="cls-2"
+                            d="M4.31.07L89.71,0c3.31-.14,5.71,3.02,4.49,6.09-10.93,11.74-22.74,22.74-33.9,34.31l-.03,49.34c.16,3.8-3.95,6.15-7.05,3.86l-18.11-18.17-.58-1.21c-.6-11.22-.04-22.55-.29-33.81L.89,6.93C-1.33,4.24.9.05,4.31.07Z" />
+                          <g>
+                            <circle class="cls-1" cx="28.35" cy="41.77" r="23.31" />
+                            <path class="cls-2"
+                              d="M42.32,37.17h-8.45c-.5,0-.91-.41-.91-.91v-8.45c0-.5-.41-.91-.91-.91h-7.4c-.5,0-.91.41-.91.91v8.45c0,.5-.41.91-.91.91h-8.45c-.5,0-.91.41-.91.91v7.4c0,.5.41.91.91.91h8.45c.5,0,.91.41.91.91v8.45c0,.5.41.91.91.91h7.4c.5,0,.91-.41.91-.91v-8.45c0-.5.41-.91.91-.91h8.45c.5,0,.91-.41.91-.91v-7.4c0-.5-.41-.91-.91-.91Z" />
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="flex-grow-1 ms-3">
+                  <h4>Filtros personalizados por unidad médica</h4>
+                  <p>Adapta la operación según las necesidades de tu clínica o centro medico.</p>
+                </div>
+              </div>
+              <!-- End Icon Blocks -->
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="col-md-6 col-lg-5 mb-3 mb-md-5 mb-lg-7">
+              <!-- Icon Blocks -->
+              <div class="d-flex pe-md-5">
+                <div class="flex-shrink-0">
+                  <div class="svg-icon text-primary">
+                    <svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.01 95.61">
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #377dff;
+                          }
+
+                          .cls-2 {
+                            fill: #3d80fe;
+                          }
+
+                          .cls-3 {
+                            fill: #c3d8ff;
+                          }
+                        </style>
+                      </defs>
+                      <g id="Capa_1-2" data-name="Capa 1">
+                        <g>
+                          <path class="cls-3"
+                            d="M76.01,27.1v62.36c0,3.4-2.75,6.15-6.15,6.15H6.16c-3.4,0-6.16-2.76-6.16-6.16V6.15C0,2.75,2.75,0,6.15,0h42.3l27.56,27.1Z" />
+                          <path class="cls-1" d="M48.45,0v22.64c0,2.22,1.78,4.04,4.01,4.07l23.56.38" />
+                          <g>
+                            <path class="cls-2"
+                              d="M35.88,36.86c1.22-.12,3.42-.15,4.6,0,3.85.5,9.67,3.8,9.21,8.32-.18,1.82-2.47,3.04-4.2,2.51s-1.58-3.86-5.01-5.08c-1.66-.6-2.69-.81-4.6-.58-2.87.35-5.63,3.37-3.19,5.78,1.12,1.11,2.17.76,3.19,1.12,1.66.58,3.41.74,4.6,1.15,3.74,1.29,9.16,3.11,10.11,7.44,1.67,7.63-2.69,12.44-10.11,13.27-1.26.14-3.32.11-4.6,0-3.79-.34-7.68-2.13-9.69-5.55-1.86-3.16-1.76-8.67,2.99-7.01,1.64.57,1.58,5.41,6.71,6.81,2.07.57,2.28.79,4.6,0,3.06-1.05,4.92-4.2,2.64-6.96-1.02-1.23-1.76-.76-2.64-1.1-1.83-.7-3.37-.71-4.6-1.15-6.07-2.15-12.48-5.25-9.91-13.07,1.23-3.75,6.33-5.56,9.91-5.91Z" />
+                            <path class="cls-2"
+                              d="M40.48,56.99v8.05c-2.32.79-2.53.57-4.6,0v-9.2c1.24.44,2.77.46,4.6,1.15Z" />
+                            <path class="cls-2"
+                              d="M40.48,42.61v7.48c-1.19-.41-2.94-.57-4.6-1.15v-6.9c1.91-.23,2.94-.02,4.6.58Z" />
+                            <path class="cls-2" d="M40.48,70.8c1.55,9.92-6.14,9.96-4.6,0,1.28.11,3.35.14,4.6,0Z" />
+                            <path class="cls-2" d="M40.48,36.86c-1.18-.15-3.38-.12-4.6,0-1.47-9.17,6.08-9.14,4.6,0Z" />
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="flex-grow-1 ms-3">
+                  <h4>Presupuestos automatizados</h4>
+                  <p>Calcula costos según la orden quirúrgica y modalidad de aseguramiento, eliminando doble digitación.
+                  </p>
+                </div>
+              </div>
+              <!-- End Icon Blocks -->
+            </div>
+
+            <div class="col-md-6 col-lg-5 mb-3 mb-md-5 mb-lg-7">
+              <!-- Icon Blocks -->
+              <div class="d-flex ps-md-5">
+                <div class="flex-shrink-0">
+                  <div class="svg-icon text-primary">
+                    <svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.14 95.45">
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #c3d7fe;
+                          }
+
+                          .cls-2 {
+                            fill: #3b80fe;
+                          }
+
+                          .cls-3 {
+                            fill: #3d80fe;
+                          }
+
+                          .cls-4 {
+                            fill: #c3d8ff;
+                          }
+                        </style>
+                      </defs>
+                      <g id="Capa_1-2" data-name="Capa 1">
+                        <g>
+                          <g>
+                            <path class="cls-1"
+                              d="M58.32,60.81l-.06-.07-.67-.7.31-.34c-1.3-.96-2.05-1.55-2.66-2.1-.87-.78-1.44-1.46-2.86-2.96l-.25-.26c-1.37-1.44-4.94-5.52-6.69-3.37-1.39,1.71,1.02,3.19.89,3.97-.2,1.16-8.99,8.21-10.1,10.32-1.48,2.82,1.18,4.85.76,6.5-.33,1.31-6.08,5.44-7.08,7.6-1.02,2.22.8,3.48,2.86,2.41,1.81-.94,5.95-6.65,7.25-6.97,1.65-.42,3.68,2.24,6.5.76,2.11-1.1,9.16-9.89,10.32-10.1.78-.14,2.23,2.27,3.96.89,2.08-1.67-1.28-4.43-2.49-5.59ZM44.72,72.06c-.55.15-3.79-.69-4.02-.92-.23-.23-1.07-3.47-.92-4.02.2-.71,4.05-4.5,4.94-4.26.67.17,4.49,4.07,4.26,4.96-.1.39-3.85,4.12-4.27,4.24Z" />
+                            <path class="cls-2"
+                              d="M57.9,59.71c-3.27-2.41-3.1-2.53-5.76-5.32.85-.75,4.18-3.51,4.39-4.3.3-1.15-.95-1.41-1.21-2.22-.61-1.94,1.1-3.39,2.82-2.38.5.29,7.91,7.71,8.21,8.21.9,1.52.18,2.96-1.58,2.95-1.43,0-1.87-1.48-2.6-1.35-.53.09-3.67,3.65-4.27,4.41Z" />
+                            <path class="cls-2"
+                              d="M40.7,71.14c-.23-.23-1.07-3.47-.92-4.02.19-.71,4.05-4.5,4.95-4.26.66.18,4.49,4.07,4.25,4.96-.1.39-3.85,4.12-4.26,4.24-.55.15-3.79-.69-4.02-.92Z" />
+                            <polygon class="cls-2"
+                              points="52.13 54.39 57.89 59.71 57.59 60.05 55.24 57.61 52.38 54.65 52.13 54.39" />
+                          </g>
+                          <path class="cls-4"
+                            d="M92.43,31.92H2.71C1.21,31.92,0,33.14,0,34.63v58.11c0,1.5,1.21,2.71,2.71,2.71h89.72c1.5,0,2.71-1.21,2.71-2.71v-58.11c0-1.5-1.21-2.71-2.71-2.71ZM88.18,85.92c0,1.5-1.21,2.71-2.71,2.71H9.67c-1.5,0-2.71-1.21-2.71-2.71v-44.47c0-1.5,1.21-2.71,2.71-2.71h75.8c1.5,0,2.71,1.21,2.71,2.71v44.47Z" />
+                          <g>
+                            <path class="cls-3"
+                              d="M41.63,7.53c-.75-.47-1.62-.71-2.59-.71-.69,0-1.34.13-1.92.39-.59.26-1.1.64-1.52,1.14-.43.5-.76,1.14-1.01,1.91s-.37,1.65-.37,2.61c0,1.97.46,3.49,1.38,4.56.92,1.06,2.08,1.6,3.49,1.6.58,0,1.17-.12,1.78-.36-.37-.27-.82-.55-1.37-.82-.55-.27-.93-.48-1.13-.63-.2-.15-.3-.36-.3-.63,0-.23.1-.44.29-.62.19-.18.41-.27.64-.27.71,0,1.9.59,3.57,1.78.48-.55.84-1.21,1.07-1.96.23-.76.34-1.63.34-2.63,0-1.25-.2-2.34-.61-3.26-.41-.92-.98-1.62-1.74-2.09Z" />
+                            <path class="cls-3"
+                              d="M89.1,0H6.04C2.71,0,0,2.71,0,6.04v13.95c0,3.34,2.71,6.04,6.04,6.04h83.06c3.34,0,6.04-2.71,6.04-6.04V6.04c0-3.34-2.71-6.04-6.04-6.04ZM48.08,22.7c-.23.25-.51.37-.84.37-.26,0-.59-.09-.96-.26-.38-.17-.82-.42-1.33-.75-.51-.33-1.07-.71-1.68-1.15-1.13.58-2.52.87-4.16.87-1.33,0-2.53-.21-3.58-.64-1.06-.42-1.94-1.04-2.66-1.84-.72-.8-1.26-1.75-1.62-2.85-.36-1.1-.54-2.3-.54-3.59s.19-2.53.57-3.62.93-2.03,1.64-2.81c.72-.77,1.59-1.36,2.62-1.77,1.03-.41,2.2-.61,3.51-.61,1.78,0,3.3.36,4.58,1.08,1.28.72,2.24,1.75,2.89,3.08.66,1.33.98,2.89.98,4.68,0,2.72-.74,4.88-2.21,6.47.51.34,1.06.68,1.66,1,.6.32,1,.58,1.19.77.19.19.29.46.29.81,0,.25-.11.5-.34.75ZM62.36,21.05c-.13.23-.32.41-.56.54-.24.13-.51.2-.82.2-.33,0-.6-.07-.83-.2s-.41-.31-.55-.51c-.14-.2-.4-.6-.78-1.18l-3.02-4.75-3.2,4.89c-.25.39-.43.66-.53.82-.11.16-.23.31-.38.46-.15.15-.32.27-.53.35-.2.09-.44.13-.71.13-.42,0-.77-.13-1.05-.39-.28-.26-.41-.63-.41-1.12,0-.58.28-1.28.85-2.12l3.84-5.6-3.23-4.98c-.3-.48-.53-.9-.68-1.25s-.23-.68-.23-1,.15-.62.44-.88c.29-.26.65-.39,1.07-.39.48,0,.86.14,1.13.43.27.28.64.81,1.12,1.58l2.57,4.16,2.75-4.16c.23-.35.42-.65.58-.9s.31-.46.46-.62c.15-.16.31-.29.5-.37s.4-.12.64-.12c.44,0,.79.13,1.07.39.28.26.42.57.42.93,0,.52-.3,1.23-.9,2.13l-3.38,5.05,3.64,5.6c.33.49.56.9.71,1.22.15.32.22.63.22.92,0,.27-.07.52-.2.75Z" />
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="flex-grow-1 ms-3">
+                  <h4>Tablas quirúrgicas centralizada</h4>
+                  <p>Gestiona la información del paciente, órdenes quirúrgicas y procedimientos desde una interfaz
+                    centralizada.</p>
+                </div>
+              </div>
+              <!-- End Icon Blocks -->
+            </div>
+
+            <div class="w-100"></div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <!-- Features -->
+      <div class="container content-space-2 content-space-lg-3">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="pe-lg-6">
+              <div class="mb-4">
+                <h2 class="h1 text-primary">Control total de tu agenda</h2>
+              </div>
+
+              <div class="mb-4">
+                <p class="lead text-muted">
+                  Configura la agenda quirúrgica según la <span class="fw-semibold text-primary">sucursal</span>, <span
+                    class="fw-semibold text-primary">unidad</span>, o <span
+                    class="fw-semibold text-primary">especialidad médica</span>.
+                </p>
+              </div>
+
+              <!-- Lista con puntos destacados -->
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Personalización por sucursal y unidad médica.
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Filtros avanzados para organizar horarios específicos.
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Un sistema de colores intuitivo para identificar el estado de cada cita quirúrgica.
+                </li>
+              </ul>
+
+              <a class="link" href="../reunion">Agenda una asesoría personalizada <i
+                  class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-lg-7">
+            <div class="text-center">
+              <img class="img-fluid mx-auto d-block rounded"
+                style="max-width: 100%; height: auto;  transition: transform 0.3s ease;"
+                src="../assets/svg/img/ipq/AGENDA prueba (1).png" alt="Image Description"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            </div>
+          </div>
+        </div>
+        <!-- End Col -->
+      </div>
+
+
+
+      <div class="container content-space-2 content-space-lg-3">
+        <div class="row align-items-lg-center">
+          <!-- Imagen primero (Izquierda) -->
+          <div class="col-lg-7">
+            <div class="text-center">
+              <img class="img-fluid mx-auto d-block rounded"
+                style="max-width: 100%; height: auto;  transition: transform 0.3s ease;"
+                src="../assets/svg/img/ipq/colores prueba (1).png" alt="Image Description"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            </div>
+          </div>
+          <!-- Fin Imagen -->
+
+          <!-- Contenido después (Derecha) -->
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="ps-lg-6">
+              <div class="mb-4">
+                <h2 class="h1 text-primary">Adapta la agenda a las necesidades de tu clínica</h2>
+              </div>
+
+              <div class="mb-4">
+                <p class="lead text-muted">
+                  Configura la agenda quirúrgica según la <span class="fw-semibold text-primary">sucursal</span>, <span
+                    class="fw-semibold text-primary">unidad</span>, o <span
+                    class="fw-semibold text-primary">especialidad médica</span>.
+                </p>
+              </div>
+
+              <!-- Lista con puntos destacados -->
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Personalización por sucursal y unidad médica.
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Filtros avanzados para organizar horarios específicos.
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Un sistema de colores intuitivo para identificar el estado de cada cita quirúrgica.
+                </li>
+              </ul>
+
+              <a class="link" href="../reunion">Agenda una asesoría personalizada <i
+                  class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+          <!-- Fin Contenido -->
+        </div>
+        <!-- Fin Row -->
+      </div>
+      <div class="container content-space-2 content-space-lg-3">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="pe-lg-6">
+              <div class="mb-4">
+                <h2 class="h1 text-primary">Mantén informados a tus pacientes</h2>
+              </div>
+
+              <div class="mb-4">
+                <p class="lead text-muted">
+                  Automatiza <span class="fw-semibold text-primary">recordatorios, confirmaciones y
+                    reprogramaciones</span> para una mejor experiencia del paciente.
+                </p>
+              </div>
+
+              <!-- Lista con puntos destacados -->
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Notificaciones automáticas por correo y WhatsApp.
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  IA en WhatsApp para entender lenguaje coloquial.
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Confirmaciones 24 horas antes de cada cita.
+                </li>
+              </ul>
+
+              <a class="link" href="../reunion">Agenda una asesoría personalizada <i
+                  class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-lg-7">
+            <div class="text-center">
+              <img class="img-fluid mx-auto d-block rounded"
+                style="max-width: 100%; height: auto;  transition: transform 0.3s ease;"
+                src="../assets/svg/img/ipq/RECORDATORIO.png" alt="Image Description"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEGUNDA SECCIÓN -->
+      <div class="container content-space-2 content-space-lg-3">
+        <div class="row align-items-lg-center">
+          <!-- Imagen primero (Izquierda) -->
+          <div class="col-lg-7">
+            <div class="text-center">
+              <img class="img-fluid mx-auto d-block rounded"
+                style="max-width: 100%; height: auto;  transition: transform 0.3s ease;"
+                src="../assets/svg/img/ipq/Proceso quiorurgico automatizado.png" alt="Image Description"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            </div>
+          </div>
+          <!-- Fin Imagen -->
+
+          <!-- Contenido después (Derecha) -->
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="ps-lg-6">
+              <div class="mb-4">
+                <h2 class="h1 text-primary">Automatiza y agiliza cada procedimiento quirúrgico</h2>
+              </div>
+
+              <div class="mb-4">
+                <p class="lead text-muted">
+                  Asegura un flujo de trabajo eficiente con herramientas diseñadas para mejorar <span
+                    class="fw-semibold text-primary">la experiencia del personal médico</span> como del paciente.
+                </p>
+              </div>
+
+              <!-- Lista con puntos destacados -->
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Estados de cirugía configurables: Controla en qué etapa se encuentra cada procedimiento.
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Vistas personalizadas por unidad médica: Ajusta la agenda según las necesidades de cada especialidad.
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Consentimientos digitales: Adjunta y gestiona documentos de consentimiento informado.
+                </li>
+              </ul>
+
+              <a class="link" href="../reunion">Agenda una asesoría personalizada <i
+                  class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+          <!-- Fin Contenido -->
+        </div>
+        <!-- Fin Row -->
+      </div>
+      <div class="bg-light">
+        <div class="container content-space-2 content-space-lg-3 ">
+          <div class="row align-items-lg-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+              <div class="pe-lg-6">
+                <div class="mb-4">
+                  <h2 class="h1 text-primary">Monitoreo en tiempo real y personalización avanzada</h2>
+                </div>
+
+                <div class="mb-4">
+                  <p class="lead text-muted">
+                    Medinet permite <span class="fw-semibold text-primary">personalizar</span> la agenda quirúrgica
+                    según las <span class="fw-semibold text-primary">características</span> de cada centro medico.
+                  </p>
+                </div>
+
+                <!-- Lista con puntos destacados -->
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center mb-3">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Filtros avanzados: Encuentra citas según sucursal, unidad médica, profesional o tipo de cirugía.
+                  </li>
+                  <li class="d-flex align-items-center mb-3">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Código de colores intuitivo: Identifica el estado de cada cirugía de manera visual.
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Historial de modificaciones: Registra todos los cambios realizados en la agenda para mayor
+                    trazabilidad.
+                  </li>
+                </ul>
+
+                <a class="link" href="../reunion">Agenda una asesoría personalizada <i
+                    class="bi-chevron-right small ms-1"></i></a>
+              </div>
+            </div>
+            <!-- End Col -->
+
+            <div class="col-lg-7">
+              <div class="text-center">
+                <img class="img-fluid mx-auto d-block rounded"
+                  style="max-width: 100%; height: auto;  transition: transform 0.3s ease;"
+                  src="../assets/svg/img/ipq/Vistasqx2.png" alt="Image Description"
+                  onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+              </div>
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+      </div>
+      <!-- Feature Nav -->
+      <div class="container content-space-1">
+        <!-- Heading -->
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+          <h2 class="text-primary">Automatización de costos y gestión de pabellones</h2>
+        </div>
+        <!-- End Heading -->
+
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 order-lg-2 mb-7 mb-lg-0">
+            <!-- Nav Scroller -->
+            <div class="js-nav-scroller hs-nav-scroller-horizontal">
+              <span class="hs-nav-scroller-arrow-prev" style="display: none;">
+                <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                  <i class="bi-chevron-left"></i>
+                </a>
+              </span>
+
+              <span class="hs-nav-scroller-arrow-next" style="display: none;">
+                <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                  <i class="bi-chevron-right"></i>
+                </a>
+              </span>
+
+              <!-- Nav Pills -->
+              <ul class="nav nav-lg nav-pills nav-pills-shadow flex-lg-column gap-lg-1 p-3" id="featuresTab"
+                role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" href="#featuresOne" id="featuresOne-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresOne" role="tab" aria-controls="featuresOne" aria-selected="true"
+                    style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Cálculo automático de costos</h4>
+                        <p class="text-body mb-0">Presupuestos precisos por cirugía y seguro</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" href="#featuresTwo" id="featuresTwo-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresTwo" role="tab" aria-controls="featuresTwo" aria-selected="false"
+                    style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Eliminación de doble digitación</h4>
+                        <p class="text-body mb-0">Evita errores y retrabajos en presupuestos</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" href="#featuresThree" id="featuresThree-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresThree" role="tab" aria-controls="featuresThree" aria-selected="false"
+                    style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Administración de múltiples salas</h4>
+                        <p class="text-body mb-0">Optimiza la asignación de pabellones</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- Nueva Lista 1 -->
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" href="#featuresFour" id="featuresFour-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresFour" role="tab" aria-controls="featuresFour" aria-selected="false"
+                    style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Bloqueo de horarios no disponibles</h4>
+                        <p class="text-body mb-0">Evita errores en la programación quirúrgica</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- Nueva Lista 2 -->
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" href="#featuresFive" id="featuresFive-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresFive" role="tab" aria-controls="featuresFive" aria-selected="false"
+                    style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Registro de tiempos quirúrgicos</h4>
+                        <p class="text-body mb-0">Informes de costos y uso de pabellones</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- End Nav Pills -->
+            </div>
+            <!-- End Nav Scroller -->
+          </div>
+          <!-- End Col -->
+
+          <div class="col-lg-7 order-lg-1">
+            <!-- Tab Content -->
+            <div class="tab-content" id="featuresTabContent">
+              <div class="tab-pane fade show active" id="featuresOne" role="tabpanel" aria-labelledby="featuresOne-tab">
+                <figure class="">
+                  <div class="">
+                    <img class="device-browser-img" src="../assets/svg/img/ipq/Vistasqx2 (1).png"
+                      alt="Image Description">
+                  </div>
+                </figure>
+              </div>
+
+              <div class="tab-pane fade" id="featuresTwo" role="tabpanel" aria-labelledby="featuresTwo-tab">
+                <figure class="">
+                  <div class="">
+                    <img class="device-browser-img" src="../assets/svg/img/ipq/DOBLEDIGITACIONMEDICO.png"
+                      alt="Image Description">
+                  </div>
+                </figure>
+              </div>
+
+              <div class="tab-pane fade" id="featuresThree" role="tabpanel" aria-labelledby="featuresThree-tab">
+                <figure class="">
+                  <div class="">
+                    <img class="device-browser-img" src="../assets/svg/img/ipq/Multiples salas(2).png"
+                      alt="Image Description">
+                  </div>
+                </figure>
+              </div>
+
+              <!-- Nueva Sección de Contenido 1 -->
+              <div class="tab-pane fade" id="featuresFour" role="tabpanel" aria-labelledby="featuresFour-tab">
+                <figure class="">
+                  <div class="">
+                    <img class="device-browser-img" src="../assets/svg/img/ipq/Horarios).png" alt="Image Description">
+                  </div>
+                </figure>
+              </div>
+
+              <!-- Nueva Sección de Contenido 2 -->
+              <div class="tab-pane fade" id="featuresFive" role="tabpanel" aria-labelledby="featuresFive-tab">
+                <figure class="">
+                  <div class="">
+                    <img class="device-browser-img" src="../assets/svg/img/ipq/procesosqx.png" alt="Image Description">
+                  </div>
+                </figure>
+              </div>
+
+            </div>
+            <!-- End Tab Content -->
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+      <div class="container content-space-2 content-space-lg-3">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="pe-lg-6">
+              <div class="mb-4">
+                <h2 class="h1 text-primary">Gestión Integral de la Tabla Quirúrgica</h2>
+              </div>
+
+              <div class="mb-4">
+                <p class="lead text-muted">
+                  Optimiza el uso y <span class="fw-semibold text-primary">arriendo de pabellones</span> con una
+                  administración eficiente.
+                </p>
+              </div>
+
+              <!-- Lista con puntos destacados -->
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Programación de Cirugías y Equipos Quirúrgicos: Facilita la reserva y asignación de quirófanos para
+                  médicos externos y equipos internos.
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Preparación de pabellones: Gestiona la logística previa a cada cirugía, asegurando que el pabellón
+                  cuente con los insumos, equipamiento y personal requerido para su disponibilidad inmediata.
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Visualización Centralizada: Consulta la programación de múltiples pabellones en una sola vista para
+                  evitar solapamientos.
+                </li>
+              </ul>
+
+              <a class="link" href="../reunion">Agenda una asesoría personalizada <i
+                  class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-lg-7">
+            <div class="text-center">
+              <img class="img-fluid mx-auto d-block rounded"
+                style="max-width: 100%; height: auto;  transition: transform 0.3s ease;"
+                src="../assets/svg/img/ipq/Pabellones.conectados.png" alt="Image Description"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-light">
+        <div class="container content-space-2 content-space-lg-3">
+          <div class="row align-items-lg-center">
+            <!-- Imagen primero (Izquierda) -->
+            <div class="col-lg-7">
+              <div class="text-center">
+                <img class="img-fluid mx-auto d-block rounded"
+                  style="max-width: 100%; height: auto;  transition: transform 0.3s ease;"
+                  src="../assets/svg/img/ipq/Comunicacion.paciente.png" alt="Image Description"
+                  onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+              </div>
+            </div>
+            <!-- Fin Imagen -->
+
+            <!-- Contenido después (Derecha) -->
+            <div class="col-lg-5 mb-5 mb-lg-0">
+              <div class="ps-lg-6">
+                <div class="mb-4">
+                  <h2 class="h1 text-primary">Comunicación y Experiencia del Paciente</h2>
+                </div>
+
+                <div class="mb-4">
+                  <p class="lead text-muted">
+                    Mantén a los pacientes informados en <span class="fw-semibold text-primary">cada etapa</span> del
+                    proceso quirúrgico.
+                  </p>
+                </div>
+
+                <!-- Lista con puntos destacados -->
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center mb-3">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Notificaciones Automáticas: Envía recordatorios y confirmaciones por correo y WhatsApp para reducir
+                    ausencias.
+                  </li>
+                  <li class="d-flex align-items-center mb-3">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Gestión de Consentimientos: Facilita la firma digital o física de documentos clave sin retrasos
+                    administrativos.
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Alertas de Reprogramación: Informa cambios de agenda en tiempo real para minimizar cancelaciones.
+                  </li>
+                </ul>
+
+                <a class="link" href="../reunion">Agenda una asesoría personalizada <i
+                    class="bi-chevron-right small ms-1"></i></a>
+              </div>
+            </div>
+            <!-- Fin Contenido -->
+          </div>
+        </div>
+      </div>
+      <div class="container content-space-2 content-space-lg-3">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="pe-lg-6">
+              <div class="mb-4">
+                <h2 class="h1 text-primary">Automatización y Eficiencia en Procesos Quirúrgicos</h2>
+              </div>
+
+              <div class="mb-4">
+                <p class="lead text-muted">
+                  Adapta cada procedimiento y <span class="fw-semibold text-primary">maximiza</span> la eficiencia
+                  operativa
+                </p>
+              </div>
+
+              <!-- Lista con puntos destacados -->
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Flujos de Trabajo Configurables: Adapta y gestiona cada etapa del procedimiento según la especialidad
+                  médica.
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Vistas Personalizadas por Unidad: Ajusta la agenda quirúrgica según cada unidad o especialidad para
+                  mayor eficiencia
+                </li>
+              </ul>
+              <a class="link" href="../reunion">Agenda una asesoría personalizada <i
+                  class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-lg-7">
+            <div class="text-center">
+              <img class="img-fluid mx-auto d-block rounded"
+                style="max-width: 100%; height: auto;  transition: transform 0.3s ease;"
+                src="../assets/svg/img/ipq/Automatizacion.pabellon.png" alt="Image Description"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            </div>
+          </div>
+        </div>
+        <!-- End Col -->
+      </div>
+
+      <!-- Fin Row -->
+
+      <div class="container custom-container content-space-1">
+        <!-- Heading -->
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+          <h2 class="display-3 fw-bold text-primary">Integración de Módulos Clínicos y Administrativos</h2>
+        </div>
+        <!-- End Heading -->
+
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 order-lg-2 mb-7 mb-lg-0">
+            <!-- Nav Scroller -->
+            <div class="js-nav-scroller hs-nav-scroller-horizontal">
+              <!-- Nav Pills -->
+              <ul class="nav nav-lg nav-pills nav-pills-shadow flex-lg-column gap-lg-1 p-3" id="featuresTabUnique"
+                role="tablist">
+                <!-- Tab 1 -->
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" href="#featuresOneUnique" id="featuresOneUnique-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresOneUnique" role="tab" aria-controls="featuresOneUnique"
+                    aria-selected="true" style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Módulo de Presupuestos</h4>
+                        <p class="text-body mb-0">Facilita la elaboración y seguimiento de presupuestos quirúrgicos con
+                          precisión.</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- Tab 2 -->
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" href="#featuresTwoUnique" id="featuresTwoUnique-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresTwoUnique" role="tab" aria-controls="featuresTwoUnique"
+                    aria-selected="false" style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Órdenes Médicas</h4>
+                        <p class="text-body mb-0">Emite y centraliza indicaciones médicas en un solo lugar.</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- Tab 3 -->
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" href="#featuresThreeUnique" id="featuresThreeUnique-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresThreeUnique" role="tab" aria-controls="featuresThreeUnique"
+                    aria-selected="false" style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Datos de Admisión</h4>
+                        <p class="text-body mb-0">Accede al historial del paciente antes de la cirugía.</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- Tab 4 -->
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" href="#featuresFourUnique" id="featuresFourUnique-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresFourUnique" role="tab" aria-controls="featuresFourUnique"
+                    aria-selected="false" style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Gestión de Insumos</h4>
+                        <p class="text-body mb-0">Controla el uso y disponibilidad de recursos médicos.</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- Tab 5 -->
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" href="#featuresFiveUnique" id="featuresFiveUnique-tab" data-bs-toggle="tab"
+                    data-bs-target="#featuresFiveUnique" role="tab" aria-controls="featuresFiveUnique"
+                    aria-selected="false" style="min-width: 25rem;">
+                    <div class="d-flex align-items-center align-items-lg-start">
+                      <div class="flex-grow-1 ms-3">
+                        <h4 class="mb-1 text-primary">Cuenta Médica Automática</h4>
+                        <p class="text-body mb-0">Consolida costos y optimiza la facturación postoperatoria.</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- End Nav Pills -->
+            </div>
+            <!-- End Nav Scroller -->
+          </div>
+          <!-- End Col -->
+
+          <div class="col-lg-7 order-lg-1">
+            <!-- Tab Content -->
+            <div class="tab-content" id="featuresTabContentUnique">
+              <!-- Tab 1 Content -->
+              <div class="tab-pane fade show active" id="featuresOneUnique" role="tabpanel"
+                aria-labelledby="featuresOneUnique-tab">
+                <img class="device-browser-img" src="../assets/svg/img/ipq/seguimiento de presupuesto.png"
+                  alt="Módulo de Presupuestos">
+              </div>
+              <!-- Tab 2 Content -->
+              <div class="tab-pane fade" id="featuresTwoUnique" role="tabpanel" aria-labelledby="featuresTwoUnique-tab">
+                <img class="device-browser-img" src="../assets/svg/img/ipq/ordenesmedicas.png" alt="Órdenes Médicas">
+              </div>
+              <!-- Tab 3 Content -->
+              <div class="tab-pane fade" id="featuresThreeUnique" role="tabpanel"
+                aria-labelledby="featuresThreeUnique-tab">
+                <img class="device-browser-img" src="../assets/svg/img/ipq/Registro paciente.png"
+                  alt="Datos de Admisión">
+              </div>
+              <!-- Tab 4 Content -->
+              <div class="tab-pane fade" id="featuresFourUnique" role="tabpanel"
+                aria-labelledby="featuresFourUnique-tab">
+                <img class="device-browser-img" src="../assets/svg/img/ipq/insumos.png" alt="Gestión de Insumos">
+              </div>
+              <!-- Tab 5 Content -->
+              <div class="tab-pane fade" id="featuresFiveUnique" role="tabpanel"
+                aria-labelledby="featuresFiveUnique-tab">
+                <img class="device-browser-img" src="../assets/svg/img/ipq/cuenta medica.png"
+                  alt="Cuenta Médica Automática">
+              </div>
+            </div>
+            <!-- End Tab Content -->
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+
+
+
+      <div class="container content-space-2 content-space-lg-3">
+        <div class="row align-items-lg-center">
+          <!-- Imagen primero (Izquierda) -->
+          <div class="col-lg-7">
+            <div class="text-center">
+              <img class="img-fluid mx-auto d-block rounded"
+                style="max-width: 100%; height: auto;  transition: transform 0.3s ease;"
+                src="../assets/svg/img/ipq/Seguridad.png" alt="Image Description"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+            </div>
+          </div>
+          <!-- Fin Imagen -->
+
+          <!-- Contenido después (Derecha) -->
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="ps-lg-6">
+              <div class="mb-4">
+                <h2 class="h1 text-primary">Seguridad y Accesibilidad</h2>
+              </div>
+
+              <div class="mb-4">
+                <p class="lead text-muted">
+                  <span class="fw-semibold text-primary">Optimiza</span> el control de horarios y <span
+                    class="fw-semibold text-primary">facilita</span> el acceso a la información.
+                </p>
+              </div>
+
+              <!-- Lista con puntos destacados -->
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Bloqueos automáticos de horarios: Evita errores en la programación con restricciones predefinidas.
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  IA en WhatsApp para entender lenguaje coloquial.
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                  Interfaz intuitiva y adaptable: Facilita el uso para todo el equipo con una plataforma accesible y
+                  personalizable.
+                </li>
+              </ul>
+
+              <a class="link" href="../reunion">Agenda una asesoría personalizada <i
+                  class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+          <!-- Fin Contenido -->
+        </div>
+        <!-- Fin Row -->
+      </div>
+      <!-- Step -->
+      <div class="container-fluid content-space-b-2 content-space-b-lg-3 bg-light">
+        <div class="row text-center align-items-center" style="padding-top: 60px;"> <!-- Se agregó padding-top -->
+          <div class="col-sm-4 d-flex flex-column justify-content-center align-items-center">
+            <small class="text-cap text-primary">Pacientes</small>
+            <h4 class="display-5">2.500.000</h4>
+            <p>Atendidos cada año y subiendo</p>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-sm-4 d-flex flex-column justify-content-center align-items-center">
+            <small class="text-cap text-primary">Profesionales</small>
+            <h4 class="display-5">30.000</h4>
+            <p>Utilizan nuestros softwares</p>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-sm-4 d-flex flex-column justify-content-center align-items-center">
+            <small class="text-cap text-primary">Registros clínicos</small>
+            <h4 class="display-5">4.000.000</h4>
+            <p>A través de nuestras fichas clínicas</p>
+          </div>
+          <!-- End Col -->
+        </div>
+      </div>
+
+      <div class="container content-space-2 content-space-lg-3">
+        <!-- Heading -->
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+          <h2>Contrata solo el módulo o intégralo con otros sistemas según tus necesidades</h2>
+        </div>
+        <!-- End Heading -->
+
+        <!-- Step -->
+        <ul class="step step-md step-centered">
+          <li class="step-item">
+            <div class="step-content-wrapper">
+              <span class="step-icon step-icon-soft-primary">1</span>
+              <div class="step-content">
+                <h3>Módulo independiente</h3>
+                <p>Se vende por separado.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="step-item">
+            <div class="step-content-wrapper">
+              <span class="step-icon step-icon-soft-primary">2</span>
+              <div class="step-content">
+                <h3>Módulo integrado con Medinet</h3>
+                <p>Adquiere la Agenda Quirúrgica como parte del sistema completo de Medinet para una experiencia
+                  totalmente unificada.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="step-item">
+            <div class="step-content-wrapper">
+              <span class="step-icon step-icon-soft-primary">3</span>
+              <div class="step-content">
+                <h3>Módulo integrado a otros sistemas</h3>
+                <p>Integra la Agenda Quirúrgica con tus sistemas externos para una gestión unificada y eficiente.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- End Step -->
+      </div>
+      <!-- End Step -->
+      <!-- End Feature Nav -->
+      <div id="featuresSection" class="container-fluid content-space-2 content-space-lg-3 bg-soft-primary">
+        <!-- Heading -->
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+          <h2 class="h1">¿Por qué Medinet?</h2>
+          <p>En Medinet, no solo somos un software, somos tu aliado tecnológico. Contamos con un equipo dedicado
+            específicamente a atender tus necesidades y requerimientos, asegurando que siempre tengas el soporte
+            necesario.</p>
+        </div>
+        <!-- End Heading -->
+
+        <div class="row gx-3">
+          <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+            <!-- Card -->
+            <a class="card card-sm card-transition h-100">
+              <div class="card-body">
+                <span class="svg-icon text-primary mb-3">
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.87 178.87">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #4871b7;
+                        }
+
+                        .cls-2 {
+                          fill: #fff;
+                        }
+
+                        .cls-3 {
+                          fill: #c5d7f0;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Capa_1-2" data-name="Capa_1">
+                      <g>
+                        <path class="cls-2"
+                          d="M15.73,73.77C7.3,73.5,0,80.77,0,89.43c0,8.66,7.29,15.93,15.73,15.67,8.42.22,15.68-6.99,15.71-15.58.03-8.71-7.23-15.98-15.71-15.75ZM89.45,52.43c-5.39-.07-9.63,2.22-12.88,6.4-4.73,6.08-4.1,15.07,1.22,20.58,2.75,2.84,6.1,4.29,9.85,5.07-9.33.78-17.02,4.69-22.91,12.03-6.02,7.51-7.29,16.27-6.63,25.49.18,2.56,2.43,4.45,5.02,4.46,8.78.03,17.56-.02,26.33-.04,8.78.02,17.56.07,26.34.04,2.65,0,5.01-2.02,4.99-4.64-.04-4.4,0-8.89-.87-13.16-2.39-11.59-12.44-22.73-28.33-24.17,0-.09,0-.17.01-.26,3.89-.38,7.02-2.21,9.69-5,4.24-4.44,5.45-11.44,2.92-17.2-2.6-5.91-8.51-9.76-14.73-9.6ZM89.44,147.48c-3.54-.02-7.08-.1-10.62-.03-2.85.05-5.06,2.29-5.08,5.15-.05,7.03-.05,14.05,0,21.08.02,2.84,2.25,5.11,5.08,5.16,3.54.06,7.08-.02,10.62-.03,3.54.02,7.08.1,10.62.03,2.85-.05,5.05-2.28,5.08-5.16.05-7.03.05-14.05,0-21.08-.02-2.88-2.22-5.11-5.08-5.16-3.54-.07-7.08.02-10.62.03ZM133.37,154.64c2.75-2.21,5.41-4.19,7.9-6.36,7.98-6.99,14.26-15.29,18.86-24.85,1.39-2.89.38-5.99-2.32-7.29-2.64-1.27-5.57-.2-7.07,2.59-.22.41-.41.84-.62,1.25-5.18,10.14-12.4,18.52-21.72,25.08-.35.25-.73.44-1.26.75.16-1.8.29-3.36.45-4.92.34-3.33-1.51-5.88-4.59-6.3-2.78-.37-5.41,1.69-5.79,4.82-.62,5.2-1.12,10.41-1.56,15.63-.22,2.62,1.02,4.5,3.47,5.45,4.87,1.89,9.75,3.75,14.66,5.53,2.83,1.03,5.69-.33,6.73-3.02,1.03-2.67-.24-5.59-3-6.76-1.33-.57-2.71-1.04-4.16-1.6ZM154.73,45.26c-3.44-3.94-6.65-7.93-10.2-11.59-6.09-6.27-13.22-11.18-21.11-14.94-3.39-1.62-7.11.17-7.72,3.65-.44,2.54.83,4.65,3.67,6.05,10.11,4.99,18.45,12.08,25.1,21.16.45.62.87,1.27,1.47,2.13-1.94-.18-3.5-.31-5.06-.47-3.32-.34-5.88,1.53-6.28,4.61-.36,2.77,1.71,5.4,4.84,5.77,5.2.62,10.41,1.12,15.63,1.55,2.61.22,4.48-1.03,5.44-3.49,1.87-4.81,3.7-9.65,5.47-14.5,1.08-2.94-.24-5.83-3-6.88-2.75-1.04-5.62.29-6.81,3.19-.52,1.29-1,2.59-1.44,3.75ZM32.9,127.64c.12-.15.25-.31.37-.46,1.54.13,3.07.25,4.61.4,3.49.33,6.05-1.54,6.39-4.67.31-2.86-1.83-5.36-5.1-5.74-5.03-.57-10.07-1.07-15.11-1.5-2.86-.25-4.78,1.04-5.81,3.74-1.79,4.66-3.55,9.34-5.29,14.02-1.13,3.05.09,5.98,2.89,7.08,2.79,1.1,5.68-.28,6.89-3.3.5-1.25.99-2.51,1.56-3.96.5.68.85,1.14,1.18,1.61,7.86,10.95,17.84,19.4,29.97,25.28,2.81,1.36,5.86.41,7.19-2.19,1.35-2.62.34-5.61-2.4-7.12-.41-.22-.83-.43-1.24-.64-6.5-3.27-12.41-7.39-17.45-12.63-3.04-3.16-5.78-6.6-8.65-9.92ZM45.63,24.26c-.58.45-.93.73-1.3.99-5.69,4.01-10.76,8.69-15.22,14.03-4.15,4.98-7.63,10.39-10.43,16.24-.9,1.87-.83,3.73.36,5.46,1.16,1.67,2.81,2.43,4.82,2.2,2.15-.24,3.53-1.54,4.46-3.46,3.9-8.05,9.21-15.06,15.91-20.98,2.28-2.02,4.74-3.83,7.5-6.03-.18,2.12-.31,3.67-.45,5.21-.32,3.4,1.45,5.89,4.52,6.34,2.83.41,5.47-1.7,5.85-4.93.61-5.14,1.1-10.29,1.54-15.44.22-2.62-1.01-4.53-3.43-5.48-4.87-1.9-9.75-3.74-14.65-5.54-2.83-1.03-5.7.28-6.75,2.96-1.08,2.74.23,5.66,3.09,6.85,1.29.53,2.6.99,4.19,1.59Z" />
+                        <path class="cls-3"
+                          d="M101.31,0c3.02,1.39,3.98,3.78,3.89,7.03-.17,6.16-.04,12.33-.05,18.5,0,3.81-2.12,5.91-5.94,5.91-3.26,0-6.51-.03-9.77-.05,0-10.46,0-20.92,0-31.38h11.88Z" />
+                        <path class="cls-3"
+                          d="M89.43,0c0,10.46,0,20.92,0,31.38-3.55.02-7.1.1-10.64.03-2.84-.05-5.05-2.32-5.07-5.19-.05-6.98-.02-13.96-.01-20.94,0-2.68,1.69-4.15,3.84-5.29h11.88Z" />
+                        <path class="cls-3"
+                          d="M163.16,73.77c6.71-.19,13.2,4.63,15.03,11.14.2.7.46,1.39.69,2.08v5.24c-.57,1.43-1.02,2.92-1.74,4.27-2.96,5.58-7.63,8.46-13.97,8.6,0-10.44,0-20.89,0-31.33Z" />
+                        <path class="cls-1"
+                          d="M89.44,126.43c-8.78.02-17.56.07-26.33.04-2.59,0-4.84-1.9-5.02-4.46-.66-9.22.61-17.99,6.63-25.49,5.89-7.34,13.58-11.25,22.91-12.03.6.04,1.21.07,1.81.11,0,13.95,0,27.89,0,41.84Z" />
+                        <path class="cls-1"
+                          d="M89.44,126.43c0-13.95,0-27.89,0-41.84.71-.03,1.41-.07,2.12-.1,15.89,1.44,25.94,12.58,28.33,24.17.88,4.27.83,8.76.87,13.16.02,2.63-2.34,4.64-4.99,4.64-8.78.03-17.56-.02-26.34-.04Z" />
+                        <path class="cls-1"
+                          d="M133.37,154.64c1.46.55,2.83,1.03,4.16,1.6,2.75,1.17,4.02,4.09,3,6.76-1.04,2.69-3.9,4.05-6.73,3.02-4.91-1.78-9.79-3.64-14.66-5.53-2.45-.95-3.69-2.83-3.47-5.45.44-5.22.94-10.43,1.56-15.63.37-3.13,3.01-5.19,5.79-4.82,3.08.41,4.93,2.97,4.59,6.3-.16,1.56-.29,3.12-.45,4.92.53-.31.92-.51,1.26-.75,9.32-6.56,16.53-14.94,21.72-25.08.21-.41.4-.84.62-1.25,1.49-2.79,4.43-3.86,7.07-2.59,2.69,1.3,3.71,4.4,2.32,7.29-4.6,9.56-10.88,17.86-18.86,24.85-2.49,2.18-5.14,4.16-7.9,6.36Z" />
+                        <path class="cls-1"
+                          d="M154.73,45.26c.44-1.16.91-2.46,1.44-3.75,1.18-2.89,4.06-4.23,6.81-3.19,2.76,1.04,4.07,3.93,3,6.88-1.77,4.85-3.6,9.69-5.47,14.5-.96,2.46-2.83,3.71-5.44,3.49-5.22-.43-10.43-.93-15.63-1.55-3.13-.37-5.2-3-4.84-5.77.4-3.08,2.96-4.95,6.28-4.61,1.56.16,3.12.29,5.06.47-.59-.86-1.01-1.51-1.47-2.13-6.66-9.08-15-16.17-25.1-21.16-2.84-1.4-4.12-3.51-3.67-6.05.61-3.48,4.33-5.27,7.72-3.65,7.89,3.77,15.02,8.68,21.11,14.94,3.56,3.66,6.76,7.65,10.2,11.59Z" />
+                        <path class="cls-1"
+                          d="M32.9,127.64c2.87,3.32,5.61,6.76,8.65,9.92,5.05,5.24,10.96,9.35,17.45,12.63.42.21.83.41,1.24.64,2.74,1.5,3.75,4.5,2.4,7.12-1.34,2.6-4.38,3.55-7.19,2.19-12.14-5.88-22.11-14.33-29.97-25.28-.33-.46-.68-.92-1.18-1.61-.57,1.45-1.06,2.71-1.56,3.96-1.21,3.02-4.1,4.4-6.89,3.3-2.81-1.11-4.03-4.03-2.89-7.08,1.74-4.68,3.5-9.36,5.29-14.02,1.04-2.7,2.95-3.98,5.81-3.74,5.04.43,10.08.93,15.11,1.5,3.28.37,5.42,2.88,5.1,5.74-.34,3.13-2.9,5-6.39,4.67-1.54-.14-3.07-.27-4.61-.4-.12.15-.25.31-.37.46Z" />
+                        <path class="cls-1"
+                          d="M45.63,24.26c-1.58-.6-2.9-1.06-4.19-1.59-2.86-1.19-4.17-4.11-3.09-6.85,1.05-2.67,3.93-3.99,6.75-2.96,4.9,1.79,9.79,3.64,14.65,5.54,2.42.94,3.65,2.85,3.43,5.48-.44,5.15-.93,10.3-1.54,15.44-.38,3.23-3.03,5.34-5.85,4.93-3.07-.45-4.85-2.94-4.52-6.34.15-1.54.27-3.09.45-5.21-2.75,2.2-5.21,4.02-7.5,6.03-6.7,5.93-12.01,12.93-15.91,20.98-.93,1.92-2.3,3.22-4.46,3.46-2.01.23-3.67-.54-4.82-2.2-1.2-1.72-1.26-3.58-.36-5.46,2.8-5.84,6.28-11.26,10.43-16.24,4.46-5.34,9.53-10.03,15.22-14.03.37-.26.72-.55,1.3-.99Z" />
+                        <path class="cls-3"
+                          d="M89.44,147.48c3.54-.02,7.08-.1,10.62-.03,2.85.05,5.05,2.28,5.08,5.16.05,7.03.05,14.05,0,21.08-.02,2.87-2.22,5.1-5.08,5.16-3.54.07-7.08-.02-10.62-.03,0-10.44,0-20.88,0-31.33Z" />
+                        <path class="cls-3"
+                          d="M89.44,147.48c0,10.44,0,20.88,0,31.33-3.54.02-7.08.1-10.62.03-2.83-.05-5.06-2.31-5.08-5.16-.05-7.03-.05-14.05,0-21.08.02-2.86,2.24-5.1,5.08-5.15,3.54-.06,7.08.02,10.62.03Z" />
+                        <path class="cls-3"
+                          d="M91.56,84.49c-.71.03-1.41.07-2.12.1-.6-.04-1.21-.07-1.81-.11-3.75-.78-7.1-2.22-9.85-5.07-5.32-5.51-5.95-14.5-1.22-20.58,3.25-4.18,7.49-6.47,12.88-6.4,0,10.53,0,21.06,0,31.67.87.05,1.49.09,2.12.13,0,.09-.01.17-.01.26Z" />
+                        <path class="cls-3"
+                          d="M91.57,84.23c-.63-.04-1.26-.07-2.12-.13,0-10.61,0-21.14,0-31.67,6.23-.17,12.14,3.68,14.73,9.6,2.53,5.76,1.32,12.76-2.92,17.2-2.66,2.79-5.8,4.62-9.69,5Z" />
+                        <path class="cls-3"
+                          d="M15.73,105.1C7.29,105.36,0,98.1,0,89.43c0-8.66,7.3-15.93,15.73-15.67,0,10.44,0,20.89,0,31.33Z" />
+                        <path class="cls-3"
+                          d="M15.73,105.1c0-10.44,0-20.89,0-31.33,8.48-.23,15.74,7.04,15.71,15.75-.03,8.59-7.29,15.8-15.71,15.58Z" />
+                        <path class="cls-3"
+                          d="M163.16,73.77c0,10.44,0,20.89,0,31.33-8.44.26-15.73-7.01-15.73-15.67,0-8.66,7.3-15.93,15.73-15.67Z" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+
+                <h4 class="card-title">Adaptados a tu clínica</h4>
+                <p class="card-text text-body"> Contamos con un equipo de desarrolladores expertos capaces de integrar y
+                  personalizar las soluciones que tu clínica necesita para funcionar de manera óptima y sin
+                  contratiempos.</p>
+              </div>
+
+            </a>
+            <!-- End Card -->
+          </div>
+          <!-- End Col -->
+
+          <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
+            <!-- Card -->
+            <a class="card card-sm card-transition h-100">
+              <div class="card-body">
+                <span class="svg-icon text-primary mb-3">
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152.25 178.69">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #4871b7;
+                        }
+
+                        .cls-2 {
+                          fill: #c5d7f0;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Capa_1-2" data-name="Capa_1">
+                      <g>
+                        <path class="cls-1"
+                          d="M73.3,178.69c-.26-.58-.85-.53-1.32-.69-16.88-5.94-32.25-14.35-44.73-27.44-10.18-10.68-17.05-23.27-21.28-37.35C2.45,101.45.99,89.36.35,77.14c-.61-11.57-.29-23.14.02-34.7.25-9.17,7.57-17.13,16.73-18.08,6.93-.72,13.85-1.42,20.59-3.37,10.04-2.91,18.98-7.78,26.88-14.6,1.58-1.37,3.11-2.81,4.75-4.09C71.39.67,73.79-.12,76.45.01c.59.61.54,1.38.54,2.13.02,13.51.02,27.02,0,40.53,0,.52-.02,1.04-.16,1.55-.09.31-.24.58-.48.8-.6.46-1.31.4-2,.42-8.68.25-16.56,2.9-23.6,7.97-10.74,7.73-17.04,18.21-18.39,31.35-1.12,10.83,1.34,20.94,7.8,29.89,7.74,10.73,18.23,16.82,31.33,18.49,1.6.2,3.27-.31,4.82.46.25.21.42.48.51.79.23.86.18,1.73.18,2.6,0,12.9,0,25.8,0,38.69,0,1.03.19,2.11-.55,3.01h-3.14Z" />
+                        <path class="cls-1"
+                          d="M76.44,178.69c0-14.9,0-29.79,0-44.69.8-.7,1.81-.73,2.79-.79,9.38-.54,17.63-3.97,24.85-9.89,9.01-7.38,14.26-16.96,15.72-28.46,1.57-12.42-1.69-23.65-9.58-33.39-7.32-9.04-16.92-14.17-28.38-15.89-.81-.12-1.62-.12-2.43-.16-1.04-.05-2.1-.06-2.96-.79,0-14.88,0-29.76.01-44.63,3.03-.07,5.5,1.23,7.67,3.19,4.27,3.86,8.69,7.52,13.66,10.49,8.12,4.86,16.89,7.79,26.18,9.35,3.9.65,7.85.79,11.76,1.32,8.71,1.18,15.81,9.17,16.14,17.9.39,10.06.5,20.13.22,30.18-.4,14.18-1.92,28.24-6.2,41.87-6.72,21.43-19.39,38.35-38.3,50.57-8.43,5.44-17.46,9.61-26.85,13.04-.73.27-1.6.16-2.2.78h-2.09Z" />
+                        <path class="cls-2"
+                          d="M76.44,44.65c5.57.38,11.08,1.09,16.25,3.35,15.3,6.67,24.66,18.12,27.37,34.67,3.11,19.01-6.73,36.9-22.2,45.52-5.74,3.2-11.87,5.16-18.47,5.51-.98.05-1.96.2-2.95.3-.12-.09-.25-.18-.37-.27-.36-.48-.51-1.04-.51-1.63.01-9.44-.14-18.88.08-28.31.04-.41.18-.79.4-1.13,6.35-6.54,12.87-12.92,19.31-19.38,1.25-1.25,2.09-2.59,1.97-4.45-.2-3.35-3.72-5.44-6.72-3.94-1.1.55-2.04,1.33-2.9,2.2-3.48,3.51-6.99,6.98-10.47,10.48-.47.48-1.05,1.46-1.56-.02-.17-.81-.13-1.63-.13-2.44,0-12.39,0-24.78,0-37.17,0-1.03-.16-2.11.53-3.03.12-.09.25-.18.37-.27Z" />
+                        <path class="cls-2"
+                          d="M76.09,103.27c0,10.15-.02,20.31-.02,30.46-24.35.23-44.44-20-44.44-44.41,0-24.4,20.09-44.64,44.44-44.41,0,14.45.02,28.91.03,43.36.1.15.13.31.08.48-2.03,2.47-4.43,4.59-6.68,6.85-.86.87-1.75.74-2.6-.07-1.51-1.45-2.95-2.96-4.45-4.42-2.2-2.13-4.94-2.2-7-.2-1.81,1.75-1.74,4.84.25,6.88,3,3.08,6.04,6.12,9.12,9.12,2.1,2.04,4.7,2.02,6.84.02.98-.91,1.88-1.9,2.85-2.82.44-.42.82-1.03,1.59-.85Z" />
+                        <path class="cls-1"
+                          d="M76.09,103.27c-1.38,1.33-2.75,2.66-4.13,3.98-2.26,2.16-5.22,2.2-7.45,0-3.11-3.05-6.19-6.13-9.24-9.24-2.07-2.11-2.13-5.42-.21-7.37,2.17-2.21,5.28-2.19,7.6.07,1.49,1.46,3,2.91,4.42,4.44.83.89,1.41.89,2.26.01,2.18-2.24,4.46-4.4,6.7-6.58.45.36.55.89.55,1.41,0,4.22.23,8.45-.13,12.67-.13.2-.25.4-.38.59Z" />
+                        <path class="cls-1"
+                          d="M76.47,102.68c-.52-.52-.34-1.19-.34-1.81-.04-4.09-.05-8.18-.07-12.28.02-.1.04-.21.04-.31,4.13-4.16,8.22-8.37,12.42-12.47,2.53-2.47,5.77-2.46,7.89-.21,2.06,2.19,1.86,5.35-.55,7.76-6.45,6.45-12.93,12.88-19.39,19.31Z" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+
+                <h4 class="card-title">Seguridad</h4>
+                <p class="card-text text-body">Nos respaldan los más altos estándares internacionales de seguridad,
+                  garantizando la protección y privacidad de la información de tu clínica y de tus pacientes.</p>
+              </div>
+
+            </a>
+            <!-- End Card -->
+          </div>
+          <!-- End Col -->
+
+          <div class="col-sm-6 col-lg-3 mb-3 mb-sm-0">
+            <!-- Card -->
+            <a class="card card-sm card-transition h-100">
+              <div class="card-body">
+                <span class="svg-icon text-primary mb-3">
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.6 178.68">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #4871b7;
+                        }
+
+                        .cls-2 {
+                          fill: #c5d7f0;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Capa_1-2" data-name="Capa_1">
+                      <g>
+                        <path class="cls-2"
+                          d="M48.83,0c1.9.82,3.1,2.3,4.06,4.08,1.32,2.45,2.79,4.81,4.15,7.24,1.65,2.96.89,6.01-1.8,7.53-2.63,1.49-5.59.62-7.29-2.21-1.49-2.48-2.91-5.01-4.36-7.52-2.44-4.24-1.76-6.77,2.45-9.13h2.79Z" />
+                        <path class="cls-2"
+                          d="M132.56,0c4.21,2.36,4.89,4.88,2.45,9.13-1.42,2.46-2.81,4.94-4.26,7.38-1.75,2.95-4.71,3.87-7.39,2.35-2.76-1.57-3.45-4.6-1.71-7.69,1.34-2.37,2.77-4.7,4.06-7.1.96-1.79,2.16-3.26,4.06-4.08h2.79Z" />
+                        <path class="cls-2"
+                          d="M178.6,80.23c-1.28,2.9-3.48,4.06-6.64,3.87-2.95-.18-5.92-.02-8.88-.04-3.2-.02-5.44-2.25-5.41-5.31.03-2.96,2.29-5.12,5.41-5.14,2.96-.02,5.93.13,8.88-.04,3.17-.19,5.36.98,6.64,3.87v2.79Z" />
+                        <path class="cls-1"
+                          d="M115.75,146.78h-21.13c-.03-.56-.08-1.12-.08-1.67,0-7.15-.03-14.3.03-21.45,0-.91.34-1.94.85-2.71,5.85-8.87,11.74-17.71,17.66-26.54.8-1.2,1.76-2.31,2.76-3.34,2.83-2.92,5.79-5.73,8.58-8.68,2.06-2.18,1.94-5.18-.09-7.19-2.03-2.02-4.97-2.08-7.2-.07-1.21,1.09-2.33,2.27-3.48,3.43-1.09,1.11-2.15,2.25-3.41,3.55-2.1-2.14-4-4.09-5.92-6.02-3.26-3.26-5.87-3.28-9.09-.05-1.92,1.93-3.81,3.9-5.91,6.06-2.11-2.14-4.04-4.12-6-6.08-3.18-3.17-5.81-3.19-8.96-.03-1.93,1.93-3.81,3.91-5.9,6.07-1.57-1.56-2.98-2.98-4.41-4.39-.91-.9-1.78-1.84-2.75-2.67-2.2-1.89-5.09-1.77-7.06.21-1.97,1.99-2.14,4.94-.16,7.05,2.94,3.13,6.05,6.11,9.06,9.19.77.78,1.48,1.64,2.08,2.55,6.05,9.02,12.07,18.05,18.07,27.1.39.59.73,1.36.73,2.05.05,7.62.03,15.23.03,22.85,0,.22-.05.44-.08.76h-21.28c-.61-2.56-1.11-5.17-1.87-7.7-2.25-7.51-6.43-13.82-12.01-19.29-6.8-6.67-11.61-14.59-14.42-23.7-8.56-27.74,4.03-56.8,30.16-69.33,9.58-4.59,19.74-6.27,30.32-5.15,25.32,2.67,45.35,20.23,50.63,45.06,4.11,19.36-.91,36.53-14.04,51.32-2.78,3.13-5.82,6.04-8.36,9.34-4.37,5.68-6.75,12.23-7.37,19.46Z" />
+                        <path class="cls-2"
+                          d="M115.42,157.45c.05,4.51.46,8.93-1.91,12.99-2.95,5.06-7.32,7.94-13.15,8.1-7.37.2-14.76.16-22.13.02-8.16-.16-14.82-6.92-15.07-15.09-.06-1.97,0-3.94,0-6.02h52.27Z" />
+                        <path class="cls-1"
+                          d="M78.69,85.91c2.38,2.42,4.35,4.47,6.36,6.47,2.87,2.85,5.61,2.87,8.46.04,2.05-2.04,4.03-4.14,5.99-6.17,1.39,1.42,2.56,2.6,3.89,3.95-4.56,6.85-9.24,13.87-14.03,21.06-.44-.58-.76-.97-1.04-1.38-4.12-6.18-8.2-12.38-12.38-18.51-.75-1.1-.68-1.74.27-2.6.85-.76,1.52-1.73,2.47-2.85Z" />
+                        <path class="cls-2"
+                          d="M153.2,47.44c-2.76,0-4.77-1.45-5.47-3.62-.67-2.07-.04-4.57,1.84-5.75,3.34-2.1,6.75-4.09,10.24-5.91,2.29-1.2,5.17-.11,6.5,2.11,1.36,2.26,1,5.3-1.19,6.72-3.4,2.2-6.99,4.12-10.53,6.1-.53.3-1.22.31-1.39.35Z" />
+                        <path class="cls-2"
+                          d="M17.26,125.92c-2.74.02-4.65-1.33-5.43-3.56-.76-2.17-.13-4.59,1.87-5.85,3.29-2.06,6.65-4.03,10.09-5.84,2.31-1.21,5.17-.19,6.54,2.01,1.36,2.2,1.06,5.33-1.09,6.74-3.44,2.25-7.09,4.17-10.67,6.19-.48.27-1.11.27-1.29.31Z" />
+                        <path class="cls-2"
+                          d="M25.74,47.65c-.96-.36-1.98-.62-2.87-1.11-2.8-1.54-5.56-3.13-8.3-4.76-2.95-1.75-3.86-4.72-2.33-7.4,1.51-2.66,4.6-3.41,7.55-1.76,2.98,1.67,5.96,3.36,8.88,5.16,2.08,1.29,2.91,3.68,2.25,5.92-.65,2.22-2.74,3.75-5.18,3.95Z" />
+                        <path class="cls-2"
+                          d="M161.74,126.14c-1.01-.38-2.09-.65-3.03-1.17-2.75-1.5-5.46-3.08-8.15-4.67-3.01-1.78-3.93-4.83-2.31-7.54,1.58-2.64,4.57-3.29,7.59-1.58,2.98,1.69,5.96,3.37,8.86,5.18,2.04,1.27,2.8,3.61,2.14,5.76-.72,2.35-2.64,3.8-5.11,4.02Z" />
+                        <path class="cls-2"
+                          d="M10.37,84.07c-1.74,0-3.48.03-5.22,0C2.19,84,0,81.75,0,78.84c0-2.91,2.2-5.18,5.15-5.21,3.54-.04,7.08-.04,10.62,0,2.95.04,5.15,2.31,5.15,5.22,0,2.91-2.2,5.16-5.15,5.22-1.8.04-3.6,0-5.4,0Z" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+
+                <h4 class="card-title">Líderes en innovación </h4>
+                <p class="card-text text-body">Somos el software número uno en gestión clínica en áreas críticas como
+                  pabellones y cirugía, y estamos a la vanguardia de las tendencias tecnológicas.</p>
+              </div>
+
+            </a>
+            <!-- End Card -->
+          </div>
+          <!-- End Col -->
+
+          <div class="col-sm-6 col-lg-3">
+            <!-- Card -->
+            <a class="card card-sm card-transition h-100">
+              <div class="card-body">
+                <span class="svg-icon text-primary mb-3">
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173.87 178.73">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #4871b7;
+                        }
+
+                        .cls-2 {
+                          fill: #c5d7f0;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Capa_1-2" data-name="Capa_1">
+                      <g>
+                        <rect class="cls-1" x="15.12" y="115.01" width="39.42" height="58.86" rx="6.74" ry="6.74" />
+                        <rect class="cls-2" x="66.42" y="76.68" width="39.42" height="97.2" rx="6.74" ry="6.74" />
+                        <rect class="cls-2" x="117.71" y="0" width="39.42" height="169.01" rx="6.74" ry="6.74" />
+                        <rect class="cls-1" x="0" y="158.21" width="173.87" height="20.52" rx="3.51" ry="3.51" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+
+                <h4 class="card-title">Crecemos contigo</h4>
+                <p class="card-text text-body">Desde el primer día contarás con una persona dedicada con nombre y
+                  apellido que te acompañará en cada paso para garantizar la mejor experiencia con Medinet.</p>
+              </div>
+
+
+            </a>
+            <!-- End Card -->
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Features -->
+
+      <!-- Boletín -->
+      <div class="bg-light">
+        <div class="container content-space-2">
+          <div class="w-md-75 w-lg-50 text-center mx-md-auto">
+            <div class="row justify-content-lg-between">
+              <!-- Heading -->
+              <div class="mb-5">
+                <span class="text-cap">Boletín Medinet</span>
+                <h2>Entérate de las novedades</h2>
+              </div>
+              <!-- End Heading -->
+
+              <form>
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                  hbspt.forms.create({
+                    region: "na1",
+                    portalId: "21935835",
+                    formId: "3a5d3279-4775-4f13-a56d-22a8f843ad50"
+                  });
+                </script>
+              </form>
+
+              <p class="small">Puedes cancelar la suscripción en cualquier momento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Boletín -->
+
+      <div class="content-space-b-2"
+        style="background: url(../assets/svg/img/ipq/CTAICONOS\ DENTINET.png) center no-repeat; background-size: cover; margin: 0; padding: 0; color: white;">
+        <div class="text-center py-5">
+          <div class="mb-4">
+            <h2 class="text-white">Centraliza y automatiza tu gestión clínica</h2>
+            <p class="text-white">Solicita una cotización personalizada ahora</p>
+          </div>
+
+          <a class="btn btn-primary btn-transition btn-custom" href="../cotiza"
+            style="background-color: #06DEE1; border-color: #06DEE1; color: white;">
+            Cotiza aquí
+          </a>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- End CTA -->
+
+
+    </main>
+
+
+    <footer id="ifooter" class="footer-mn gjs-section">
+      <div class="footer-mn-container" id="iaegu8">
+        <img id="i57wjx"
+          src="https://cdn.grapesjs.com/workspaces/cmhy77jff22nehtj95eqhyyjw/assets/d05e7e45-764c-442a-9686-ba009ba3e9fe__logo-blanco-medinet.png" />
+        <div id="ipbtgg" class="footer-top">
+          <div id="ih00tf" class="footer-logo-box">
+            <div aria-label="Sellos ISO" class="iso-block" id="i2gd3z">
+              <img id="i90z14"
+                src="https://cdn.grapesjs.com/workspaces/cmhy77jff22nehtj95eqhyyjw/assets/41066006-7b12-4013-9163-2163faf0bb02__mardonesiso-27001-300x.png" />
+            </div>
+            <div aria-label="Sellos ISO" class="iso-block" id="i6vupg">
+              <img id="i08lxr"
+                src="https://cdn.grapesjs.com/workspaces/cmhy77jff22nehtj95eqhyyjw/assets/a6832c26-25db-4b92-88ac-a1ee965e951d__recurso-2300x.png" />
+            </div>
+          </div>
+
+          <!-- Columna Soluciones -->
+          <div id="i69864">
+            <h4 class="footer-column-title" id="ixq7x7">Soluciones</h4>
+            <ul class="footer-list" id="icwgbs">
+              <li id="i9guj5">
+                <a href="./soluciones/agenda-medica" class="footer-link" id="ift1lc">Agenda médica</a>
+              </li>
+              <li id="ia1xjl">
+                <a href="./soluciones/fichas-clinicas" class="footer-link" id="id3tzs">Ficha clínica</a>
+              </li>
+              <li id="iv1nwe">
+                <a href="./soluciones/cobranza-y-cuenta-medica" class="footer-link" id="ikasjz">Cobranza y cuenta
+                  médica</a>
+              </li>
+              <li id="ieclq6">
+                <a href="./soluciones/gestion-quirofano" class="footer-link" id="ix4jkq">Gestión de quirófano</a>
+              </li>
+              <li id="iaal36">
+                <a href="./soluciones/gestion-camas" class="footer-link" id="ismktx">Gestión de camas</a>
+              </li>
+              <li id="isgwkf">
+                <a href="./soluciones/software-urgencia-hospitalaria" class="footer-link" id="isords">Urgencia
+                  hospitalaria</a>
+              </li>
+              <li id="iyofll">
+                <a href="./soluciones/adquisicion-y-dispensacion" class="footer-link" id="itqtyo">Adquisición y
+                  dispensación</a>
+              </li>
+              <li id="ilwzdq">
+                <a href="./soluciones/reportes" class="footer-link" id="if1s1e">Reportes</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna Especialidades -->
+          <div id="i7866c">
+            <h4 class="footer-column-title" id="ihhsii">Especialidades</h4>
+            <ul class="footer-list" id="i4rq8j">
+              <li id="i221wv">
+                <a href="./especialidades/software-para-oftalmologia" class="footer-link" id="ik46gg">Oftalmología</a>
+              </li>
+              <li id="iuga6g">
+                <a href="./especialidades/software-para-psiquiatria" class="footer-link" id="ier3db">Psiquiatría</a>
+              </li>
+              <li id="iz1cum">
+                <a href="./especialidades/software-para-clinica-estetica" class="footer-link" id="irrwq8">Estética</a>
+              </li>
+              <li id="i9n2nz">
+                <a href="./especialidades/software-para-oncologia" class="footer-link" id="iz0yq1">Oncología</a>
+              </li>
+              <li id="iv79mf">
+                <a href="./especialidades/software-de-salud-ocupacional" class="footer-link" id="i7dz4l">Salud
+                  ocupacional</a>
+              </li>
+              <li id="ikp4pi">
+                <a href="./especialidades/software-gestion-centro-medico" class="footer-link" id="id9hk6">Centros
+                  médicos</a>
+              </li>
+              <li id="iwvkve">
+                <a href="./especialidades/software-dental" class="footer-link" id="iqhmng">Dental</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna Metodología -->
+          <div id="i65mdc">
+            <h4 class="footer-column-title" id="ijs307">Metodología</h4>
+            <ul class="footer-list" id="ibyyk7">
+              <li id="i45bwk">
+                <a href="./metodologia/implementacion" class="footer-link" id="ikkm2c">Implementación</a>
+              </li>
+              <li id="igp1pp">
+                <a href="./metodologia/integraciones" class="footer-link" id="ivffmw">Integraciones</a>
+              </li>
+              <li id="i41jab">
+                <a href="./metodologia/migracion-de-datos" class="footer-link" id="ipjh7a">Migración de datos</a>
+              </li>
+              <li id="izyr36">
+                <a href="./metodologia/seguridad" class="footer-link" id="iim1i3">Seguridad</a>
+              </li>
+              <li id="i9p1m7">
+                <a href="./metodologia/soporte" class="footer-link" id="iux0vp">Soporte</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna Empresa -->
+          <div id="ivtfzv">
+            <h4 id="i4i9rc" class="footer-column-title">Empresa</h4>
+            <ul id="i8qp7t" class="footer-list">
+              <li id="ijkvxj">
+                <a href="./empresa/nosotros" id="iyu4vr" class="footer-link">Sobre Medinet</a>
+              </li>
+              <li id="i2dqef">
+                <a href="./empresa/trabajo" id="iapmwl" class="footer-link">Trabaja con nosotros</a>
+              </li>
+            </ul>
+            <div class="footer-contact-card" id="ivns1j">
+              <h4 class="footer-column-title" id="i8zli4">¿Hablemos?</h4>
+              <p class="footer-copy" id="iok4sp">
+                Nuestro equipo está disponible para asesorarte en la implementación y resolver tus dudas.
+              </p>
+              <a href="https://api.whatsapp.com/send/?phone=56959167735&text&type=phone_number&app_absent=0"
+                aria-label="Contactar por WhatsApp" class="btn-whatsapp" id="ixftw8">
+                <img src="https://api.iconify.design/lucide-message-circle.svg?color=%23FFFFFF" alt="" width="18"
+                  height="18" loading="lazy" id="iarl9i" />
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="ink23a"></div>
+
+        <div id="i0c7ls" class="footer-copy">© Medinet. 2025. Todos los derechos reservados.</div>
+
+        <div class="footer-bottom" id="iqlydj"></div>
+
+        <button type="button" aria-label="Abrir chat" class="footer-chat-btn" id="i9g0qf">
+          <img alt="Chat" loading="lazy" src="https://api.iconify.design/lucide-message-circle.svg?color=%23FFFFFF"
+            class="footer-chat-icon" id="iwwc58" />
+        </button>
+      </div>
+    </footer>
+
+    <footer id="io102d" class="medinet-footer">
+      <div id="ibj916" class="footer-container">
+        <div class="footer-contact-mobile" id="i6tk3o">
+          <p class="footer-contact-title" id="ib0g9m">¿Necesitas hablar con nosotros?</p>
+          <a href="tel:+56968105839" class="footer-contact-phone" id="ie2l95">+56 9 6810 5839</a>
+          <div class="footer-contact-channels" id="i5ogv9">
+            <a href="https://www.instagram.com/medinetapp/" class="footer-channel" id="im9eg7">Instagram</a>
+            <a href="https://www.facebook.com/medinetappcl/?locale=es_LA" class="footer-channel"
+              id="ibg7dw">Facebook</a>
+            <a href="https://api.whatsapp.com/send/?phone=56959167735&text&type=phone_number&app_absent=0"
+              class="footer-channel" id="i1x6qw">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/medinetapp" class="footer-channel" id="ix31qn">LinkedIn</a>
+          </div>
+        </div>
+
+        <div id="iigcb1" class="footer-bottom">
+          <span id="iwwbzw">© 2025 Medinet. Todos los derechos reservados.</span>
+          <a href="mailto:contacto@medinetapp.com" id="iljdnr" class="footer-mail">
+            <img src="https://api.iconify.design/lucide-mail.svg?color=%23ebf1fe&amp;width=18&amp;height=18"
+              alt="Icono correo" id="i9lldf" class="footer-icon" />
+            contacto@medinetapp.com
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <section aria-label="Barra de contacto" id="im3s1w" class="contact-sticky-bar">
+      <div id="imka4v" class="sticky-container">
+        <div id="ie7r73" class="contact-sticky-inner">
+          <div id="i61fej" class="contact-left">
+            <span id="iiqajg" class="contact-left-text"></span>
+          </div>
+          <div id="i6endo" class="contact-center">
+            <a href="https://api.whatsapp.com/send/?phone=56959167735&text&type=phone_number&app_absent=0"
+              aria-label="Escríbenos" id="ig7yda" class="btn-phone">
+              <img src="https://api.iconify.design/lucide-whatsapp.svg?color=%23FFFFFF" alt="" aria-hidden="true"
+                loading="lazy" class="btn-icon" id="ic7rgv" />
+              ESCRÍBENOS
+            </a>
+            <a href="../reunion" aria-label="Agendar una demo" id="irlrtr" class="btn-quote">
+              Agendar una demo
+            </a>
+          </div>
+          <div id="i2gwxk" class="contact-right">
+            <a href="https://www.instagram.com/medinetapp/" aria-label="Instagram" id="i4mves"
+              class="contact-channel channel-instagram">
+              <span aria-hidden="true" id="ih25fk" class="channel-icon">
+                <img
+                  src="https://cdn.grapesjs.com/workspaces/cmhy77jff22nehtj95eqhyyjw/assets/ec66ff4e-e0a1-4ef0-8203-5804f27f2938__instagram.svg"
+                  alt="" loading="lazy" id="itun42" />
+              </span>
+              <span id="isqn4j">Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/medinetappcl/?locale=es_LA" aria-label="Facebook" id="ix9xo6"
+              class="contact-channel channel-facebook">
+              <span aria-hidden="true" id="if7j09" class="channel-icon">
+                <img
+                  src="https://cdn.grapesjs.com/workspaces/cmhy77jff22nehtj95eqhyyjw/assets/7ca2e06b-be99-40aa-9fba-6255352300de__facebook.svg"
+                  alt="" loading="lazy" id="io7v6q" />
+              </span>
+              <span id="ipvwif">Facebook</span>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=56959167735&text&type=phone_number&app_absent=0"
+              aria-label="WhatsApp" id="i0fkmw" class="contact-channel channel-whatsapp">
+              <span aria-hidden="true" id="inmcyy" class="channel-icon">
+                <img
+                  src="https://cdn.grapesjs.com/workspaces/cmhy77jff22nehtj95eqhyyjw/assets/9df93677-bc87-44f8-b0eb-dce5b6fe9595__whatsapp.svg"
+                  alt="" loading="lazy" id="ib8cvv" />
+              </span>
+              <span id="ixt9ym">WhatsApp</span>
+            </a>
+            <a href="https://www.linkedin.com/company/medinetapp" aria-label="LinkedIn" id="i7uc2h"
+              class="contact-channel channel-linkedin">
+              <span aria-hidden="true" id="ihk68f" class="channel-icon">
+                <img
+                  src="https://cdn.grapesjs.com/workspaces/cmhy77jff22nehtj95eqhyyjw/assets/5d5af388-c736-4e77-bb3a-f503f10e14d1__linkedin.svg"
+                  alt="" loading="lazy" id="i3ek1s" />
+              </span>
+              <span id="ipxwn3">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../assets/js/vendor.min.js"></script>
+
+    <script src="../assets/js/theme.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="../node_modules/typed.js/lib/typed.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="../assets/js/hs.typed.js"></script>
+
+    <script src="../node_modules/fslightbox/index.js"></script>
+
+    <script src="../assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+
+    <script>
+      (function () {
+        // INITIALIZATION OF TEXT ANIMATION (TYPING)
+        // =======================================================
+        HSCore.components.HSTyped.init('.js-typedjs')
+      })()
+
+        (function () {
+          // INITIALIZATION OF HEADER
+          // =======================================================
+          new HSHeader('#header').init()
+
+
+          // INITIALIZATION OF MEGA MENU
+          // =======================================================
+          new HSMegaMenu('.js-mega-menu', {
+            desktop: {
+              position: 'left'
+            }
+          })
+
+
+
+          // INITIALIZATION OF SHOW ANIMATIONS
+          // =======================================================
+          new HSShowAnimation('.js-animation-link')
+
+
+          // INITIALIZATION OF BOOTSTRAP VALIDATION
+          // =======================================================
+          HSBsValidation.init('.js-validate', {
+            onSubmit: data => {
+              data.event.preventDefault()
+              alert('Submited')
+            }
+          })
+
+
+          // INITIALIZATION OF AOS
+          // =======================================================
+          AOS.init({
+            duration: 650,
+            once: true
+          });
+
+
+
+          // INITIALIZATION OF NAV SCROLLER
+          // =======================================================
+          new HsNavScroller('.js-nav-scroller')
+        })()
+    </script>
+    <script>
+       (function () {
+         // INITIALIZATION OF NAV SCROLLER
+         // =======================================================
+         new HsNavScroller('.js-nav-scroller')
+       })()
+    </script>
+    <script>
+       (function () {
+         // INITIALIZATION OF HEADER
+         // =======================================================
+         new HSHeader('#header').init()
+
+
+         // INITIALIZATION OF MEGA MENU
+         // =======================================================
+         new HSMegaMenu('.js-mega-menu', {
+           desktop: {
+             position: 'left'
+           }
+         })
+
+
+         // INITIALIZATION OF SHOW ANIMATIONS
+         // =======================================================
+         new HSShowAnimation('.js-animation-link')
+
+
+         // INITIALIZATION OF BOOTSTRAP VALIDATION
+         // =======================================================
+         HSBsValidation.init('.js-validate', {
+           onSubmit: data => {
+             data.event.preventDefault()
+             alert('Submited')
+           }
+         })
+
+
+         // INITIALIZATION OF AOS
+         // =======================================================
+         AOS.init({
+           duration: 650,
+           once: true
+         });
+
+
+         // INITIALIZATION OF NAV SCROLLER
+         // =======================================================
+         new HsNavScroller('.js-nav-scroller')
+       })()
+    </script>
+    <script id="i3bz2s">
+        (function () {
+          const track = document.getElementById('modulesTrack');
+          const slides = Array.from(track.children);
+          const prevBtn = document.getElementById('modulesPrev');
+          const nextBtn = document.getElementById('modulesNext');
+          const iconRow = document.getElementById('modulesIcons');
+          const iconButtons = Array.from(iconRow.querySelectorAll('[data-index]'));
+          let current = 0;
+          let isAnimating = false;
+
+          function markActiveSlide() {
+            slides.forEach((s, i) => {
+              if (i === current) s.classList.add('is-active');
+              else s.classList.remove('is-active');
+            });
+          }
+
+          function updateSlider(index) {
+            if (isAnimating) return;
+            isAnimating = true;
+            current = Math.max(0, Math.min(index, slides.length - 1));
+            const offset = -current * track.clientWidth;
+            track.style.transform = `translateX(${offset}px)`;
+            updateIcons();
+            markActiveSlide();
+            setTimeout(() => { isAnimating = false; }, 400);
+          }
+
+          function setIconColor(img, toWhite) {
+            try {
+              const u = new URL(img.src);
+              u.searchParams.set('color', toWhite ? '#FFFFFF' : '#0D47A1');
+              img.src = u.toString();
+            } catch (e) {
+              const white = 'color=%23FFFFFF';
+              const blue = 'color=%230D47A1';
+              if (/color=%23/i.test(img.src)) {
+                img.src = img.src.replace(/color=%23[0-9A-Fa-f]{6}/, toWhite ? white : blue);
+              }
+            }
+          }
+
+          function updateIcons() {
+            iconButtons.forEach((btn, i) => {
+              const img = btn.querySelector('img');
+              const isActive = i === current;
+              btn.classList.toggle('is-active', isActive);
+              setIconColor(img, isActive);
+              if (isActive) {
+                img.classList.remove('opacity-80');
+              } else {
+                img.classList.add('opacity-80');
+              }
+            });
+          }
+
+          prevBtn.addEventListener('click', () => updateSlider(current - 1));
+          nextBtn.addEventListener('click', () => updateSlider(current + 1));
+          iconButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const idx = parseInt(btn.getAttribute('data-index'), 10);
+              updateSlider(idx);
+            });
+          });
+
+          let startX = 0, deltaX = 0, isTouch = false;
+          track.addEventListener('touchstart', (e) => {
+            isTouch = true;
+            startX = e.touches[0].clientX;
+            deltaX = 0;
+          }, { passive: true });
+          track.addEventListener('touchmove', (e) => {
+            if (!isTouch) return;
+            deltaX = e.touches[0].clientX - startX;
+          }, { passive: true });
+          track.addEventListener('touchend', () => {
+            isTouch = false;
+            if (Math.abs(deltaX) > 50) {
+              if (deltaX < 0) updateSlider(current + 1);
+              else updateSlider(current - 1);
+            }
+            deltaX = 0;
+          });
+
+          window.addEventListener('resize', () => updateSlider(current));
+          updateSlider(0);
+
+          const faqItems = document.querySelectorAll('[data-gjs-name="FAQ Item"]');
+          faqItems.forEach(item => {
+            const header = item.querySelector('[data-gjs-name="FAQ Header"]');
+            const content = item.querySelector('[data-gjs-name="FAQ Content"]');
+            const icon = item.querySelector('[data-gjs-name="FAQ Toggle Icon"]');
+            if (!header || !content || !icon) return;
+            content.style.maxHeight = '0px';
+            content.style.transition = 'max-height 250ms ease';
+            header.addEventListener('click', () => {
+              const expanded = header.getAttribute('aria-expanded') === 'true';
+              header.setAttribute('aria-expanded', (!expanded).toString());
+              if (expanded) {
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+              } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+              }
+            });
+          });
+        })();
+    </script>
+    <script id="id2vqx">
+      (function () {
+        const root = document.getElementById('medinet-navbar');
+        const navbar = root.querySelector('.navbar');
+        const dropdownTriggers = root.querySelectorAll('.nav-link.dropdown');
+        const mobileToggle = root.querySelector('.mobile-menu-toggle');
+        const mobileMenu = root.querySelector('.mobile-menu');
+        const mobileButtons = root.querySelectorAll('.mobile-menu-btn');
+
+        // Shadow on scroll
+        function onScroll() {
+          if (window.scrollY > 2) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        }
+        onScroll();
+        window.addEventListener('scroll', onScroll);
+
+        // Helper to close all desktop dropdowns
+        function closeAllDropdowns() {
+          dropdownTriggers.forEach(tr => {
+            const id = tr.getAttribute('data-dropdown');
+            const panel = root.querySelector('#dropdown-' + id);
+            if (panel) panel.classList.remove('dropdown-open');
+            tr.setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        // Toggle a specific dropdown (desktop)
+        function toggleDropdown(id) {
+          dropdownTriggers.forEach(tr => {
+            const key = tr.getAttribute('data-dropdown');
+            const panel = root.querySelector('#dropdown-' + key);
+            if (!panel) return;
+
+            if (key === id) {
+              const isOpen = panel.classList.contains('dropdown-open');
+              closeAllDropdowns();
+              if (!isOpen) {
+                panel.classList.add('dropdown-open');
+                tr.setAttribute('aria-expanded', 'true');
+                if (window.innerWidth >= 993) {
+                  panel.style.left = '50%';
+                }
+              }
+            } else {
+              panel.classList.remove('dropdown-open');
+              tr.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+
+        // Desktop interactions
+        dropdownTriggers.forEach(tr => {
+          const id = tr.getAttribute('data-dropdown');
+
+          tr.addEventListener('click', (e) => {
+            // Si el click viene desde un enlace del dropdown, deja que navegue
+            if (e.target.closest('.dropdown-item')) return;
+
+            // Solo para abrir/cerrar el dropdown del ítem principal
+            e.preventDefault();
+            if (window.innerWidth < 993) return;
+            toggleDropdown(id);
+          });
+
+          tr.addEventListener('mouseenter', () => {
+            if (window.innerWidth < 993) return;
+            toggleDropdown(id);
+          });
+        });
+
+
+        const panels = root.querySelectorAll('.dropdown-panel');
+        panels.forEach(panel => {
+          panel.addEventListener('mouseleave', () => {
+            if (window.innerWidth < 993) return;
+            closeAllDropdowns();
+          });
+        });
+
+        // Mobile menu open/close with scroll lock
+        function openMobileMenu() {
+          mobileMenu.classList.add('open');
+          mobileMenu.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+          mobileMenu.classList.remove('open');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+          mobileButtons.forEach(btn => {
+            btn.setAttribute('aria-expanded', 'false');
+            const submenu = btn.parentElement.querySelector('.mobile-submenu');
+            if (submenu) {
+              submenu.classList.remove('open');
+              submenu.setAttribute('aria-hidden', 'true');
+            }
+          });
+        }
+
+        // Click outside
+        document.addEventListener('click', (e) => {
+          if (!root.contains(e.target)) {
+            closeAllDropdowns();
+            closeMobileMenu();
+          } else {
+            const isTrigger = e.target.closest('.nav-link.dropdown');
+            const isPanel = e.target.closest('.dropdown-panel');
+            if (!isTrigger && !isPanel && window.innerWidth >= 993) {
+              closeAllDropdowns();
+            }
+          }
+        });
+
+        // Mobile toggle
+        mobileToggle.addEventListener('click', () => {
+          if (mobileMenu.classList.contains('open')) {
+            closeMobileMenu();
+          } else {
+            closeAllDropdowns();
+            openMobileMenu();
+          }
+        });
+
+        mobileToggle.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            mobileToggle.click();
+          }
+        });
+
+        // Mobile accordion
+        mobileButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+            mobileButtons.forEach(other => {
+              if (other !== btn) {
+                other.setAttribute('aria-expanded', 'false');
+                const otherSub = other.parentElement.querySelector('.mobile-submenu');
+                if (otherSub) {
+                  otherSub.classList.remove('open');
+                  otherSub.setAttribute('aria-hidden', 'true');
+                }
+              }
+            });
+
+            btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            const submenu = btn.parentElement.querySelector('.mobile-submenu');
+            if (submenu) {
+              if (expanded) {
+                submenu.classList.remove('open');
+                submenu.setAttribute('aria-hidden', 'true');
+              } else {
+                submenu.classList.add('open');
+                submenu.setAttribute('aria-hidden', 'false');
+              }
+            }
+          });
+        });
+
+        // Cerrar menú móvil al hacer click en un link
+        mobileMenu.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => {
+            closeMobileMenu();
+          });
+        });
+
+        // Escape
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            closeAllDropdowns();
+            closeMobileMenu();
+          }
+        });
+
+        // Al redimensionar, reseteamos estados
+        window.addEventListener('resize', () => {
+          closeAllDropdowns();
+          if (window.innerWidth >= 993) {
+            closeMobileMenu();
+          }
+        });
+      })();
+    </script>
+    <script>
+      (function (d, t) {
+        var BASE_URL = "https://agente-wsp-chatwoot.db8enk.easypanel.host";
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = BASE_URL + "/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g, s);
+        g.onload = function () {
+          window.chatwootSDK.run({
+            websiteToken: 'aFeow3wQwimPu3jBwrGMaVrQ',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document, "script");
+    </script>
+    <script>
+      (function () {
+        function setupCountryDropdown(wrapperSelector) {
+          var wrappers = document.querySelectorAll(wrapperSelector);
+          wrappers.forEach(function (wrapper) {
+            var toggle = wrapper.querySelector('.country-toggle');
+            var menu = wrapper.querySelector('.country-menu');
+            if (!toggle || !menu) return;
+
+            // Abrir/cerrar
+            toggle.addEventListener('click', function (e) {
+              e.stopPropagation();
+              var isOpen = wrapper.classList.contains('open');
+              // Cerrar otros
+              document.querySelectorAll(wrapperSelector + '.open').forEach(function (w) {
+                w.classList.remove('open');
+              });
+              if (!isOpen) wrapper.classList.add('open');
+            });
+          });
+
+          // Click fuera cierra
+          document.addEventListener('click', function () {
+            document.querySelectorAll(wrapperSelector + '.open').forEach(function (w) {
+              w.classList.remove('open');
+            });
+          });
+        }
+
+        // Desktop y móvil
+        setupCountryDropdown('.country-switcher');
+        setupCountryDropdown('.mobile-country-switcher');
+      })();
+    </script>
+
+</body>
+
+</html>

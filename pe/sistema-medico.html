@@ -1,0 +1,953 @@
+﻿<!DOCTYPE html>
+<html lang="es" dir="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Medinet - Sistema MÃ©dico - Software MÃ©dico Integral en PerÃº</title>
+  <meta name="description"
+    content="Gestiona citas, fichas clÃ­nicas, facturaciÃ³n y inventario con Medinet, el sistema mÃ©dico confiable elegido por mÃ¡s de 30.000 profesionales de la salud. Â¡Optimiza tus operaciones hoy!">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://medinetapp.com/" />
+  <meta property="og:site_name" content="Medinet" />
+  <meta property="fb:app_id" content="" />
+
+  <link rel="shortcut icon" href="../assets/svg/logos/favicon-medinet.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/theme.min.css">
+  <link rel="stylesheet" href="../assets/css/vendor.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/snippets.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KH42KFM');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    .headersoft {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    .logosoft {
+      width: 200px;
+      height: auto;
+    }
+
+    .hero-gradient {
+      position: relative;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 5%, rgba(0, 98, 255, 0.8) 40%, rgba(0, 98, 255, 1) 100%);
+    }
+
+
+    @media (max-width: 991px) {
+      .hero-gradient {
+        background: #0062ff;
+      }
+    }
+
+    .iso-icon {
+      width: 120px;
+      height: auto;
+      display: block;
+    }
+
+
+    @media (max-width: 768px) {
+      .iso-cert {
+        max-width: 100%;
+      }
+    }
+
+    .iso-cert {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 250px;
+      min-height: 250px;
+      /* Fuerza la misma altura */
+    }
+
+    .iso-title {
+      min-height: 50px;
+      /* Ajusta segÃºn el tamaÃ±o del tÃ­tulo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+  </header>
+</head>
+
+
+<body>
+
+
+  <!-- Hero -->
+  <div class=" hero-gradient position-relative bg-primary overflow-hidden">
+    <div class="content-space-t-1 content-space-t-lg-2 content-space-b-2 content-space-b-lg-5">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- ðŸ“Œ Columna Izquierda: TÃ­tulo, DescripciÃ³n y Beneficios -->
+          <div class="col-lg-6">
+            <div class="w-100 w-lg-100">
+              <div class="mb-3">
+                <a href="../">
+                  <img src="../assets/svg/logos/logo-medinet-white.svg" alt="Logo" class="img-fluid mb-3" width="180">
+                </a>
+              </div>
+              <h1 class="display-5 fw-bold text-white mb-4 text-start">
+                Sistema mÃ©dico integral para consultorios, clÃ­nicas y centros mÃ©dicos
+              </h1>
+              <p class="h3 text-white opacity-75 mb-4 text-start">
+                La soluciÃ³n lÃ­der en sistema mÃ©dico para PerÃº
+              </p>
+
+              <!-- ðŸ“Œ SecciÃ³n de Avatares y ReseÃ±as -->
+              <div class="d-flex align-items-center mb-4">
+                <!-- Grupo de Avatares -->
+                <div class="d-flex">
+                  <span class="avatar avatar-sm avatar-circle me-n2">
+                    <img class="avatar-img"
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/doctor%201.png"
+                      alt="">
+                  </span>
+                  <span class="avatar avatar-sm avatar-circle me-n2">
+                    <img class="avatar-img"
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/doctor%205.png"
+                      alt="">
+                  </span>
+                  <span class="avatar avatar-sm avatar-circle me-n2">
+                    <img class="avatar-img"
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/doctor%202.png"
+                      alt="">
+                  </span>
+                  <span class="avatar avatar-sm avatar-circle me-n2">
+                    <img class="avatar-img"
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/doctor%204.png"
+                      alt="">
+                  </span>
+                  <span class="avatar avatar-sm avatar-circle">
+                    <img class="avatar-img"
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/doctor%203.png"
+                      alt="">
+                  </span>
+                </div>
+
+                <!-- Texto y Estrellas -->
+                <div class="ms-3">
+                  <div class="text-warning d-flex align-items-center mb-1">
+                    <img
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/estrella.png"
+                      alt="Star" width="18" class="me-1">
+                    <img
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/estrella.png"
+                      alt="Star" width="18" class="me-1">
+                    <img
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/estrella.png"
+                      alt="Star" width="18" class="me-1">
+                    <img
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/estrella.png"
+                      alt="Star" width="18" class="me-1">
+                    <img
+                      src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/estrella.png"
+                      alt="Star" width="18">
+                  </div>
+                  <p class="text-white mb-0">Usado por mÃ¡s de <strong>+30.000</strong> profesionales</p>
+                </div>
+              </div>
+              <!-- ðŸ“Œ Fin de SecciÃ³n de Avatares y ReseÃ±as -->
+
+              <!-- ðŸ“Œ ViÃ±etas -->
+              <ul class="list-unstyled text-white">
+                <li class="d-flex align-items-center mb-2">
+                  <img
+                    src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/ORGANIZA%20CITAS%20WSSP%20COLOR.svg"
+                    alt="Citas" width="90" class="me-2">
+                  Organiza citas y recordatorios sin esfuerzo, con mensajes inteligentes por WhatsApp que disminuyen la
+                  tasa de no-show
+                </li>
+
+                <li class="d-flex align-items-center mb-2">
+                  <img
+                    src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/FICHA%20CLINICA%20INTEGRADA%20COLOR.svg"
+                    alt="Ficha ClÃ­nica" width="90" class="me-2">
+                  Disfruta de una ficha clÃ­nica integrada con todos los mÃ³dulos, 100% configurable y automatizada que se
+                  adapta a las necesidades de tu centro y especialidad mÃ©dica
+                </li>
+
+                <li class="d-flex align-items-center">
+                  <img
+                    src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/AUTOMATIZA%20FACTURACION%20COLOR.svg"
+                    alt="FacturaciÃ³n" width="90" class="me-2">
+                  Automatiza la facturaciÃ³n y reduce errores operativos, agilizando la conciliaciÃ³n de ingresos y
+                  generando reportes financieros precisos
+                </li>
+              </ul>
+
+
+              <!-- ðŸ“Œ Certificaciones ISO -->
+              <div class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-5">
+                <!-- ISO 27001 -->
+                <div class="text-center mx-4 iso-cert">
+                  <img
+                    src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/historia%20clinica/ISO%2027001.svg"
+                    alt="ISO 27001" class="iso-icon">
+                  <div class="mt-3">
+                    <p class="text-white fw-bold fs-5 iso-title">Sistema de GestiÃ³n de Seguridad de la InformaciÃ³n</p>
+                    <p class="text-white opacity-75 fs-6">IRAM-ISO 27001:2013</p>
+                  </div>
+                </div>
+
+                <!-- ISO 9001 -->
+                <div class="text-center mx-4 iso-cert">
+                  <img
+                    src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/historia%20clinica/ISO%209001.svg"
+                    alt="ISO 9001" class="iso-icon">
+                  <div class="mt-3">
+                    <p class="text-white fw-bold fs-5 iso-title">Sistema de GestiÃ³n</p>
+                    <p class="text-white opacity-75 fs-6">ISO 9001:2015</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- ðŸ“Œ Fin de Certificaciones ISO -->
+
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <!-- ðŸ“Œ Columna Derecha: Formulario de Contacto -->
+          <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="ps-lg-5 w-100">
+              <!-- Card -->
+              <div class="card custom-contact-form shadow-lg p-4" id="contactoForm">
+                <div class="card-header border-bottom text-center bg-white">
+                  <h3 class="card-header-title text-dark fw-bold">Solicita una consulta gratuita</h3>
+                </div>
+                <div class="card-body bg-white">
+                  <!-- Form -->
+                  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                  <script>
+                    hbspt.forms.create({
+                      region: "na1",
+                      portalId: "21935835",
+                      formId: "a44a6e1c-6f94-40da-b455-3017f72a67c9"
+                    });
+                  </script>
+                  <!-- End Form -->
+                </div>
+              </div>
+              <!-- End Card -->
+            </div>
+          </div>
+          <!-- End Col -->
+
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- Shape -->
+      <div class="shape shape-bottom zi-1" style="margin-bottom: -.125rem">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+          <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+        </svg>
+      </div>
+      <!-- End Shape -->
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Icon Blocks -->
+  <div class="container content-space-1 content-space-lg-3 mb-5 mb-lg-7 content-space-b-4 content-space-b-lg-5">
+    <!-- Heading -->
+    <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+      <h2 class="h1 display-6 text-primary fw-bold">Beneficios clave para consultorios mÃ©dicos con Medinet</h2>
+    </div>
+    <!-- End Heading -->
+
+    <div class="row">
+      <div class="col-md-4 mb-5 mb-md-0">
+        <!-- Icon Blocks -->
+        <div class="text-center px-lg-3">
+          <div class="mb-4">
+            <img
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/gestion%20cita.svg"
+              alt="GestiÃ³n de Citas" width="100">
+          </div>
+          <h3 class="text-primary fw-bold">GestiÃ³n de citas eficiente</h3>
+          <p class="text-dark">Organiza y optimiza el agendamiento con recordatorios automÃ¡ticos, reduciendo tiempos de
+            espera y maximizando la atenciÃ³n a tus pacientes.</p>
+        </div>
+        <!-- End Icon Blocks -->
+      </div>
+      <!-- End Col -->
+
+      <div class="col-md-4 mb-5 mb-md-0">
+        <!-- Icon Blocks -->
+        <div class="text-center px-lg-3">
+          <div class="mb-4">
+            <img
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/ficha%20segura.svg"
+              alt="Historia ClÃ­nica" width="100">
+          </div>
+          <h3 class="text-primary fw-bold">Historia clÃ­nica digital segura</h3>
+          <p class="text-dark">Accede y actualiza la informaciÃ³n mÃ©dica de tus pacientes de forma centralizada y
+            confiable, facilitando diagnÃ³sticos precisos y seguimiento continuo.</p>
+        </div>
+        <!-- End Icon Blocks -->
+      </div>
+      <!-- End Col -->
+
+      <div class="col-md-4">
+        <!-- Icon Blocks -->
+        <div class="text-center px-lg-3">
+          <div class="mb-4">
+            <img
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/administracion%20simplificada.svg"
+              alt="AdministraciÃ³n" width="100">
+          </div>
+          <h3 class=" text-primary fw-bold">AdministraciÃ³n simplificada</h3>
+          <p class=" text-dark">Automatiza procesos administrativos y financieros para reducir errores, mejorar la
+            rentabilidad y liberar tiempo para lo que realmente importa: la atenciÃ³n mÃ©dica.</p>
+        </div>
+        <!-- End Icon Blocks -->
+      </div>
+      <!-- End Col -->
+    </div>
+
+    <!-- End Row -->
+  </div>
+  <!-- End Icon Blocks -->
+
+  <div class="position-relative text-center mt-5 mt-lg-2">
+    <h2 class=" display-4 fw-bold text-primary mb-2 mb-lg-1 " style="line-height: 1.1;">Visualiza cÃ³mo Medinet
+      href="../solucionesa tu consultorio mÃ©dico</h2>
+    <div class="js-swiper-pagination-dynamic swiper mt-0 mt-lg-n3">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="img-fluid w-100 d-block"
+            src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/SISTEMA%20MEDINET.png"
+            alt="Image Description">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Features 1-->
+  <div class="container content-space-2 content-space-lg-3">
+    <div class="row align-items-lg-center flex-lg-row-reverse">
+      <!-- Imagen -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <img class="img-fluid"
+          src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/MODULO%20AGENDA.png"
+          alt="Image Description">
+      </div>
+      <!-- End Col -->
+
+      <!-- Texto y CTA -->
+      <div class="col-lg-5">
+        <div class="ps-lg-6">
+          <div class="mb-4">
+            <h2 class="h1 fw-bold text-primary fw-bold">Agenda mÃ©dica</h2>
+          </div>
+
+          <div class="mb-4">
+            <p>Organiza y gestiona las citas de tu consultorio de manera intuitiva. Nuestra agenda mÃ©dica de Medinet,
+              parte integral de un sistema mÃ©dico completo, te permite programar, reasignar y confirmar citas en tiempo
+              real, garantizando una experiencia fluida para tus pacientes y tu equipo administrativo.</p>
+          </div>
+
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/PROGRAMACION%20EFIENTE%20DE%20CITAS.svg"
+                alt="Icono Citas" width="50" class="me-2">
+              ProgramaciÃ³n eficiente de citas
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/RECORDATORIOS%20AUTOMATICOS.svg"
+                alt="Icono Recordatorios" width="50" class="me-2">
+              Recordatorios automÃ¡ticos
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/CONFIRMACION%20VIA%20WHASTSAPP.svg"
+                alt="Icono WhatsApp" width="50" class="me-2">
+              Confirmaciones instantÃ¡neas vÃ­a WhatsApp
+            </li>
+          </ul>
+
+          <a class="scrollToForm btn btn-primary mt-3" href="#contactoForm">Solicitar AsesorÃ­a <i
+              class="bi-chevron-right small ms-1"></i></a>
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+
+
+
+  <!-- End Features -->
+
+  <!-- Features 2-->
+  <div class="container content-space-2 content-space-lg-3">
+    <div class="row align-items-lg-center mt-5">
+      <!-- Imagen -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <img class="img-fluid"
+          src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/MODULO%20FICHA%20CLINICA.png"
+          alt="Image Description">
+      </div>
+      <!-- End Col -->
+
+      <!-- Texto y CTA -->
+      <div class="col-lg-5">
+        <div class="ps-lg-6">
+          <h2 class="h1 text-primary fw-bold">Ficha clÃ­nica electrÃ³nica</h2>
+          <p>Digitaliza y centraliza toda la informaciÃ³n clÃ­nica de tus pacientes en un solo lugar. Con la Ficha ClÃ­nica
+            ElectrÃ³nica de Medinet, registra diagnÃ³sticos, tratamientos y antecedentes mÃ©dicos de forma segura y
+            actualizada, facilitando el acceso inmediato a datos crÃ­ticos en cada consulta.</p>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/REGISTRO%20SEGURO%20Y%20CENTRALIZADO.svg"
+                alt="Icono Citas" width="50" class="me-2">
+              Registro seguro y centralizado
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/ACCESOS%20HISTORIALES%20MEDICOS.svg"
+                alt="Icono Citas" width="50" class="me-2">
+              Acceso instantÃ¡neo a historiales mÃ©dicos
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/INTEGRACION%20CON%20REPORTES%20MEDICOS.svg"
+                alt="Icono Citas" width="50" class="me-2">
+              IntegraciÃ³n con reportes clÃ­nicos
+            </li>
+          </ul>
+          <a class="scrollToForm btn btn-primary mt-3" href="#contactoForm">Solicitar AsesorÃ­a <i
+              class="bi-chevron-right small ms-1"></i></a>
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+
+
+
+  <!-- End Features -->
+
+  <!-- Features 3 -->
+  <div class="container content-space-2 content-space-lg-3">
+    <div class="row align-items-lg-center flex-lg-row-reverse">
+      <!-- Imagen -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <img class="img-fluid"
+          src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/MODULO%20COBRANZA.png"
+          alt="Image Description">
+      </div>
+      <!-- End Col -->
+
+      <!-- Texto y CTA -->
+      <div class="col-lg-5">
+        <div class="ps-lg-6">
+          <div class="mb-4">
+            <h2 class="h1 text-primary fw-bold">Cobranza y cuenta mÃ©dica</h2>
+          </div>
+
+          <div class="mb-4">
+            <p>Optimiza la gestiÃ³n financiera de tu consultorio automatizando la facturaciÃ³n y el seguimiento de pagos.
+              Este mÃ³dulo te permite llevar un control riguroso de las cuentas mÃ©dicas, reduciendo errores
+              administrativos y mejorando la rentabilidad de tu negocio, esencial en cualquier software para centros
+              mÃ©dicos.</p>
+          </div>
+
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/AUTOMATIZACION%20DE%20FACTURACION.svg"
+                alt="Icono Citas" width="50" class="me-2"> AutomatizaciÃ³n de facturaciÃ³n
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/SEGUIMIENTO%20DE%20PAGOS.svg"
+                alt="Icono Citas" width="50" class="me-2"> Seguimiento de pagos
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/REDUCCION%20DE%20ERRORES%20ADMINISTRATIVOS.svg"
+                alt="Icono Citas" width="50" class="me-2"> ReducciÃ³n de errores administrativos
+            </li>
+          </ul>
+
+          <a class="scrollToForm btn btn-primary mt-3" href="#contactoForm">Solicitar AsesorÃ­a <i
+              class="bi-chevron-right small ms-1"></i></a>
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Features -->
+
+  <!-- Features 4-->
+  <div class="container content-space-2 content-space-lg-3">
+    <div class="row align-items-lg-center mt-5">
+      <!-- Imagen -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <img class="img-fluid"
+          src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/MODULO%20BODEGA.png"
+          alt="Image Description">
+      </div>
+      <!-- End Col -->
+
+      <!-- Texto y CTA -->
+      <div class="col-lg-5">
+        <div class="ps-lg-6">
+          <h2 class="h1 text-primary fw-bold">Bodega e inventario</h2>
+          <p>Controla y gestiona tus insumos y equipos mÃ©dicos de forma sencilla y eficaz. Con este mÃ³dulo, mantÃ©n el
+            control del stock en tiempo real, optimiza la reposiciÃ³n de suministros y reduce los costos operativos,
+            asegurando que nunca falten recursos esenciales.</p>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/GESTION%20DE%20INSUMOS.svg"
+                alt="Icono Citas" width="50" class="me-2"> GestiÃ³n eficiente de insumos
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/CONTROL%20DE%20STOCK%20EN%20TIEMPO%20REAL.svg"
+                alt="Icono Citas" width="50" class="me-2"> Control de stock en tiempo real
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/REDUCCION%20COSTOS%20OPERATIVOS.svg"
+                alt="Icono Citas" width="50" class="me-2"> ReducciÃ³n de costos operativos
+            </li>
+          </ul>
+          <a class="scrollToForm btn btn-primary mt-3" href="#contactoForm">Solicitar AsesorÃ­a <i
+              class="bi-chevron-right small ms-1"></i></a>
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Features -->
+
+  <!-- Features 5-->
+  <div class="container content-space-2 content-space-lg-3">
+    <div class="row align-items-lg-center flex-lg-row-reverse">
+      <!-- Imagen -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <img class="img-fluid"
+          src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/MODULO%20QUIRURGICO.png"
+          alt="Image Description">
+      </div>
+      <!-- End Col -->
+
+      <!-- Texto y CTA -->
+      <div class="col-lg-5">
+        <div class="ps-lg-6">
+          <div class="mb-4">
+            <h2 class="h1 text-primary fw-bold">GestiÃ³n de cirugÃ­as y quirÃ³fanos</h2>
+          </div>
+
+          <div class="mb-4">
+            <p>Organiza y supervisa la programaciÃ³n de cirugÃ­as y el uso de quirÃ³fanos de manera integral. Este mÃ³dulo
+              facilita la coordinaciÃ³n de equipos, la asignaciÃ³n de recursos y el control de la disponibilidad de salas,
+              garantizando intervenciones mÃ©dicas seguras y bien planificadas, clave en un sistema para clÃ­nicas mÃ©dicas
+              que realizan procedimientos complejos.</p>
+          </div>
+
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/COORDINACION%20DE%20EQUIPOS%20QUIRJICOS.svg"
+                alt="Icono WhatsApp" width="50" class="me-2"> CoordinaciÃ³n de equipos quirÃºrgicos
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/PROGRAMACION%20DE%20CIRUGIAS.svg"
+                alt="Icono WhatsApp" width="50" class="me-2"> ProgramaciÃ³n precisa de cirugÃ­as
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/OPTIMIZACION%20USO%20DE%20QUIROFANOS.svg"
+                alt="Icono WhatsApp" width="50" class="me-2"> OptimizaciÃ³n del uso de quirÃ³fanos
+            </li>
+          </ul>
+
+          <a class="scrollToForm btn btn-primary mt-3" href="#contactoForm">Solicitar AsesorÃ­a <i
+              class="bi-chevron-right small ms-1"></i></a>
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Features -->
+
+  <!-- Features 6 -->
+  <div class="container content-space-2 content-space-lg-3">
+    <div class="row align-items-lg-center mt-5">
+      <!-- Imagen -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <img class="img-fluid"
+          src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/MODULO%20GESTION%20DE%20CAMAS.png"
+          alt="Image Description">
+      </div>
+      <!-- End Col -->
+
+      <!-- Texto y CTA -->
+      <div class="col-lg-5">
+        <div class="ps-lg-6">
+          <h2 class="h1 text-primary fw-bold">GestiÃ³n de camas</h2>
+          <p>Administra la asignaciÃ³n y disponibilidad de camas en tu centro mÃ©dico de forma intuitiva. Este mÃ³dulo te
+            ayuda a distribuir eficientemente los recursos hospitalarios, reduciendo tiempos de espera y mejorando la
+            experiencia y el flujo de atenciÃ³n para tus pacientes.</p>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/ASIGNACION%20EFICIENTE%20DE%20CAMAS.svg"
+                alt="Icono WhatsApp" width="50" class="me-2"> AsignaciÃ³n eficiente de camas
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/REDUCCION%20TIEMPOS%20DE%20ESPERA.svg"
+                alt="Icono WhatsApp" width="50" class="me-2"> ReducciÃ³n de tiempos de espera
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/MEJORA%20GESTION%20HOSPITALARIA.svg"
+                alt="Icono WhatsApp" width="50" class="me-2"> Mejora en la gestiÃ³n hospitalaria
+            </li>
+          </ul>
+          <a class="scrollToForm btn btn-primary mt-3" href="#contactoForm">Solicitar AsesorÃ­a <i
+              class="bi-chevron-right small ms-1"></i></a>
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Features -->
+
+  <!-- Features 7 -->
+  <div class="container content-space-2 content-space-lg-3">
+    <div class="row align-items-lg-center flex-lg-row-reverse">
+      <!-- Imagen -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <img class="img-fluid"
+          src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/MODULO%20REPORTERIA.png"
+          alt="Image Description">
+      </div>
+      <!-- End Col -->
+
+      <!-- Texto y CTA -->
+      <div class="col-lg-5">
+        <div class="ps-lg-6">
+          <div class="mb-4">
+            <h2 class="h1 text-primary fw-bold">Reportes</h2>
+          </div>
+
+          <div class="mb-4">
+            <p>ObtÃ©n informaciÃ³n detallada y en tiempo real sobre el rendimiento de tu consultorio. Nuestro mÃ³dulo de
+              reportes te brinda anÃ¡lisis precisos y grÃ¡ficos claros que apoyan la toma de decisiones estratÃ©gicas y
+              optimizan tus procesos operativos, haciendo de tu sistema mÃ©dico una herramienta de gestiÃ³n integral.</p>
+          </div>
+
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/ANALISIS%20EN%20TIEMPO%20REAL.svg"
+                alt="Icono WhatsApp" width="50" class="me-2"> AnÃ¡lisis en tiempo real
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/DATOS%20PRECISOS%20PARA%20DECISIONES.svg"
+                alt="Icono WhatsApp" width="50" class="me-2"> Datos precisos para decisiones
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/SVG/REPORTES%20PERSONALIZADOS%20Y%20VISUALES.svg"
+                alt="Icono WhatsApp" width="50" class="me-2"> Reportes personalizados y visuales
+            </li>
+          </ul>
+
+          <a class="scrollToForm btn btn-primary mt-3" href="#contactoForm">Solicitar AsesorÃ­a <i
+              class="bi-chevron-right small ms-1"></i></a>
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Features -->
+
+  <div class="container rounded-4 p-5 shadow-sm shadow-lg rounded-3" style="background-color: #7098FF;">
+    <div class="row align-items-center">
+
+      <!-- ðŸ“Œ Imagen -->
+      <div class="col-lg-5">
+        <img class="img-fluid rounded-3 shadow"
+          src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/iconos/IMAGEN%20CTA_.png"
+          alt="Soporte Medinet">
+      </div>
+
+      <!-- ðŸ“Œ Texto -->
+      <div class="col-lg-7 text-white">
+        <h2 class="fw-bold display-4">
+          <span class="text-warning fw-bold ">Soporte especializado</span><span class="text-white fw-bold"> siempre
+            disponible </span>
+        </h2>
+        <p class="opacity-100">
+          Contamos con un equipo de soporte que te acompaÃ±a en cada paso. Desde la capacitaciÃ³n hasta la operaciÃ³n
+          diaria, siempre tendrÃ¡s asistencia disponible.
+          Contacta con nuestro equipo por telÃ©fono o correo electrÃ³nico para resolver cualquier inquietud.
+        </p>
+        <a href="#contactoForm"
+          class="scrollToForm btn btn-warning text-dark fw-bold px-4 py-2 mt-3  shadow-sm">Solicita tu asesorÃ­a</a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- Features Stats -->
+  <div class="container content-space-2 content-space-b-lg-5 mb-lg-7 ">
+    <div class="row">
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <div class="text-center">
+          <small class="text-cap text-primary">Pacientes</small>
+          <h4 class="display-4">2.500.000</h4>
+          <p>Atendidos cada aÃ±o y subiendo
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <div class="text-center">
+          <small class="text-cap text-primary">Profesionales</small>
+          <h4 class="display-4">30.000
+          </h4>
+          <p>Utilizan nuestros softwares.</p>
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <div class="col-sm-4">
+        <div class="text-center">
+          <small class="text-cap text-primary">Registros clÃ­nicos</small>
+          <h4 class="display-4">4.000.000
+          </h4>
+          <p>A travÃ©s de nuestras fichas clÃ­nicas.
+          </p>
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Features Stats -->
+
+  <!-- SecciÃ³n de Testimonios -->
+  <div class="container text-center my-4"> <!-- Margen reducido -->
+
+    <!-- ðŸ“Œ Contenedor del TÃ­tulo -->
+    <div class="container mb-3 ">
+      <h2 class=" display-5 fw-bold text-primary mb-2">Lo que dicen nuestros clientes</h2>
+    </div>
+
+    <!-- ðŸ“Œ Contenedor del Swiper -->
+    <div class="position-relative">
+      <div class="js-swiper-navigation swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-center">
+            <div class="d-flex justify-content-center"> <!-- Contenedor para centrar imagen -->
+              <img class="img-fluid mx-auto d-block"
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/testimonio%20lo%20arcaya.png"
+                alt="Testimonio Lo Arcaya">
+            </div>
+          </div>
+          <div class="swiper-slide text-center">
+            <div class="d-flex justify-content-center">
+              <img class="img-fluid mx-auto d-block"
+                src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Google%20ads%20peru/Software%20medico/testimonio%20renal%20mater.png"
+                alt="Testimonio Renal Mater">
+            </div>
+          </div>
+        </div>
+
+        <!-- ðŸ“Œ Flechas de NavegaciÃ³n -->
+        <div class="js-swiper-navigation-button-prev position-absolute start-0 top-50 translate-middle-y">
+          <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Prev" width="40">
+        </div>
+        <div class="js-swiper-navigation-button-next position-absolute end-0 top-50 translate-middle-y">
+          <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Next" width="40">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Swiper JS ConfiguraciÃ³n -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper(".js-swiper-navigation", {
+        loop: true,
+        navigation: {
+          nextEl: ".js-swiper-navigation-button-next",
+          prevEl: ".js-swiper-navigation-button-prev"
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 5
+          },
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          }
+        }
+      });
+    });
+  </script>
+
+
+
+  <!-- Contacts -->
+  <div class="position-relative">
+    <div class="bg-primary bg-img-start" style="background-image: url(../assets/svg/components/shape-7.svg);">
+      <div class="container content-space-t-1 content-space-t-lg-1 content-space-b-1">
+        <!-- Heading -->
+        <div class="w-lg-50 text-center mx-lg-auto mb-7">
+          <span class="text-cap text-white-70">ContÃ¡ctanos</span>
+          <h2 class="text-white lh-base">Digitaliza y optimiza tu centro de salud.
+            <span class="text-warning">Â¡Hablemos!</span>
+          </h2>
+        </div>
+        <!-- End Heading -->
+
+        <!-- ðŸ“Œ Contenedor de Formulario Centrado -->
+        <div class="d-flex justify-content-center">
+          <div class="col-lg-6">
+            <div class="w-100">
+              <!-- Card -->
+              <div class="card custom-contact-form shadow-lg p-4" id="contactoForm">
+                <div class="card-header border-bottom text-center bg-white">
+                  <h3 class="card-header-title text-dark fw-bold">ContÃ¡ctanos</h3>
+                </div>
+                <div class="card-body bg-white">
+                  <!-- Form -->
+                  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                  <script>
+                    hbspt.forms.create({
+                      region: "na1",
+                      portalId: "21935835",
+                      formId: "a44a6e1c-6f94-40da-b455-3017f72a67c9"
+                    });
+                  </script>
+                  <!-- End Form -->
+                </div>
+              </div>
+              <!-- End Card -->
+            </div>
+          </div>
+        </div>
+        <!-- Fin del Contenedor Centrado -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- End Contacts -->
+
+
+
+  <script src="../assets/js/vendor.min.js"></script>
+
+  <script src="../assets/js/theme.min.js"></script>
+
+  <script src="../assets/js/aos.js"></script>
+
+
+  <script>
+    (function () {
+      // INITIALIZATION OF LEAFLET
+      // =======================================================
+      const leaflet = HSCore.components.HSLeaflet.init(document.getElementById('mapEg1'))
+
+      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        id: 'mapbox/light-v9'
+      }).addTo(leaflet)
+    })()
+  </script>
+
+  <script>
+      (function () {
+        // INITIALIZATION OF SWIPER
+        // =======================================================
+        var swiper = new Swiper('.swiper');
+      })()
+  </script>
+  <script>
+    document.querySelectorAll(".scrollToForm").forEach(button => {
+      button.addEventListener("click", function (event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        document.getElementById("contactoForm").scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

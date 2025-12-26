@@ -1,0 +1,1838 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha OftalmolÃ³gica Digital | Medinet</title>
+  <meta name="description" content="Optimiza el diagnÃ³stico y seguimiento oftalmolÃ³gico con una ficha clÃ­nica digital. Mejora la experiencia integrada al ecosistema mÃ©dico.">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://medinetapp.com/" />
+  <meta property="og:site_name" content="Medinet" />
+  <meta property="fb:app_id" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../assets/svg/logos/favicon-medinet.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/theme.min.css">
+  <link rel="stylesheet" href="../assets/css/vendor.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KH42KFM');</script>
+        <!-- End Google Tag Manager -->
+  <style>
+    /* Reset y estilos base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: #1a202c;
+      line-height: 1.5;
+      background-color: #fff;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+    
+    /* Utilidades */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .flex {
+      display: flex;
+    }
+    
+    .flex-col {
+      flex-direction: column;
+    }
+    
+    .items-center {
+      align-items: center;
+    }
+    
+    .justify-center {
+      justify-content: center;
+    }
+    
+    .justify-end {
+      justify-content: flex-end;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    .grid {
+      display: grid;
+    }
+    
+    .gap-2 {
+      gap: 0.5rem;
+    }
+    
+    .gap-4 {
+      gap: 1rem;
+    }
+    
+    .gap-6 {
+      gap: 1.5rem;
+    }
+    
+    .gap-8 {
+      gap: 2rem;
+    }
+    
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+    
+    .mb-3 {
+      margin-bottom: 0.75rem;
+    }
+    
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+    
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+    
+    .mb-10 {
+      margin-bottom: 2.5rem;
+    }
+    
+    .mt-4 {
+      margin-top: 1rem;
+    }
+    
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+    
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+    
+    .mt-0\.5 {
+      margin-top: 0.125rem;
+    }
+    
+    .p-3 {
+      padding: 0.75rem;
+    }
+    
+    .p-4 {
+      padding: 1rem;
+    }
+    
+    .p-6 {
+      padding: 1.5rem;
+    }
+    
+    .p-8 {
+      padding: 2rem;
+    }
+    
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+    
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
+    .py-12 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    
+    .py-16 {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    
+    /* TipografÃ­a */
+    .text-sm {
+      font-size: 0.875rem;
+    }
+    
+    .text-lg {
+      font-size: 1.125rem;
+    }
+    
+    .text-xl {
+      font-size: 1.25rem;
+    }
+    
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+    
+    .text-3xl {
+      font-size: 1.875rem;
+    }
+    
+    .font-medium {
+      font-weight: 500;
+    }
+    
+    .font-bold {
+      font-weight: 700;
+    }
+    
+    /* Colores */
+    .text-white {
+      color: #fff;
+    }
+    
+    .text-gray-500 {
+      color: #718096;
+    }
+    
+    .text-gray-600 {
+      color: #4a5568;
+    }
+    
+    .text-gray-700 {
+      color: #2d3748;
+    }
+    
+    .bg-white {
+      background-color: #fff;
+    }
+    
+    .bg-blue-100 {
+      background-color: #ebf8ff;
+    }
+    
+    .text-green-500 {
+      color: #48bb78;
+    }
+    
+    /* Componentes */
+    .btn {
+      display: inline-block;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 0.375rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background-color: #5493db;
+      color: #fff;
+      border: none;
+    }
+    
+    .btn-primary:hover {
+      background-color: #4d648d;
+      transform: scale(1.05);
+    }
+    
+    .card {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+    }
+    
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+    
+    .rounded-full {
+      border-radius: 9999px;
+    }
+    
+    .shadow-lg {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .shadow-xl {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    /* Secciones especÃ­ficas */
+    .hero-section {
+      background: linear-gradient(to right, #dbeafe, #e3eeff);
+    }
+    
+    .accent-box {
+      background-color: #e3c52b;
+      display: inline-block;
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .accent-box:hover {
+      transform: scale(1.05);
+    }
+    
+    .info-box {
+      background-color: #dbeafe;
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .info-box:hover {
+      transform: translateY(-5px);
+    }
+    
+    .benefits-section {
+      background-color: #e3eeff;
+    }
+    
+    .ecosystem-section {
+      background-color: #e3eeff;
+    }
+    
+    .testimonials-section {
+      background-color: #dbeafe;
+    }
+    
+    .contact-section {
+      background: linear-gradient(to right, #5493db, #4d648d);
+      color: #fff;
+    }
+    
+    /* Formulario de contacto actualizado */
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #4a5568;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: transparent;
+      box-shadow: 0 0 0 2px #5493db;
+    }
+    
+    /* BotÃ³n de formulario corregido */
+    .form-button {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .form-button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .form-disclaimer {
+      text-align: center;
+      font-size: 0.825rem;
+      margin-top: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Animaciones */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* BotÃ³n de volver arriba corregido */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #5493db;
+      color: #fff;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 50;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(10px);
+      border: none; /* Eliminando cualquier borde */
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .back-to-top:hover {
+      background-color: #4d648d;
+    }
+    
+    /* Iconos de verificaciÃ³n actualizados - REDUCIDOS */
+    .check-circle {
+      width: 42px; /* Reducido de 80px */
+      height: 42px; /* Reducido de 80px */
+      border-radius: 50%;
+      border: 3px solid #4ade80; /* Reducido de 6px */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .check-circle svg {
+      width: 24px; /* Reducido de 40px */
+      height: 24px; /* Reducido de 40px */
+      color: #4ade80;
+    }
+    
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    
+    .check-text {
+      margin-top: 0.25rem; /* Reducido un poco para alinear mejor con cÃ­rculos mÃ¡s pequeÃ±os */
+    }
+    
+    /* Media queries */
+    @media (min-width: 768px) {
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      
+      .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+      
+      .md\:text-3xl {
+        font-size: 1.875rem;
+      }
+      
+      .md\:text-4xl {
+        font-size: 2.25rem;
+      }
+      
+      .md\:py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      
+      .md\:px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      
+      .md\:order-1 {
+        order: 1;
+      }
+      
+      .md\:order-2 {
+        order: 2;
+      }
+      
+      .md\:justify-end {
+        justify-content: flex-end;
+      }
+    }
+    
+    /* AnimaciÃ³n para elementos en scroll */
+    .animate-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .animate-item.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Efectos hover */
+    .hover-translate {
+      transition: transform 0.3s ease;
+    }
+    
+    .hover-translate:hover {
+      transform: translateX(0.5rem);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #e6f2ff;
+    }
+
+    .hero-section {
+      min-height: 100vh;
+      width: 100%;
+      background-color: #e6f2ff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text h1 .ficha {
+      display: block;
+    }
+
+    .hero-text h1 .oftalmologica {
+      display: block;
+      opacity: 0.8;
+    }
+
+    .hero-text h1 .digital {
+      display: block;
+      color: #5493db; /* Azul Medinet */
+      position: relative;
+      width: fit-content;
+    }
+
+    .hero-text h1 .digital::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-color: #5493db; /* Azul Medinet */
+      border-radius: 3px;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #ffffff;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-cta-primary {
+      background-color: #e3c52b;
+      color: #0a2463;
+      font-weight: 600;
+      padding: 0.875rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .hero-cta-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(227, 197, 43, 0.3);
+    }
+
+    .hero-cta-primary svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .hero-cta-secondary {
+      background: transparent;
+      color: white;
+      font-weight: 500;
+      padding: 0.875rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .hero-cta-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-features {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .hero-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .hero-feature-icon {
+      width: 24px;
+      height: 24px;
+      background-color: #e3c52b;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-feature-icon svg {
+      width: 14px;
+      height: 14px;
+      color: white;
+    }
+
+    .hero-image-container {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero-image-frame {
+      background-color: #5493db;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+      max-width: 550px;
+      transition: transform 0.5s ease;
+    }
+
+    .hero-image-frame:hover {
+      transform: translateY(-10px);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .hero-image-frame:hover .hero-image {
+      transform: scale(1.02);
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .hero-badge span {
+      font-size: 0.75rem;
+      color: #718096;
+    }
+
+    .hero-badge strong {
+      font-size: 1rem;
+      color: #0a2463;
+    }
+
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #0a2463; /* Cambiado a azul oscuro para mejor visibilidad */
+      opacity: 0.9; /* Aumentado para mejor visibilidad */
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente para mejorar legibilidad */
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    .hero-scroll-indicator:hover {
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-scroll-indicator span {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600; /* MÃ¡s peso para mejor visibilidad */
+    }
+
+    .hero-scroll-indicator svg {
+      stroke: #0a2463; /* Cambiado a azul oscuro para coincidir con el texto */
+    }
+
+    /* Media queries para responsividad */
+    @media (min-width: 1200px) {
+      .hero-image-frame {
+        max-width: 650px; /* Imagen mÃ¡s grande en pantallas grandes */
+      }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .hero-image-frame {
+        max-width: 600px; /* Imagen mÃ¡s grande en tablets grandes */
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .hero-image-frame {
+        max-width: 550px; /* Imagen mÃ¡s grande en tablets */
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .hero-text h1 {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image-container {
+        justify-content: center;
+        order: -1;
+        margin-bottom: 2rem;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-features {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+      }
+
+      .hero-image-frame {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header id="header" class="navbar navbar-expand-lg navbar-end navbar-sticky-top navbar-light bg-white" data-hs-header-options='{"fixMoment": 1000, "fixEffect": "slide"}' hsheader="true">
+
+
+  <div class="container">
+    <nav class="js-mega-menu navbar-nav-wrap hs-menu-initialized hs-menu-horizontal">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center pe-3" href="../" aria-label="Medinet" style="max-height: 56px;">
+        <img src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Servicios/logo-medinet.svg" alt="Logo Medinet" class="img-fluid" style="max-height: 36px;">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-default">
+          <i class="bi-list"></i>
+        </span>
+        <span class="navbar-toggler-toggled">
+          <i class="bi-x"></i>
+        </span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar-absolute-top-scroller">
+          <ul class="navbar-nav">
+            <!-- Soluciones -->
+            <li class="hs-has-mega-menu nav-item">
+              <a id="landingsMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle" href="../soluciones/software-en-la-medicina" aria-expanded="false">Soluciones</a>
+
+              <div class="hs-mega-menu dropdown-menu w-100 hs-mega-menu-desktop-lg animated fadeOut" aria-labelledby="landingsMegaMenu" style="min-width: 30rem; animation-duration: 300ms; display: none;">
+                <div class="row">
+                  <div class="col-lg-5 d-none d-lg-block">
+                    <div class="navbar-dropdown-menu-banner bg-light">
+                      <div class="navbar-dropdown-menu-banner-content">
+                        <div class="mb-4">
+                          <span class="h2 d-block">Conoce Medinet</span>
+                          <p>Descubre cÃ³mo Medinet te ayuda a administrar mejor y reducir costos</p>
+                        </div>
+                        <a class="btn btn-primary btn-transition" href="../reunion">Agendar reuniÃ³n <i class="bi-chevron-right small"></i></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-7">
+                    <div class="navbar-dropdown-menu-inner">
+                      <div class="row">
+                        <div class="col-sm mb-3 mb-sm-0">
+                          <span class="dropdown-header">MÃ³dulos</span>
+                          <a class="dropdown-item" href="../soluciones/agenda-medica">Agenda mÃ©dica</a>
+                          <a class="dropdown-item" href="../soluciones/fichas-clinicas">Historia clÃ­nica</a>
+                          <a class="dropdown-item" href="../soluciones/cobranza-y-cuenta-medica">Cobranza y cuenta mÃ©dica</a>
+                          <a class="dropdown-item" href="../soluciones/gestion-quirofano">GestiÃ³n de quirÃ³fano</a>
+                          <a class="dropdown-item" href="../soluciones/gestion-camas">GestiÃ³n de camas</a>
+                          <a class="dropdown-item" href="../soluciones/adquisicion-y-dispensacion">AdquisiciÃ³n y dispensaciÃ³n</a>
+                          <a class="dropdown-item" href="../soluciones/reportes">Reportes</a>
+                          <a class="dropdown-item" href="../soluciones/software-urgencia-hospitalaria">Urgencia Hospitalaria</a>
+                        </div>
+
+                        <div class="col-sm">
+                          <div class="mb-3">
+                            <span class="dropdown-header">Roles</span>
+                            <a class="dropdown-item" href="../roles/director-medico">Director mÃ©dico</a>
+                            <a class="dropdown-item" href="../roles/gerente-general">Gerente general (CEO)</a>
+                            <a class="dropdown-item" href="../roles/gerente-finanzas">Gerente de finanzas (CFO)</a>
+                            <a class="dropdown-item" href="../roles/gerente-operaciones">Gerente de operaciones (COO)</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Especialidades -->
+            <li class="hs-has-sub-menu nav-item">
+              <a id="companyMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle" href="#" aria-expanded="false">Especialidades</a>
+
+              <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated" aria-labelledby="companyMegaMenu" style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                <a class="dropdown-item" href="../especialidades/software-para-oftalmologia">OftalmologÃ­a</a>
+                <a class="dropdown-item" href="../especialidades/software-para-psiquiatria">PsiquiatrÃ­a</a>
+                <a class="dropdown-item" href="../especialidades/software-para-bariatrica">BariÃ¡trica</a>
+                <a class="dropdown-item" href="../especialidades/software-gestion-centro-medico">Centros MÃ©dicos</a>
+                <a class="dropdown-item" href="../especialidades/software-para-clinica-estetica">EstÃ©tica</a>
+                <a class="dropdown-item" href="../especialidades/software-dental">Dental</a>
+              </div>
+            </li>
+
+            <!-- PabellÃ³n -->
+            <li class="hs-has-sub-menu nav-item">
+              <a id="gestionmenu" class="hs-mega-menu-invoker nav-link dropdown-toggle" href="#" aria-expanded="false">PabellÃ³n</a>
+
+              <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated" aria-labelledby="gestionmenu" style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                <a class="dropdown-item" href="../gestion-pabellon-quirurgico/agenda-quirurgica">Agenda quirÃºrgica</a>
+                <a class="dropdown-item" href="../gestion-pabellon-quirurgico/tabla-quirurgica">Tabla quirÃºrgica</a>
+              </div>
+            </li>
+
+            <!-- MetodologÃ­a -->
+            <li class="hs-has-sub-menu nav-item">
+              <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle" href="#" aria-expanded="false">Servicios</a>
+
+              <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated" aria-labelledby="pagesMegaMenu" style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                <a class="dropdown-item" href="../metodologia/implementacion">ImplementaciÃ³n</a>
+                <a class="dropdown-item" href="../metodologia/integraciones">Integraciones</a>
+                <a class="dropdown-item" href="../metodologia/migracion-de-datos">MigraciÃ³n de datos</a>
+                <a class="dropdown-item" href="../metodologia/soporte">Soporte</a>
+                <a class="dropdown-item" href="../metodologia/seguridad">Seguridad</a>
+              </div>
+            </li>
+
+            <!-- Empresa -->
+            <li class="hs-has-sub-menu nav-item">
+              <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle" href="#" aria-expanded="false">Empresa</a>
+
+              <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated fadeOut" aria-labelledby="blogMegaMenu" style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                <a class="dropdown-item" href="../empresa/nosotros">Nosotros</a>
+                <a class="dropdown-item" href="../empresa/trabajo">Trabajo</a>
+              </div>
+            </li>
+
+            <!-- Contacto y WhatsApp -->
+            <li class="nav-item">
+              <a class="btn btn-primary btn-transition" href="../contacto">Contactar</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-success btn-transition" href="https://wa.me/56959167735" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp fs-5"></i> WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+  <!-- BotÃ³n de volver arriba (corregido: sin bordes) -->
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="hero-section py-12 md:py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center animate-item">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold mb-4" style="color: #0a2463;">Ficha OftalmolÃ³gica digital</h1>
+          <p class="text-gray-700 mb-6">
+            Optimiza el diagnÃ³stico y seguimiento oftalmolÃ³gico con una ficha clÃ­nica digital. Mejora la experiencia
+            integrada al ecosistema mÃ©dico y tus recetas digitales desde el primer dÃ­a.
+          </p>
+          <button class="btn btn-primary px-6 py-2" onclick="scrollToSection('contacto')">
+            SOLICITAR DEMO
+          </button>
+        </div>
+        <div class="flex justify-center">
+          <img 
+            src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/HERO%201%20IMAGEN.png"
+            alt="Doctor mostrando ficha oftalmolÃ³gica digital"
+            class="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            width="500"
+            height="400"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center animate-item">
+        <div class="order-1">
+          <img 
+            src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/IMAGE%20CONTENT%202%201.png"
+            alt="Doctor con tabla de visiÃ³n"
+            class="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            width="450"
+            height="350"
+          />
+        </div>
+        <div class="order-2">
+          <div class="accent-box p-4 mb-4">
+            <h2 class="text-xl font-bold">Â¿TodavÃ­a llenas fichas oftalmolÃ³gicas a mano?</h2>
+          </div>
+          <p class="text-gray-700 mb-6">
+            Imagina tener todos los datos del paciente en un solo lugar:
+            <strong>recetas Ã³pticas, evoluciÃ³n mÃ©dica y antecedentes clave</strong>. Todo listo para tomar
+            decisiones rÃ¡pidas y seguras.
+          </p>
+          <div class="info-box p-4">
+            <p class="text-sm text-gray-700">
+              Los oftalmÃ³logos que usan Medinet pueden <strong>dedicar mÃ¡s tiempo a sus pacientes</strong> y menos a
+              la documentaciÃ³n clÃ­nica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Benefits Section -->
+  <section id="beneficios" class="benefits-section py-12 md:py-16">
+    <div class="container">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-2 animate-item" style="color: #0a2463;">
+        Beneficios reales para tu clÃ­nica
+      </h2>
+      <p class="text-center text-gray-700 mb-10 max-w-3xl mx-auto animate-item">
+        Nuestra ficha oftalmolÃ³gica estÃ¡ diseÃ±ada especÃ­ficamente para mejorar la eficiencia y calidad de atenciÃ³n
+        en consultas oftalmolÃ³gicas.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Benefit Card 1 -->
+        <div class="card p-6 animate-item" style="transition-delay: 100ms;">
+          <h3 class="text-lg font-bold mb-3" style="color: #0a2463;">Mejora el flujo de atenciÃ³n</h3>
+          <p class="text-gray-700 mb-4">
+            Optimiza el proceso de consulta. OftalmÃ³logos con agenda completa pueden atender mÃ¡s pacientes sin
+            sacrificar la calidad de atenciÃ³n.
+          </p>
+          <div class="flex items-center" style="color: #5493db;">
+            <span class="mr-2">â†’</span>
+            <p class="font-medium">OptimizaciÃ³n del tiempo de consulta</p>
+          </div>
+        </div>
+
+        <!-- Benefit Card 2 -->
+        <div class="card p-6 animate-item" style="transition-delay: 200ms;">
+          <h3 class="text-lg font-bold mb-3" style="color: #0a2463;">Ahorra tiempo con recetas digitales</h3>
+          <p class="text-gray-700 mb-4">
+            Genera recetas de lentes y medicamentos automÃ¡ticamente, prescripciones electrÃ³nicas al momento y
+            envÃ­a indicaciones vÃ­a email.
+          </p>
+          <div class="flex items-center" style="color: #5493db;">
+            <span class="mr-2">â†’</span>
+            <p class="font-medium">GeneraciÃ³n rÃ¡pida de documentaciÃ³n</p>
+          </div>
+        </div>
+
+        <!-- Benefit Card 3 -->
+        <div class="card p-6 animate-item" style="transition-delay: 300ms;">
+          <h3 class="text-lg font-bold mb-3" style="color: #0a2463;">Accede rÃ¡pido al historial clÃ­nico</h3>
+          <p class="text-gray-700 mb-4">
+            Visualiza el historial completo del paciente en segundos. Compara evoluciÃ³n y accede a informaciÃ³n
+            previa en un solo clic.
+          </p>
+          <div class="flex items-center" style="color: #5493db;">
+            <span class="mr-2">â†’</span>
+            <p class="font-medium">Acceso inmediato a toda la historial</p>
+          </div>
+        </div>
+
+        <!-- Benefit Card 4 -->
+        <div class="card p-6 animate-item" style="transition-delay: 400ms;">
+          <h3 class="text-lg font-bold mb-3" style="color: #0a2463;">Centraliza y protege la informaciÃ³n</h3>
+          <p class="text-gray-700 mb-4">
+            MantÃ©n toda la data clÃ­nica en un solo lugar seguro. Cumple con normativas de protecciÃ³n de datos
+            mÃ©dicos y evita la pÃ©rdida de informaciÃ³n.
+          </p>
+          <div class="flex items-center" style="color: #5493db;">
+            <span class="mr-2">â†’</span>
+            <p class="font-medium">Seguridad de nivel hospitalario</p>
+          </div>
+        </div>
+
+        <!-- Benefit Card 5 -->
+        <div class="card p-6 animate-item" style="transition-delay: 500ms;">
+          <h3 class="text-lg font-bold mb-3" style="color: #0a2463;">Trabaja desde mÃºltiples sedes</h3>
+          <p class="text-gray-700 mb-4">
+            Accede a la informaciÃ³n desde donde trabajes con total seguridad. Ideal para oftalmÃ³logos que atienden
+            en diferentes clÃ­nicas o consultorios.
+          </p>
+          <div class="flex items-center" style="color: #5493db;">
+            <span class="mr-2">â†’</span>
+            <p class="font-medium">SincronizaciÃ³n en tiempo real</p>
+          </div>
+        </div>
+
+        <!-- Benefit Card 6 -->
+        <div class="card p-6 animate-item" style="transition-delay: 600ms;">
+          <h3 class="text-lg font-bold mb-3" style="color: #0a2463;">Toma decisiones mÃ¡s informadas</h3>
+          <p class="text-gray-700 mb-4">
+            Visualiza tendencias y patrones en datos clÃ­nicos para mejorar diagnÃ³sticos y tratamientos
+            personalizados para cada paciente.
+          </p>
+          <div class="flex items-center" style="color: #5493db;">
+            <span class="mr-2">â†’</span>
+            <p class="font-medium">AnÃ¡lisis clÃ­nico avanzado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Data Section -->
+  <section id="datos-paciente" class="py-12 md:py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center animate-item">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-4" style="color: #0a2463;">Datos generales del paciente</h2>
+          <p class="text-gray-700 mb-6">
+            Toda la informaciÃ³n clÃ­nica ordenada y accesible. Registra antecedentes mÃ©dicos, signos vitales y
+            diagnÃ³sticos en segundos. Personaliza la ficha segÃºn el flujo clÃ­nico de tu especialidad para mayor
+            eficiencia.
+          </p>
+
+          <div class="space-y-4">
+            <!-- Checkmark items con tamaÃ±o reducido -->
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">Historial mÃ©dico completo y organizado</p>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">Alergias de riesgos y condiciones previas</p>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">Antecedentes de tratamientos y resultados</p>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">DiagnÃ³sticos con verificaciÃ³n CIE-10</p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary px-6 py-2 mt-6" onclick="scrollToSection('contacto')">
+            CONTÃCTANOS
+          </button>
+        </div>
+        <div class="flex justify-center">
+          <img 
+            src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/IMAGE%20CONTENT%203%201.png"
+            alt="Doctor mostrando ficha digital a paciente"
+            class="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            width="500"
+            height="400"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Medical Indications Section -->
+  <section class="bg-white py-12 md:py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center animate-item">
+        <div class="order-2 md:order-1">
+          <img 
+            src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/FICHA%20OFT%2031%201.png"
+            alt="Interfaz de software mÃ©dico"
+            class="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            width="450"
+            height="350"
+          />
+        </div>
+        <div class="order-1 md:order-2">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4" style="color: #0a2463;">Indicaciones mÃ©dicas</h2>
+          <p class="text-gray-700 mb-6">
+            Documenta cada indicaciÃ³n de forma rÃ¡pida y segura. Utiliza plantillas predefinidas para agilizar el
+            proceso. Todas tus indicaciones quedan registradas y disponibles para gestionar derivaciones, todo con
+            firma digital integrada.
+          </p>
+
+          <div class="space-y-4">
+            <!-- Checkmark items con tamaÃ±o reducido -->
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">Plantillas clÃ­nicas personalizables</p>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">Protocolos y rutas del cuidado mÃ©dico</p>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">GestiÃ³n de interconsultas y derivaciones</p>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">Archivo de Ã³rdenes mÃ©dicas firmadas digitalmente</p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary px-6 py-2 mt-6" onclick="scrollToSection('contacto')">
+            CONTÃCTANOS
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prescription Section -->
+  <section id="recetas" class="py-12 md:py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center animate-item">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-4" style="color: #0a2463;">Receta de lentes</h2>
+          <p class="text-gray-700 mb-6">
+            Optimiza recetas de lentes en pocos segundos. Prescribe con exactitud usando el formulario
+            especializado. EnvÃ­a recetas por correo automÃ¡ticamente y accede al historial Ã³ptico de tus pacientes.
+          </p>
+
+          <div class="space-y-4">
+            <!-- Checkmark items con tamaÃ±o reducido -->
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">Valoraciones integrales para prescripciÃ³n precisa</p>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">EnvÃ­o digital de recetas a pacientes por email</p>
+            </div>
+            <div class="check-item">
+              <div class="check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p class="check-text">Historial de recetas disponible para futuras consultas</p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary px-6 py-2 mt-6" onclick="scrollToSection('contacto')">
+            CONTÃCTANOS
+          </button>
+        </div>
+        <div class="flex justify-center">
+          <img 
+            src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/FICHA%20OFT%2021%201.png"
+            alt="Interfaz de receta digital"
+            class="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            width="450"
+            height="350"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Section -->
+  <section class="ecosystem-section py-12 md:py-16">
+    <div class="container">
+      <div class="animate-item">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2" style="color: #0a2463;">
+          Conectada a todo tu ecosistema clÃ­nica
+        </h2>
+        <p class="text-gray-700 mb-6 max-w-3xl">
+          La ficha oftalmolÃ³gica no es un mÃ³dulo aislado. EstÃ¡ integrada con todos los procesos clÃ­nicos y
+          administrativos de tu centro mÃ©dico.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-2">
+            <div class="grid md:grid-cols-2 gap-2">
+              <div class="space-y-2">
+                <!-- Checkmark items con tamaÃ±o reducido -->
+                <div class="check-item">
+                  <div class="check-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <p class="check-text">Agenda mÃ©dica y gestiÃ³n de tiempos</p>
+                </div>
+                <div class="check-item">
+                  <div class="check-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <p class="check-text">Caja de pagamentos, facturaciÃ³n y presupuestos</p>
+                </div>
+                <div class="check-item">
+                  <div class="check-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <p class="check-text">GestiÃ³n quirÃºrgica y hospitalaria</p>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <div class="check-item">
+                  <div class="check-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <p class="check-text">EmisiÃ³n y firma digital de informes y recetas</p>
+                </div>
+                <div class="check-item">
+                  <div class="check-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <p class="check-text">Portal del paciente y portal de exÃ¡menes</p>
+                </div>
+                <div class="check-item">
+                  <div class="check-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <p class="check-text">MÃ³dulos de recaudaciÃ³n, presupuestos y reportes</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mt-4">
+              Todo queda vinculado en un flujo clÃ­nico continuo, desde la atenciÃ³n hasta la facturaciÃ³n.
+            </p>
+          </div>
+
+          <div class="flex justify-center md:justify-end">
+            <img 
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/IMAGE%204%201.png"
+              alt="Dashboard de software mÃ©dico en laptop"
+              class="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              width="500"
+              height="300"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="py-12 md:py-16">
+    <div class="container">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-2 animate-item" style="color: #0a2463;">
+        Â¿Por quÃ© elegir a medinet?
+      </h2>
+      <p class="text-center text-gray-700 mb-10 max-w-3xl mx-auto animate-item">
+        Nuestra soluciÃ³n oftalmolÃ³gica se destaca por su flexibilidad, seguridad y capacidad de integraciÃ³n
+      </p>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="card p-6 flex flex-col items-center animate-item" style="transition-delay: 100ms;">
+          <div class="mb-4 flex justify-center">
+            <img 
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/seguridad%201.png"
+              alt="Seguridad de nivel clÃ­nico"
+              width="48"
+              height="48"
+              class="object-contain"
+            />
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-center" style="color: #0a2463;">Seguridad de nivel clÃ­nico</h3>
+          <p class="text-gray-700 text-center">
+            Cumplimos con los mÃ¡s altos estÃ¡ndares de protecciÃ³n de datos mÃ©dicos. Garantizamos la
+            confidencialidad y seguridad de la informaciÃ³n.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card p-6 flex flex-col items-center animate-item" style="transition-delay: 200ms;">
+          <div class="mb-4 flex justify-center">
+            <img 
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/aaaa%201.png"
+              alt="ConfiguraciÃ³n avanzada"
+              width="48"
+              height="48"
+              class="object-contain"
+            />
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-center" style="color: #0a2463;">ConfiguraciÃ³n avanzada</h3>
+          <p class="text-gray-700 text-center">
+            Configura la ficha a tu manera, con campos personalizados segÃºn tu especialidad y tipo de prÃ¡ctica
+            oftalmolÃ³gica.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card p-6 flex flex-col items-center animate-item" style="transition-delay: 300ms;">
+          <div class="mb-4 flex justify-center">
+            <img 
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/actualizacion%201.png"
+              alt="Flexibilidad total"
+              width="48"
+              height="48"
+              class="object-contain"
+            />
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-center" style="color: #0a2463;">Flexibilidad</h3>
+          <p class="text-gray-700 text-center">
+            Cada centro mÃ©dico trabaja de manera Ãºnica. Nos adaptamos a tu flujo de trabajo, no al revÃ©s, para
+            optimizar tu prÃ¡ctica oftalmolÃ³gica.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card p-6 flex flex-col items-center animate-item" style="transition-delay: 400ms;">
+          <div class="mb-4 flex justify-center">
+            <img 
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/cerebro%201.png"
+              alt="Interoperabilidad completa"
+              width="48"
+              height="48"
+              class="object-contain"
+            />
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-center" style="color: #0a2463;">Interoperabilidad completa</h3>
+          <p class="text-gray-700 text-center">
+            Conecta con otros dispositivos y sistemas de gestiÃ³n hospitalaria y plataformas externas para una
+            experiencia clÃ­nica integrada.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section py-12 md:py-16">
+    <div class="container">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-2 animate-item" style="color: #0a2463;">
+        Lo que dicen nuestros clientes
+      </h2>
+      <p class="text-center text-gray-700 mb-10 animate-item">
+        Profesionales que ya confÃ­an en nuestra ficha oftalmolÃ³gica digital.
+      </p>
+
+      <div class="flex justify-center animate-item">
+        <img 
+          src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/ficha-clinica-oftalmologica/Group%2034.png"
+          alt="Testimonios de clientes"
+          class="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+          width="900"
+          height="300"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <section id="contacto" class="contact-section py-16">
+    <div class="container text-center">
+      <div class="animate-item">
+        <h2 class="text-2xl text-white font-bold mb-4">Empieza a atender mejor desde hoy</h2>
+        <p class="mb-8 max-w-2xl mx-auto">
+          Solicita una demo gratuita y transforma la forma en que llevas tus fichas oftalmolÃ³gicas.
+        </p>
+      </div>
+
+      <!-- Formulario actualizado segÃºn la imagen de referencia -->
+      <div class="contact-form animate-item">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input
+              type="text"
+              id="nombre"
+              class="form-input"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email profesional</label>
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="email@ejemplo.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="telefono" class="form-label">TelÃ©fono</label>
+            <input
+              type="tel"
+              id="telefono"
+              class="form-input"
+              placeholder="+56 9 1234 5678"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="clinica" class="form-label">Nombre de la clÃ­nica</label>
+            <input
+              type="text"
+              id="clinica"
+              class="form-input"
+              placeholder="Nombre de tu clÃ­nica"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="form-button"
+          >
+            Solicitar demo
+          </button>
+
+          <p class="form-disclaimer">
+            Al enviar este formulario, acepto la polÃ­tica de privacidad y el tratamiento de mis datos.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark">
+    <div class="container pb-1 pb-lg-5">
+      <div class="row content-space-t-2 mb-9">
+        <div class="col-12 col-lg-3 mb-7 mb-lg-0">
+          <!-- Logo -->
+          <div class="mb-5">
+            <a class="navbar-brand" href="../" aria-label="Space">
+              <img class="navbar-brand-logo" src="../assets/svg/logos/logo-medinet-white.svg" alt="Image Description">
+            </a>
+          </div>
+          <!-- End Logo -->
+          <ul class="list-unstyled list-py-1">
+            <li><a class="link-sm link-light"><i class="bi bi-envelope me-1"></i> contacto@medinetapp.com</a></li>
+          </ul>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-6 col-sm mb-7 mb-sm-0">
+          <h5 class="text-white mb-3"> <a href="./" class="text-white">Soluciones</a> </h5>
+
+          <!-- List -->
+          <ul class="list-unstyled list-py-1 mb-0">
+              <li><a class="link-sm link-light" href="../soluciones/agenda-medica">Agenda mÃ©dica</a></li>
+              <li><a class="link-sm link-light" href="../soluciones/fichas-clinicas">Historia clÃ­nica</a></li>
+              <li><a class="link-sm link-light" href="../soluciones/cobranza-y-cuenta-medica">Cobranza y cuenta mÃ©dica</a></li>
+              <li><a class="link-sm link-light" href="../soluciones/gestion-quirofano">GestiÃ³n de quirÃ³fano</a></li>
+              <li><a class="link-sm link-light" href="../soluciones/gestion-camas">GestiÃ³n de camas</a></li>
+              <li><a class="link-sm link-light" href="../soluciones/adquisicion-y-dispensacion">AdquisiciÃ³n y dispensaciÃ³n</a></li>
+              <li><a class="link-sm link-light" href="../soluciones/reportes">Reportes</a></li>
+              <li><a class="link-sm link-light">Reportes BI <span class="badge bg-success rounded-pill ms-1">Pronto</span></a></li>
+          </ul>
+          <!-- End List -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col-6 col-sm mb-7 mb-sm-0">
+          <h5 class="text-white mb-3">Especialidades</h5>
+
+          <!-- List -->
+          <ul class="list-unstyled list-py-1 mb-0">
+            <li><a class="link-sm link-light" href="../especialidades/software-para-oftalmologia">OftalmologÃ­a</a></li>
+            <li><a class="link-sm link-light" href="../especialidades/software-para-psiquiatria">PsiquiatrÃ­a</a></li>
+            <li><a class="link-sm link-light" href="../especialidades/software-para-clinica-estetica">EstÃ©tica</a></li>
+            <li><a class="link-sm link-light" href="../especialidades/oncologia">OncologÃ­a</a></li>
+            <li><a class="link-sm link-light" href="../especialidades/salud-ocupacional">Salud ocupacional</a></li>
+            <li><a class="link-sm link-light" href="../especialidades/software-para-bariatrica">BariÃ¡trica</a></li>
+          </ul>
+          <!-- End List -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col-6 col-sm mb-7 mb-sm-0">
+          <h5 class="text-white mb-3">MetodologÃ­a</h5>
+
+          <!-- List -->
+          <ul class="list-unstyled list-py-1 mb-0">
+            <li><a class="link-sm link-light" href="../metodologia/implementacion">ImplementaciÃ³n</a></li>
+            <li><a class="link-sm link-light" href="../metodologia/integraciones">Integraciones</a></li>
+            <li><a class="link-sm link-light" href="../metodologia/migracion-de-datos">MigraciÃ³n de datos</a></li>
+            <li><a class="link-sm link-light" href="../metodologia/seguridad">Seguridad</a></li>
+            <li><a class="link-sm link-light" href="../metodologia/soporte">Soporte</a></li>
+          </ul>
+          <!-- End List -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col-6 col-sm">
+          <h5 class="text-white mb-3">Empresa</h5>
+
+          <!-- List -->
+          <ul class="list-unstyled list-py-1 mb-5">
+            <li><a class="link-sm link-light" href="../empresa/nosotros">Sobre Medinet</a></li>
+            <li><a class="link-sm link-light" href="../empresa/trabajo">Trabaja con nosotros</a></li>
+          </ul>
+          <!-- End List -->
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+
+      <div class="row align-items-center">
+        <div class="col">
+          <p class="text-white-70 small mb-0">Â© Medinet. 2025. Todos los derechos reservados.</p>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-auto">
+          <!-- Socials -->
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a class="btn btn-ghost-light btn-sm btn-icon" href="https://www.facebook.com/medinetappcl">
+                <i class="bi-facebook"></i>
+              </a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="btn btn-ghost-light btn-sm btn-icon" href="https://www.instagram.com/medinetapp/">
+                <i class="bi-instagram"></i>
+              </a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="btn btn-ghost-light btn-sm btn-icon" href="https://www.linkedin.com/company/medinetapp/">
+                <i class="bi-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- End Socials -->
+        </div>
+        <!-- End Col -->
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/vendor.min.js"></script>
+
+  <script src="../assets/js/theme.min.js"></script>
+
+  <script src="../assets/js/aos.js"></script>
+
+<script src="../node_modules/fslightbox/index.js"></script>
+
+  <script>
+    (function() {
+      // INITIALIZATION OF HEADER
+      // =======================================================
+      new HSHeader('#header').init()
+
+
+      // INITIALIZATION OF MEGA MENU
+      // =======================================================
+      new HSMegaMenu('.js-mega-menu', {
+          desktop: {
+            position: 'left'
+          }
+        })
+
+
+      // INITIALIZATION OF SHOW ANIMATIONS
+      // =======================================================
+      new HSShowAnimation('.js-animation-link')
+
+
+      // INITIALIZATION OF BOOTSTRAP VALIDATION
+      // =======================================================
+      HSBsValidation.init('.js-validate', {
+        onSubmit: data => {
+          data.event.preventDefault()
+          alert('Submited')
+        }
+      })
+
+
+      // INITIALIZATION OF AOS
+      // =======================================================
+      AOS.init({
+        duration: 650,
+        once: true
+      });
+
+
+      // INITIALIZATION OF NAV SCROLLER
+      // =======================================================
+      new HsNavScroller('.js-nav-scroller')
+    })()
+  </script>
+
+  <script>
+    // FunciÃ³n para manejar el scroll suave a secciones
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // BotÃ³n de volver arriba
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Animaciones basadas en scroll
+    const animateItems = document.querySelectorAll('.animate-item');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    animateItems.forEach(item => {
+      observer.observe(item);
+    });
+
+    // ValidaciÃ³n del formulario
+    const contactForm = document.getElementById('contact-form');
+    
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // AquÃ­ irÃ­a la lÃ³gica para enviar el formulario
+      alert('Â¡Gracias por tu interÃ©s! Te contactaremos pronto para coordinar una demo.');
+      
+      // Opcional: resetear el formulario
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
+

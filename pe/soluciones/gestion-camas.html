@@ -1,0 +1,753 @@
+﻿<!DOCTYPE html>
+<html lang="es-PE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <title>GestiÃ³n de hospitalizaciÃ³n y camas en PerÃº | Medinet</title>
+    <meta name="description" content="Optimiza la hospitalizaciÃ³n: mapa de camas, cÃ¡lculo automatizado del dÃ­a cama, prefacturas y reportes. Integra todo el flujo clÃ­nico y financiero con Medinet." />
+    <meta name="author" content="Medinet" />
+    <meta name="publisher" content="Medinet" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="GestiÃ³n de hospitalizaciÃ³n y camas en PerÃº | Medinet" />
+    <meta property="og:description" content="Optimiza la hospitalizaciÃ³n con mapa de camas, dÃ­a cama automatizado y prefacturas sincronizadas. Todo en Medinet." />
+    <meta property="og:image" content="https://www.medinetapp.com/assets/svg/logos/favicon-medinet.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://www.medinetapp.com/pe/soluciones/gestion-camas/" />
+    <meta property="og:site_name" content="Medinet" />
+    <meta property="og:locale" content="es_PE" />
+
+    <!-- Canonical & Hreflang -->
+    <link rel="canonical" href="https://www.medinetapp.com/pe/soluciones/gestion-camas" />
+    <link rel="alternate" hreflang="es-CL" href="https://www.medinetapp.com/soluciones/gestion-camas" />
+    <link rel="alternate" hreflang="es-PE" href="https://www.medinetapp.com/pe/soluciones/gestion-camas" />
+    <link rel="alternate" hreflang="x-default" href="https://www.medinetapp.com/soluciones/gestion-camas" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/svg/logos/favicon-medinet.png" />
+    <link rel="apple-touch-icon" href="../../assets/svg/logos/favicon-medinet.png" />
+
+    <!-- Fuentes + CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="preload" href="../../assets/css/theme.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../../assets/css/theme.min.css"></noscript>
+    <link rel="stylesheet" href="../../assets/css/vendor.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KH42KFM');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Structured Data: Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.medinetapp.com/pe/"},
+        {"@type":"ListItem","position":2,"name":"Soluciones","item":"https://www.medinetapp.com/pe/soluciones/software-en-la-medicina"},
+        {"@type":"ListItem","position":3,"name":"GestiÃ³n de camas","item":"https://www.medinetapp.com/pe/soluciones/gestion-camas"}
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Medinet",
+      "url":"https://www.medinetapp.com",
+      "logo":"https://www.medinetapp.com/assets/svg/logos/favicon-medinet.png",
+      "sameAs":[
+        "https://www.facebook.com/medinetappcl",
+        "https://www.instagram.com/medinetapp/",
+        "https://www.linkedin.com/company/medinetapp/"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Website + SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"Medinet",
+      "url":"https://www.medinetapp.com",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://www.medinetapp.com/buscar?q={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: Service (PE) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Service",
+      "name":"GestiÃ³n de hospitalizaciÃ³n y camas Medinet",
+      "description":"Optimiza la hospitalizaciÃ³n: mapa de camas, cÃ¡lculo automatizado del dÃ­a cama, prefacturas y reportes.",
+      "brand":{"@type":"Brand","name":"Medinet","url":"https://www.medinetapp.com"},
+      "image":"https://www.medinetapp.com/assets/svg/logos/favicon-medinet.png",
+      "url":"https://www.medinetapp.com/pe/soluciones/gestion-camas",
+      "areaServed": {"@type":"Country","name":"PerÃº"},
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"PEN","availability":"https://schema.org/InStock"}
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Â¿QuÃ© es el mapa de camas?",
+         "acceptedAnswer":{"@type":"Answer","text":"Es una herramienta para ver la distribuciÃ³n y uso de camas del recinto. En Medinet puedes configurar por sucursal, piso o habitaciÃ³n y visualizar su estado."}},
+        {"@type":"Question","name":"Â¿CÃ³mo se calcula el cobro de dÃ­a cama?",
+         "acceptedAnswer":{"@type":"Answer","text":"La gestiÃ³n de camas estÃ¡ integrada al resto de soluciones. Todo consumo o registro asociado al paciente hospitalizado se suma de forma automÃ¡tica a su cuenta mÃ©dica, reduciendo errores por factor humano."}}
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH42KFM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- ========== HEADER (con banderas / PerÃº activo) ========== -->
+    <header id="header"
+      class="navbar navbar-expand-lg navbar-end navbar-light bg-white sticky-top py-1"
+      data-hs-header-options='{"fixMoment":1000,"fixEffect":"slide"}'
+      hsheader="true">
+
+      <div class="container-fluid px-3 px-lg-4">
+        <nav class="js-mega-menu navbar-nav-wrap d-flex align-items-center flex-nowrap w-100">
+
+          <!-- Logo -->
+          <a href="../pe/" aria-label="Medinet"
+             class="navbar-brand p-0 me-3 d-flex align-items-center">
+            <img
+              src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Web/Servicios/logo-medinet.svg"
+              alt="Medinet" width="160" height="32"
+              class="d-inline-block align-text-top" loading="eager" decoding="async">
+          </a>
+
+          <!-- Toggler -->
+          <button class="navbar-toggler ms-auto" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-default"><i class="bi-list"></i></span>
+            <span class="navbar-toggler-toggled"><i class="bi-x"></i></span>
+          </button>
+
+          <!-- Collapse -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-absolute-top-scroller w-100">
+              <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- Soluciones -->
+                <li class="hs-has-mega-menu nav-item">
+                  <a id="landingsMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="../pe/soluciones/software-en-la-medicina" aria-expanded="false">Soluciones</a>
+
+                  <div class="hs-mega-menu dropdown-menu w-100 hs-mega-menu-desktop-lg animated fadeOut"
+                       aria-labelledby="landingsMegaMenu"
+                       style="min-width: 30rem; animation-duration: 300ms; display: none;">
+                    <div class="row">
+                      <div class="col-lg-5 d-none d-lg-block">
+                        <div class="navbar-dropdown-menu-banner bg-light">
+                          <div class="navbar-dropdown-menu-banner-content">
+                            <div class="mb-4">
+                              <span class="h2 d-block">Conoce Medinet</span>
+                              <p>Descubre cÃ³mo Medinet te ayuda a administrar mejor y reducir costos</p>
+                            </div>
+                            <a class="btn btn-primary btn-transition" href="../pe/reunion">
+                              Agendar reuniÃ³n <i class="bi-chevron-right small"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-7">
+                        <div class="navbar-dropdown-menu-inner">
+                          <div class="row">
+                            <div class="col-sm mb-3 mb-sm-0">
+                              <span class="dropdown-header">MÃ³dulos</span>
+                              <a class="dropdown-item" href="../pe/soluciones/agenda-medica">Agenda mÃ©dica</a>
+                              <a class="dropdown-item" href="../pe/soluciones/fichas-clinicas">Historia clÃ­nica</a>
+                              <a class="dropdown-item" href="../pe/soluciones/cobranza-y-cuenta-medica">Cobranza y cuenta mÃ©dica</a>
+                              <a class="dropdown-item" href="../pe/soluciones/gestion-quirofano">GestiÃ³n de quirÃ³fano</a>
+                              <a class="dropdown-item" href="../pe/soluciones/gestion-camas">GestiÃ³n de camas</a>
+                              <a class="dropdown-item" href="../pe/soluciones/adquisicion-y-dispensacion">AdquisiciÃ³n y dispensaciÃ³n</a>
+                              <a class="dropdown-item" href="../pe/soluciones/reportes">Reportes</a>
+                              <a class="dropdown-item" href="../pe/soluciones/software-urgencia-hospitalaria">Urgencia Hospitalaria</a>
+                              <a class="dropdown-item" href="../pe/soluciones/honorarios-medicos">Honorarios mÃ©dicos</a>
+                            </div>
+
+                            <div class="col-sm">
+                              <div class="mb-3">
+                                <span class="dropdown-header">Roles</span>
+                                <a class="dropdown-item" href="../pe/roles/director-medico">Director mÃ©dico</a>
+                                <a class="dropdown-item" href="../pe/roles/gerente-general">Gerente general (CEO)</a>
+                                <a class="dropdown-item" href="../pe/roles/gerente-finanzas">Gerente de finanzas (CFO)</a>
+                                <a class="dropdown-item" href="../pe/roles/gerente-operaciones">Gerente de operaciones (COO)</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Especialidades -->
+                <li class="hs-has-sub-menu nav-item">
+                  <a id="companyMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="#" aria-expanded="false">Especialidades</a>
+                  <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated"
+                       aria-labelledby="companyMegaMenu"
+                       style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                    <a class="dropdown-item" href="../pe/especialidades/software-para-oftalmologia">OftalmologÃ­a</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-para-psiquiatria">PsiquiatrÃ­a</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-para-bariatrica">BariÃ¡trica</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-gestion-centro-medico">Centros MÃ©dicos</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-para-clinica-estetica">EstÃ©tica</a>
+                    <a class="dropdown-item" href="../pe/especialidades/software-dental">Dental</a>
+                  </div>
+                </li>
+
+                <!-- PabellÃ³n -->
+                <li class="hs-has-sub-menu nav-item">
+                  <a id="gestionmenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="#" aria-expanded="false">PabellÃ³n</a>
+                  <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated"
+                       aria-labelledby="gestionmenu"
+                       style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                    <a class="dropdown-item" href="../pe/gestion-pabellon-quirurgico/agenda-quirurgica">Agenda quirÃºrgica</a>
+                    <a class="dropdown-item" href="../pe/gestion-pabellon-quirurgico/tabla-quirurgica">Tabla quirÃºrgica</a>
+                  </div>
+                </li>
+
+                <!-- Servicios -->
+                <li class="hs-has-sub-menu nav-item">
+                  <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="#" aria-expanded="false">Servicios</a>
+                  <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated"
+                       aria-labelledby="pagesMegaMenu"
+                       style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                    <a class="dropdown-item" href="../pe/metodologia/implementacion">ImplementaciÃ³n</a>
+                    <a class="dropdown-item" href="../pe/metodologia/integraciones">Integraciones</a>
+                    <a class="dropdown-item" href="../pe/metodologia/migracion-de-datos">MigraciÃ³n de datos</a>
+                    <a class="dropdown-item" href="../pe/metodologia/soporte">Soporte</a>
+                    <a class="dropdown-item" href="../pe/metodologia/seguridad">Seguridad</a>
+                  </div>
+                </li>
+
+                <!-- Empresa -->
+                <li class="hs-has-sub-menu nav-item">
+                  <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle"
+                     href="#" aria-expanded="false">Empresa</a>
+                  <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated fadeOut"
+                       aria-labelledby="blogMegaMenu"
+                       style="min-width: 14rem; animation-duration: 300ms; display: none;">
+                    <a class="dropdown-item" href="../pe/empresa/nosotros">Nosotros</a>
+                    <a class="dropdown-item" href="../pe/empresa/trabajo">Trabajo</a>
+                  </div>
+                </li>
+
+                <!-- Contacto y WhatsApp -->
+                <li class="nav-item ms-lg-3">
+                  <a class="btn btn-primary btn-transition" href="../pe/contacto">Contactar</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                  <a class="btn btn-success btn-transition" id="wa-link"
+                     href="https://wa.me/56959167735" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-whatsapp fs-5"></i> WhatsApp
+                  </a>
+                </li>
+
+                <!-- Selector de paÃ­s -->
+                <li class="nav-item dropdown ms-lg-2">
+                  <a class="nav-link dropdown-toggle" href="#" id="countryMenu" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://flagcdn.com/w20/pe.png" alt="PE" class="me-1"> PerÃº
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="countryMenu">
+                    <li><a class="dropdown-item d-flex align-items-center" href="../cl/">
+                      <img src="https://flagcdn.com/w20/cl.png" alt="CL" class="me-2">Chile</a></li>
+                    <li><a class="dropdown-item d-flex align-items-center active" href="../pe/">
+                      <img src="https://flagcdn.com/w20/pe.png" alt="PE" class="me-2">PerÃº</a></li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="../mx/">
+                      <img src="https://flagcdn.com/w20/mx.png" alt="MX" class="me-2">MÃ©xico</a></li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="../co/">
+                      <img src="https://flagcdn.com/w20/co.png" alt="CO" class="me-2">Colombia</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <!-- /Collapse -->
+
+        </nav>
+      </div>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+    <style>
+      html, body { overflow-x: hidden !important; }
+    </style>
+
+    <main id="content" role="main">
+      <!-- HERO / Intro -->
+      <div class="bg-soft-success">
+        <div class="container content-space-t-4 content-space-t-lg-4 content-space-b-1">
+          <div class="row justify-content-lg-between align-items-lg-center mb-10">
+            <div class="col-md-6 col-lg-5">
+              <div class="mb-5">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../pe/">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="../pe/soluciones/software-en-la-medicina">Soluciones</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">GestiÃ³n de camas</li>
+                  </ol>
+                </nav>
+                <h1 class="display-5">HospitalizaciÃ³n y gestiÃ³n de camas</h1>
+                <p>Unifica la hospitalizaciÃ³n de pacientes y carga automÃ¡ticamente los servicios y dÃ­as cama a la cuenta mÃ©dica de cada paciente.</p>
+              </div>
+
+              <div class="d-grid d-sm-flex gap-3">
+                <a class="btn btn-primary btn-transition" href="../pe/reunion">Agendar reuniÃ³n</a>
+                <a class="btn btn-link" href="../pe/contacto">Contactar<i class="bi-chevron-right small ms-1" aria-hidden="true"></i></a>
+              </div>
+            </div>
+
+            <div class="col-sm-7 col-md-6 d-none d-md-block">
+              <img class="img-fluid" src="../../assets/svg/shapes/gestion-de-camas/gestion-de-camas.svg" alt="IlustraciÃ³n de gestiÃ³n de camas hospitalarias en Medinet">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features grid -->
+      <div class="container content-space-2">
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+          <span class="text-cap">GestiÃ³n de camas</span>
+          <h2 class="display-6">AdministraciÃ³n eficiente de la hospitalizaciÃ³n</h2>
+        </div>
+
+        <div class="row mb-5 mb-md-9">
+          <div class="col-sm-6 col-md-4 mb-3 mb-sm-7">
+            <div class="d-flex align-items-center mb-2">
+              <div class="flex-shrink-0">
+                <span class="svg-icon svg-icon-sm text-success" aria-hidden="true">
+                  <!-- icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa de camas">
+                    <path d="M8.7 4.19995L4 6.30005V18.8999L8.7 16.8V19L3.1 21.5C2.6 21.7 2 21.4 2 20.8V6C2 5.4 2.3 4.89995 2.9 4.69995L8.7 2.09998V4.19995Z" fill="#035A4B"></path>
+                    <path d="M15.3 19.8L20 17.6999V5.09992L15.3 7.19989V4.99994L20.9 2.49994C21.4 2.29994 22 2.59989 22 3.19989V17.9999C22 18.5999 21.7 19.1 21.1 19.3L15.3 21.8998V19.8Z" fill="#035A4B"></path>
+                    <path opacity="0.3" d="M15.3 7.19995L20 5.09998V17.7L15.3 19.8V7.19995Z" fill="#035A4B"></path>
+                    <path opacity="0.3" d="M8.70001 4.19995V2L15.4 5V7.19995L8.70001 4.19995ZM8.70001 16.8V19L15.4 22V19.8L8.70001 16.8Z" fill="#035A4B"></path>
+                    <path opacity="0.3" d="M8.7 16.8L4 18.8999V6.30005L8.7 4.19995V16.8Z" fill="#035A4B"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h4 class="mb-0">Mapa de camas</h4>
+              </div>
+            </div>
+            <p>Visualiza el estado de uso y configura por piso, planta o sucursal.</p>
+          </div>
+
+          <div class="col-sm-6 col-md-4 mb-3 mb-sm-7">
+            <div class="d-flex align-items-center mb-2">
+              <div class="flex-shrink-0">
+                <span class="svg-icon svg-icon-sm text-success" aria-hidden="true">
+                  <!-- icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CÃ¡lculo automatizado de cuentas">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 19.5229C15 20.265 15.9624 20.5564 16.374 19.9389L22.2227 11.166C22.5549 10.6676 22.1976 10 21.5986 10H17V4.47708C17 3.73503 16.0376 3.44363 15.626 4.06106L9.77735 12.834C9.44507 13.3324 9.80237 14 10.4014 14H15V19.5229Z" fill="#035A4B"></path>
+                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M3 6.5C3 5.67157 3.67157 5 4.5 5H9.5C10.3284 5 11 5.67157 11 6.5C11 7.32843 10.3284 8 9.5 8H4.5C3.67157 8 3 7.32843 3 6.5ZM3 18.5C3 17.6716 3.67157 17 4.5 17H9.5C10.3284 17 11 17.6716 11 18.5C11 19.3284 10.3284 20 9.5 20H4.5C3.67157 20 3 19.3284 3 18.5ZM2.5 11C1.67157 11 1 11.6716 1 12.5C1 13.3284 1.67157 14 2.5 14H6.5C7.32843 14 8 13.3284 8 12.5C8 11.6716 7.32843 11 6.5 11H2.5Z" fill="#035A4B"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h4 class="mb-0">CÃ¡lculo automatizado de cuentas</h4>
+              </div>
+            </div>
+            <p>CÃ¡lculo del â€œdÃ­a camaâ€ integrado a servicios y medicamentos de manera automatizada.</p>
+          </div>
+
+          <div class="col-sm-6 col-md-4 mb-3 mb-sm-7 mb-md-0">
+            <div class="d-flex align-items-center mb-2">
+              <div class="flex-shrink-0">
+                <span class="svg-icon svg-icon-sm text-success" aria-hidden="true">
+                  <!-- icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Registros por especialista">
+                    <path d="M3 7.19995H10C10.6 7.19995 11 6.79995 11 6.19995V3.19995C11 2.59995 10.6 2.19995 10 2.19995H3C2.4 2.19995 2 2.59995 2 3.19995V6.19995C2 6.69995 2.4 7.19995 3 7.19995Z" fill="#035A4B"></path>
+                    <path opacity="0.3" d="M10.1 22H3.10001C2.50001 22 2.10001 21.6 2.10001 21V10C2.10001 9.4 2.50001 9 3.10001 9H10.1C10.7 9 11.1 9.4 11.1 9V20C11.1 21.6 10.7 22 10.1 22ZM13.1 18V21C13.1 21.6 13.5 22 14.1 22H21.1C21.7 22 22.1 21.6 22.1 21V18C22.1 17.4 21.7 17 21.1 17H14.1C13.5 17 13.1 17.4 13.1 18ZM21.1 2H14.1C13.5 2 13.1 2.4 13.1 3V14C13.1 14.6 13.5 15 14.1 15H21.1C21.7 15 22.1 14.6 22.1 14V3C22.1 2.4 21.7 2 21.1 2Z" fill="#035A4B"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h4 class="mb-0">Registros por especialista</h4>
+              </div>
+            </div>
+            <p>Agrupados por cada evento de la hospitalizaciÃ³n del paciente.</p>
+          </div>
+
+          <div class="col-sm-6 col-md-4 mb-3 mb-sm-7 mb-md-0">
+            <div class="d-flex align-items-center mb-2">
+              <div class="flex-shrink-0">
+                <span class="svg-icon svg-icon-sm text-success" aria-hidden="true">
+                  <!-- icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CalendarizaciÃ³n de medicamentos">
+                    <path d="M6 6C5.4 6 5 5.6 5 5V3C5 2.4 5.4 2 6 2C6.6 2 7 2.4 7 3V5C7 5.6 6.6 6 6 6ZM11 5V3C11 2.4 10.6 2 10 2C9.4 2 9 2.4 9 3V5C9 5.6 9.4 6 10 6C10.6 6 11 5.6 11 5ZM15 5V3C15 2.4 14.6 2 14 2C13.4 2 13 2.4 13 3V5C13 5.6 13.4 6 14 6C14.6 6 15 5.6 15 5ZM19 5V3C19 2.4 18.6 2 18 2C17.4 2 17 2.4 17 3V5C17 5.6 17.4 6 18 6C18.6 6 19 5.6 19 5Z" fill="#035A4B"></path>
+                    <path d="M8.8 13.1C9.2 13.1 9.5 13 9.7 12.8C9.9 12.6 10.1 12.3 10.1 11.9C10.1 11.6 10 11.3 9.8 11.1C9.6 10.9 9.3 10.8 9 10.8C8.8 10.8 8.6 10.8 8.4 10.9C8.2 11 8.1 11.1 8 11.2C7.9 11.3 7.8 11.4 7.7 11.6C7.6 11.8 7.5 11.9 7.5 12.1C7.5 12.2 7.4 12.2 7.3 12.3C7.2 12.4 7.1 12.4 6.9 12.4C6.7 12.4 6.6 12.3 6.5 12.2C6.4 12.1 6.3 11.9 6.3 11.7C6.3 11.5 6.4 11.3 6.5 11.1C6.6 10.9 6.8 10.7 7 10.5C7.2 10.3 7.5 10.1 7.9 10C8.3 9.9 8.6 9.8 9.1 9.8C9.5 9.8 9.8 9.9 10.1 10C10.4 10.1 10.7 10.3 10.9 10.4C11.1 10.5 11.3 10.8 11.4 11.1C11.5 11.4 11.6 11.6 11.6 11.9C11.6 12.3 11.5 12.6 11.3 12.9C11.1 13.2 10.9 13.5 10.6 13.7C10.9 13.9 11.2 14.1 11.4 14.3C11.6 14.5 11.8 14.7 11.9 15C12 15.3 12.1 15.5 12.1 15.8C12.1 16.2 12 16.5 11.9 16.8C11.8 17.1 11.5 17.4 11.3 17.7C11.1 18 10.7 18.2 10.3 18.3C9.9 18.4 9.5 18.5 9 18.5C8.5 18.5 8.1 18.4 7.7 18.2C7.3 18 7 17.8 6.8 17.6C6.6 17.4 6.4 17.1 6.3 16.8C6.2 16.5 6.1 16.3 6.1 16.1C6.1 15.9 6.2 15.7 6.3 15.6C6.4 15.5 6.6 15.4 6.8 15.4C6.9 15.4 7 15.4 7.1 15.5C7.2 15.6 7.3 15.6 7.3 15.7C7.5 16.2 7.7 16.6 8 16.9C8.3 17.2 8.6 17.3 9 17.3C9.2 17.3 9.5 17.2 9.7 17.1C9.9 17 10.1 16.8 10.3 16.6C10.5 16.4 10.5 16.1 10.5 15.8C10.5 15.3 10.4 15 10.1 14.7C9.8 14.4 9.5 14.3 9.1 14.3C9 14.3 8.9 14.3 8.7 14.3C8.5 14.3 8.4 14.3 8.4 14.3C8.2 14.3 8 14.2 7.9 14.1C7.8 14 7.7 13.8 7.7 13.7C7.7 13.5 7.8 13.4 7.9 13.2C8 13 8.2 13 8.5 13H8.8V13.1ZM15.3 17.5V12.2C14.3 13 13.6 13.3 13.3 13.3C13.1 13.3 13 13.2 12.9 13.1C12.8 13 12.7 12.8 12.7 12.6C12.7 12.4 12.8 12.3 12.9 12.2C13 12.1 13.2 12 13.6 11.8C14.1 11.6 14.5 11.3 14.7 11.1C14.9 10.9 15.2 10.6 15.5 10.3C15.8 10 15.9 9.8 15.9 9.7C15.9 9.6 16.1 9.6 16.3 9.6C16.5 9.6 16.7 9.7 16.8 9.8C16.9 9.9 17 10.2 17 10.5V17.2C17 18 16.7 18.4 16.2 18.4C16 18.4 15.8 18.3 15.6 18.2C15.4 18.1 15.3 17.8 15.3 17.5Z" fill="#035A4B"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h4 class="mb-0">CalendarizaciÃ³n de medicamentos</h4>
+              </div>
+            </div>
+            <p>Organiza y planifica la administraciÃ³n de medicamentos con control de consumos.</p>
+          </div>
+
+          <div class="col-sm-6 col-md-4 mb-3 mb-sm-7 mb-md-0">
+            <div class="d-flex align-items-center mb-2">
+              <div class="flex-shrink-0">
+                <span class="svg-icon svg-icon-sm text-success" aria-hidden="true">
+                  <!-- icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GeneraciÃ³n automÃ¡tica de prefacturas">
+                    <path opacity="0.3" d="M12.025 4.725C9.725 2.425 6.025 2.425 3.725 4.725C1.425 7.025 1.425 10.725 3.725 13.025L11.325 20.625C11.725 21.025 12.325 21.025 12.725 20.625L20.325 13.025C22.625 10.725 22.625 7.025 20.325 4.725C18.025 2.425 14.325 2.425 12.025 4.725Z" fill="#035A4B"></path>
+                    <path d="M14.025 17.125H13.925C13.525 17.025 13.125 16.725 13.025 16.325L11.925 11.125L11.025 14.325C10.925 14.725 10.625 15.025 10.225 15.025C9.825 15.125 9.425 14.925 9.225 14.625L7.725 12.325L6.525 12.925C6.425 13.025 6.225 13.025 6.125 13.025H3.125C2.525 13.025 2.125 12.625 2.125 12.025C2.125 11.425 2.525 11.025 3.125 11.025H5.925L7.725 10.125C8.225 9.925 8.725 10.025 9.025 10.425L9.825 11.625L11.225 6.72498C11.325 6.32498 11.725 6.02502 12.225 6.02502C12.725 6.02502 13.025 6.32495 13.125 6.82495L14.525 13.025L15.225 11.525C15.425 11.225 15.725 10.925 16.125 10.925H21.125C21.725 10.925 22.125 11.325 22.125 11.925C22.125 12.525 21.725 12.925 21.125 12.925H16.725L15.025 16.325C14.725 16.925 14.425 17.125 14.025 17.125Z" fill="#035A4B"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h4 class="mb-0">GeneraciÃ³n automÃ¡tica de prefacturas</h4>
+              </div>
+            </div>
+            <p>Medinet permite cargar servicios y productos consumidos por los pacientes.</p>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="d-flex align-items-center mb-2">
+              <div class="flex-shrink-0">
+                <span class="svg-icon svg-icon-sm text-success" aria-hidden="true">
+                  <!-- icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Informes de resumen de situaciÃ³n">
+                    <path opacity="0.3" d="M12.025 4.725C9.725 2.425 6.025 2.425 3.725 4.725C1.425 7.025 1.425 10.725 3.725 13.025L11.325 20.625C11.725 21.025 12.325 21.025 12.725 20.625L20.325 13.025C22.625 10.725 22.625 7.025 20.325 4.725C18.025 2.425 14.325 2.425 12.025 4.725Z" fill="#035A4B"></path>
+                    <path d="M14.025 17.125H13.925C13.525 17.025 13.125 16.725 13.025 16.325L11.925 11.125L11.025 14.325C10.925 14.725 10.625 15.025 10.225 15.025C9.825 15.125 9.425 14.925 9.225 14.625L7.725 12.325L6.525 12.925C6.425 13.025 6.225 13.025 6.125 13.025H3.125C2.525 13.025 2.125 12.625 2.125 12.025C2.125 11.425 2.525 11.025 3.125 11.025H5.925L7.725 10.125C8.225 9.925 8.725 10.025 9.025 10.425L9.825 11.625L11.225 6.72498C11.325 6.32498 11.725 6.02502 12.225 6.02502C12.725 6.02502 13.025 6.32495 13.125 6.82495L14.525 13.025L15.225 11.525C15.425 11.225 15.725 10.925 16.125 10.925H21.125C21.725 10.925 22.125 11.325 22.125 11.925C22.125 12.525 21.725 12.925 21.125 12.925H16.725L15.025 16.325C14.725 16.925 14.425 17.125 14.025 17.125Z" fill="#035A4B"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h4 class="mb-0">Informes de resumen de situaciÃ³n</h4>
+              </div>
+            </div>
+            <p>Configura informes de resumen como de alimentaciÃ³n, psicolÃ³gicos, terapias y mÃ¡s.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CÃ¡lculo automatizado -->
+      <div class="overflow-hidden bg-light">
+        <div class="container content-space-2">
+          <div class="row justify-content-lg-between align-items-lg-center">
+            <div class="col-lg-5 mb-9 mb-lg-0">
+              <div class="mb-5">
+                <h2 class="display-6">CÃ¡lculo automatizado de la cuenta mÃ©dica</h2>
+              </div>
+              <div class="mb-4">
+                <p>Medinet integra todos los Ã­tems de la hospitalizaciÃ³n para configurar una prefactura de forma manual o automatizada.</p>
+                <p class="mb-1">Puedes confeccionar una cuenta mÃ©dica con servicios y productos como:</p>
+                <ul class="list-checked list-checked-soft-bg-success list-checked-lg">
+                  <li class="list-checked-item">Servicios profesionales</li>
+                  <li class="list-checked-item">Medicamentos y productos consumidos</li>
+                  <li class="list-checked-item">DÃ­a cama del paciente</li>
+                  <li class="list-checked-item">CatÃ¡logos de servicios y productos a la medida</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="position-relative mx-auto" data-aos="fade-up">
+                <figure>
+                  <img class="device-mobile-img" src="../../assets/svg/shapes/gestion-de-camas/calculo-automatizado-dia-cama.svg" alt="CÃ¡lculo automatizado del dÃ­a cama en Medinet">
+                </figure>
+                <div class="position-absolute top-50 start-50 translate-middle zi-n1" style="width: 25rem;">
+                  <img class="img-fluid" src="../../assets/svg/components/shape-2.svg" alt="" aria-hidden="true">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reportes -->
+      <div class="overflow-hidden">
+        <div class="container content-space-2">
+          <div class="row justify-content-lg-between align-items-lg-center">
+            <div class="col-lg-5 order-lg-2 mb-9 mb-lg-0">
+              <div class="mb-5">
+                <h2 class="display-6">ObtÃ©n reportes de consumos por perÃ­odos</h2>
+                <p>Reduce el tiempo que tu equipo dedica a elaborar informes clÃ­nicos y financieros.</p>
+                <ul class="list-checked list-checked-soft-bg-success list-checked-lg">
+                  <li class="list-checked-item">Reportes de prefactura y su detalle</li>
+                  <li class="list-checked-item">Reporte de pagos</li>
+                  <li class="list-checked-item">Reporte de egresos</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-6 order-lg-1">
+              <div class="position-relative mx-auto" data-aos="fade-up">
+                <figure>
+                  <img class="device-mobile-img" src="../../assets/svg/shapes/gestion-de-camas/reportes-de-hospitalizacion.svg" alt="Reportes de hospitalizaciÃ³n en Medinet">
+                </figure>
+                <div class="position-absolute top-50 start-50 translate-middle zi-n1" style="width: 25rem;">
+                  <img class="img-fluid" src="../../assets/svg/components/shape-1.svg" alt="" aria-hidden="true">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Uso de camas -->
+      <div class="overflow-hidden bg-light">
+        <div class="container content-space-2">
+          <div class="row justify-content-lg-between align-items-lg-center">
+            <div class="col-lg-5 mb-9 mb-lg-0">
+              <div class="mb-5">
+                <h2 class="display-6">Visualiza el uso actual y futuro de camas</h2>
+              </div>
+              <div class="mb-4">
+                <p>Segmenta por piso, planta o sucursal y obtÃ©n visibilidad total para maximizar la rentabilidad.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="position-relative mx-auto" data-aos="fade-up">
+                <figure>
+                  <img class="device-mobile-img" src="../../assets/svg/shapes/gestion-de-camas/uso-de-camas-clinica.svg" alt="Uso de camas en clÃ­nica con Medinet">
+                </figure>
+                <div class="position-absolute top-50 start-50 translate-middle zi-n1" style="width: 25rem;">
+                  <img class="img-fluid" src="../../assets/svg/components/shape-2.svg" alt="" aria-hidden="true">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="content-space-3 bg-soft-success">
+        <div class="text-center py-6">
+          <div class="mb-5">
+            <h2 class="display-6 mb-5">Â¿MÃ¡s informaciÃ³n?</h2>
+            <p>Agenda una reuniÃ³n y descubre cÃ³mo Medinet te ayuda a administrar mejor y reducir costos.</p>
+          </div>
+          <a class="btn btn-primary btn-transition" href="../pe/reunion">Agendar reuniÃ³n</a>
+          <a class="btn btn-link" href="../pe/contacto">Contactar<i class="bi-chevron-right small ms-1" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <!-- FAQ visible -->
+      <div class="container content-space-2 content-space-b-lg-3">
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5">
+          <h2 class="display-6">Preguntas frecuentes</h2>
+        </div>
+
+        <div class="w-lg-65 mx-lg-auto">
+          <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingOne">
+                <a class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Â¿QuÃ© es el mapa de camas?
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                  Es una herramienta para ver en Medinet la distribuciÃ³n de camas de tu recinto. Puedes configurar camas por sucursal, piso o habitaciÃ³n y monitorear su estado.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingTwo">
+                <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Â¿CÃ³mo se calcula el cobro de dÃ­a cama?
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                  La gestiÃ³n de camas estÃ¡ integrada al resto de soluciones. Cualquier registro o consumo utilizado en un paciente hospitalizado se suma de manera automÃ¡tica a su cuenta mÃ©dica, evitando errores por factor humano.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="fs-5">
+            Â¿Tienes mÃ¡s preguntas? Visita nuestra
+            <a href="../pe/faq" class="fw-bold">pÃ¡gina de preguntas frecuentes</a>
+            y resuelve todas tus inquietudes.
+          </p>
+        </div>
+      </div>
+
+      <!-- BoletÃ­n -->
+      <div class="bg-light">
+        <div class="container content-space-2">
+          <div class="w-md-75 w-lg-50 text-center mx-md-auto">
+            <div class="row justify-content-lg-between">
+              <div class="mb-5">
+                <span class="text-cap">BoletÃ­n Medinet</span>
+                <h2>EntÃ©rate de las novedades</h2>
+              </div>
+
+              <div id="lazy-hubspot-form"></div>
+              <p class="small">Puedes cancelar la suscripciÃ³n en cualquier momento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark">
+      <div class="container pb-1 pb-lg-5">
+        <div class="row content-space-t-2 mb-9">
+          <div class="col-12 col-lg-3 mb-7 mb-lg-0">
+            <div class="mb-5">
+              <a class="navbar-brand" href="../pe/" aria-label="Medinet">
+                <img class="navbar-brand-logo" src="https://21935835.fs1.hubspotusercontent-na1.net/hubfs/21935835/Logos/logo-medinet-white.svg" alt="Medinet">
+              </a>
+            </div>
+            <ul class="list-unstyled list-py-1">
+              <li><a class="link-sm link-light"><i class="bi bi-envelope me-1"></i> contacto@medinetapp.com</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm mb-7 mb-sm-0">
+            <h5 class="text-white mb-3"><a href="../pe/soluciones/" class="text-white">Soluciones</a></h5>
+            <ul class="list-unstyled list-py-1 mb-0">
+              <li><a class="link-sm link-light" href="../pe/soluciones/agenda-medica">Agenda mÃ©dica</a></li>
+              <li><a class="link-sm link-light" href="../pe/historia-clinica">Historia clÃ­nica</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/cobranza-y-cuenta-medica">Cobranza y cuenta mÃ©dica</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/gestion-quirofano">GestiÃ³n de quirÃ³fano</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/gestion-camas">GestiÃ³n de camas</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/adquisicion-y-dispensacion">AdquisiciÃ³n y dispensaciÃ³n</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/reportes">Reportes</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/software-urgencia-hospitalaria">Urgencia hospitalaria</a></li>
+              <li><a class="link-sm link-light" href="../pe/soluciones/honorarios-medicos">Honorarios mÃ©dicos</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm mb-7 mb-sm-0">
+            <h5 class="text-white mb-3">Especialidades</h5>
+            <ul class="list-unstyled list-py-1 mb-0">
+              <li><a class="link-sm link-light" href="../pe/especialidades/software-para-oftalmologia">OftalmologÃ­a</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/software-para-psiquiatria">PsiquiatrÃ­a</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/software-para-clinica-estetica">EstÃ©tica</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/oncologia">OncologÃ­a</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/salud-ocupacional">Salud ocupacional</a></li>
+              <li><a class="link-sm link-light" href="../pe/especialidades/software-para-bariatrica">BariÃ¡trica</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm mb-7 mb-sm-0">
+            <h5 class="text-white mb-3">MetodologÃ­a</h5>
+            <ul class="list-unstyled list-py-1 mb-0">
+              <li><a class="link-sm link-light" href="../pe/faq">Preguntas frecuentes</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/implementacion">ImplementaciÃ³n</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/integraciones">Integraciones</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/migracion-de-datos">MigraciÃ³n de datos</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/seguridad">Seguridad</a></li>
+              <li><a class="link-sm link-light" href="../pe/metodologia/soporte">Soporte</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm">
+            <h5 class="text-white mb-3">Empresa</h5>
+            <ul class="list-unstyled list-py-1 mb-5">
+              <li><a class="link-sm link-light" href="../pe/empresa/nosotros">Sobre Medinet</a></li>
+              <li><a class="link-sm link-light" href="../pe/empresa/trabajo">Trabaja con nosotros</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col"><p class="text-white-70 small mb-0">Â© Medinet. 2025. Todos los derechos reservados.</p></div>
+          <div class="col-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item"><a class="btn btn-ghost-light btn-sm btn-icon" href="https://www.facebook.com/medinetappcl"><i class="bi-facebook"></i></a></li>
+              <li class="list-inline-item"><a class="btn btn-ghost-light btn-sm btn-icon" href="https://www.instagram.com/medinetapp/"><i class="bi-instagram"></i></a></li>
+              <li class="list-inline-item"><a class="btn btn-ghost-light btn-sm btn-icon" href="https://www.linkedin.com/company/medinetapp/"><i class="bi-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="../../assets/js/vendor.min.js" defer></script>
+    <script src="../../assets/js/theme.min.js" defer></script>
+    <script src="../../assets/js/aos.js" defer></script>
+
+    <!-- Lazy load de scripts de marketing -->
+    <script>
+      window.addEventListener('scroll', function lazyLoadMarketingScripts() {
+        const scripts = [
+          { id: 'hubspot', src: 'https://js.hsforms.net/forms/v2.js', onload: () => {
+              if (window.hbspt?.forms?.create) {
+                hbspt.forms.create({ region:"na1", portalId:"21935835", formId:"3a5d3279-4775-4f13-a56d-22a8f843ad50", target:"#lazy-hubspot-form" });
+              }
+            }
+          },
+          { id: 'fb-pixel', src: 'https://connect.facebook.net/en_US/fbevents.js', onload: () => { if (typeof fbq === 'function') { fbq('init','1268547963741502'); fbq('track','PageView'); } } },
+          { id: 'linkedin', src: 'https://snap.licdn.com/li.lms-analytics/insight.min.js' }
+        ];
+        for (const { id, src, onload } of scripts) {
+          if (!document.getElementById(id)) {
+            const s = document.createElement('script'); s.src = src; s.async = true; s.id = id; if (typeof onload === 'function') s.onload = onload; document.body.appendChild(s);
+          }
+        }
+        window.removeEventListener('scroll', lazyLoadMarketingScripts);
+      }, { once: true });
+    </script>
+
+    <!-- InicializaciÃ³n de componentes -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.HSHeader) new HSHeader('#header').init();
+        if (window.HSMegaMenu) new HSMegaMenu('.js-mega-menu', { desktop: { position: 'left' } });
+        if (window.HSShowAnimation) new HSShowAnimation('.js-animation-link');
+        if (window.HSBsValidation) {
+          HSBsValidation.init('.js-validate', { onSubmit: data => { data.event.preventDefault(); } });
+        }
+        if (window.AOS) { AOS.init({ duration: 650, once: true }); }
+        if (window.HsNavScroller) new HsNavScroller('.js-nav-scroller');
+      });
+    </script>
+  </body>
+</html>
+
