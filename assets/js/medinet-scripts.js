@@ -14,7 +14,30 @@ document.addEventListener('DOMContentLoaded', function() {
   initTestimonials();
   initFAQ();
   initScrollAnimations();
+  initMedinetStickyNavbar();
  });
+
+ /**
+ * Inicializa el comportamiento sticky del navbar de Medinet
+ */
+ function initMedinetStickyNavbar() {
+  const navbarSection = document.getElementById('medinet-navbar');
+  if (!navbarSection) return;
+  
+  const navbar = navbarSection.querySelector('.navbar');
+  if (!navbar) return;
+  
+  function updateNavbar() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }
+  
+  window.addEventListener('scroll', updateNavbar);
+  updateNavbar(); // Check on init
+ }
  
  /**
  * Inicializa el comportamiento sticky del header

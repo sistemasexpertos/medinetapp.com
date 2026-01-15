@@ -312,4 +312,34 @@
   <lastmod>2024-08-02T17:37:06+00:00</lastmod>
   <priority>0.90</priority>
 </url>
+<url>
+  <loc>https://medinetapp.com/interoperabilidad-en-salud</loc>
+  <lastmod>2026-01-15T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://medinetapp.com/cotiza</loc>
+  <lastmod>2026-01-15T12:05:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://medinetapp.com/casos-de-exito</loc>
+  <lastmod>2026-01-15T12:05:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://medinetapp.com/politica-de-alcance-y-calidad</loc>
+  <lastmod>2026-01-15T12:05:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medinetapp.com/politica-de-privacidad</loc>
+  <lastmod>2026-01-15T12:05:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://medinetapp.com/transcripcion-medica</loc>
+  <lastmod>2026-01-15T12:05:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
 </urlset>
