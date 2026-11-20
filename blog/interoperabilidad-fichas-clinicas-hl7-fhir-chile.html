@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interoperabilidad de fichas clínicas en Chile: qué cambia con la Ley 21.668 y qué es HL7 FHIR | Medinet</title>
+<meta name="description" content="Qué exige la Ley 21.668 sobre interoperabilidad de fichas clínicas, qué es el estándar HL7 FHIR que usa el MINSAL y cómo saber si el software de tu clínica está preparado.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://medinetapp.com/blog/interoperabilidad-fichas-clinicas-hl7-fhir-chile">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Interoperabilidad de fichas clínicas en Chile: qué cambia con la Ley 21.668 y qué es HL7 FHIR">
+<meta property="og:description" content="Qué exige la Ley 21.668 sobre interoperabilidad de fichas clínicas, qué es el estándar HL7 FHIR que usa el MINSAL y cómo saber si el software de tu clínica está preparado.">
+<meta property="og:url" content="https://medinetapp.com/blog/interoperabilidad-fichas-clinicas-hl7-fhir-chile">
+<meta property="og:site_name" content="Medinet">
+<meta property="og:locale" content="es_CL">
+<meta property="og:image" content="https://medinetapp.com/assets/blog/interoperabilidad-fichas-clinicas-hl7-fhir-chile-portada.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Interoperabilidad de fichas clínicas en Chile: qué cambia con la Ley 21.668 y qué es HL7 FHIR",
+  "description": "Qué exige la Ley 21.668 sobre interoperabilidad de fichas clínicas, qué es el estándar HL7 FHIR que usa el MINSAL y cómo saber si el software de tu clínica está preparado.",
+  "datePublished": "2026-11-20",
+  "dateModified": "2026-11-20",
+  "inLanguage": "es",
+  "author": {
+    "@type": "Organization",
+    "name": "Medinet",
+    "url": "https://medinetapp.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Medinet",
+    "url": "https://medinetapp.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.grapesjs.com/workspaces/cmhxptjkg1vmqhtj9atld96o3/assets/e4b04e76-b7e1-4c9e-aca3-fbc78c1787a3__logo-medinet.png"
+    }
+  },
+  "mainEntityOfPage": "https://medinetapp.com/blog/interoperabilidad-fichas-clinicas-hl7-fhir-chile"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es la interoperabilidad de fichas clínicas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es la capacidad de que los sistemas de distintos prestadores de salud intercambien información clínica y la entiendan de la misma forma. Por ejemplo, que el diagnóstico, las alergias o los medicamentos de un paciente atendido en una clínica puedan llegar al hospital donde se atiende después, sin volver a preguntarlos ni transcribirlos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué exige la Ley 21.668?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Ley 21.668, publicada en el Diario Oficial el 28 de mayo de 2024, modificó la Ley 20.584 sobre derechos y deberes de los pacientes. Su objetivo es asegurar la continuidad de la atención, sin importar quién sea el prestador, mediante fichas clínicas interoperables."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es HL7 FHIR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HL7 FHIR (Fast Healthcare Interoperability Resources) es un estándar internacional para intercambiar información de salud entre sistemas. Organiza la información en \"recursos\" (paciente, profesional, diagnóstico, medicamento, resultado de examen) que cualquier sistema compatible puede enviar, recibir y entender."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo saber si el software de mi clínica está preparado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estas preguntas ayudan a evaluar al proveedor actual o a uno nuevo:"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué ventajas tiene la interoperabilidad para la clínica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Más allá de cumplir la ley, la interoperabilidad trae beneficios concretos:"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué hacer ahora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mientras el MINSAL completa la reglamentación, conviene revisar qué tan preparado está el sistema actual, pedir al proveedor su hoja de ruta de interoperabilidad e incluir el cumplimiento de HL7 FHIR como requisito en cualquier evaluación de un nuevo sistema."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --navy: #1E3A8A;
+    --blue: #1D4ED8;
+    --blue-strong: #2050E0;
+    --blue-dark: #0D47A1;
+    --blue-soft: #EBF1FE;
+    --blue-line: #D6E2FB;
+    --green-bg: #86EFAC;
+    --green-text: #166534;
+    --ink: #1F2937;
+    --muted: #4B5563;
+    --line: #E5E7EB;
+    --white: #FFFFFF;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--blue); }
+  img { max-width: 100%; display: block; }
+
+  /* Encabezado */
+  .site-header {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    max-width: 1200px; margin: 0 auto; padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .header-inner .logo img { height: 38px; width: auto; }
+  .main-nav { display: flex; gap: 28px; }
+  .main-nav a {
+    color: var(--ink); text-decoration: none; font-weight: 600; font-size: 16px;
+  }
+  .main-nav a:hover { color: var(--blue); }
+  .header-actions { display: flex; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 22px; border-radius: 8px;
+    background: var(--blue-strong); color: var(--white);
+    font-weight: 600; font-size: 16px; text-decoration: none; border: 0;
+    transition: background .2s;
+  }
+  .btn:hover { background: var(--blue-dark); }
+  .btn svg { width: 20px; height: 20px; }
+
+  /* Portada del artículo */
+  .hero {
+    background: linear-gradient(135deg, #F4F7FE 0%, #E3ECFD 55%, #CFDDFB 100%);
+    border-bottom: 1px solid var(--blue-line);
+  }
+  .hero-inner { max-width: 880px; margin: 0 auto; padding: 72px 24px 56px; }
+  .badge {
+    display: inline-block; padding: 6px 14px; border-radius: 999px;
+    background: var(--green-bg); color: var(--green-text);
+    font-weight: 700; font-size: 14px; letter-spacing: .04em; text-transform: uppercase;
+  }
+  .hero h1 {
+    margin: 20px 0 18px; color: var(--navy);
+    font-size: clamp(30px, 4.6vw, 48px); line-height: 1.15; font-weight: 800; letter-spacing: -.01em;
+  }
+  .hero .lead { margin: 0; font-size: 19px; color: var(--muted); max-width: 760px; }
+  .meta {
+    margin-top: 26px; display: flex; flex-wrap: wrap; gap: 18px;
+    font-size: 15px; color: var(--muted); font-weight: 500;
+  }
+  .meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .meta svg { width: 18px; height: 18px; color: var(--blue-dark); }
+
+  /* Cuerpo */
+  .content { max-width: 880px; margin: 0 auto; padding: 48px 24px 24px; }
+  .toc {
+    background: var(--blue-soft); border: 1px solid var(--blue-line);
+    border-radius: var(--radius); padding: 24px 28px; margin-bottom: 48px;
+  }
+  .toc h2 { margin: 0 0 12px; font-size: 18px; color: var(--navy); }
+  .toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 32px; }
+  .toc li { margin-bottom: 6px; break-inside: avoid; font-size: 15px; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a:hover { color: var(--blue); text-decoration: underline; }
+
+  article h2 {
+    color: var(--navy); font-size: clamp(22px, 3vw, 28px); line-height: 1.3;
+    margin: 56px 0 16px; scroll-margin-top: 90px; font-weight: 800;
+  }
+  article h2 .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; margin-right: 10px; border-radius: 10px;
+    background: var(--blue-strong); color: var(--white); font-size: 17px; vertical-align: 3px;
+  }
+  article p, article li { font-size: 17px; }
+  article ul, article ol { padding-left: 24px; }
+  article li { margin-bottom: 8px; }
+  article strong { color: var(--ink); }
+
+  .table-wrap {
+    overflow-x: auto; margin: 24px 0; border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 15.5px; line-height: 1.55; }
+  thead th {
+    background: var(--navy); color: var(--white); text-align: left;
+    padding: 14px 16px; font-weight: 600;
+  }
+  tbody td { padding: 13px 16px; border-top: 1px solid var(--line); vertical-align: top; }
+  tbody tr:nth-child(even) td { background: #F8FAFF; }
+  tbody td:first-child { font-weight: 600; color: var(--navy); }
+
+  .tip {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--blue-soft); border-left: 4px solid var(--blue-strong);
+    border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 20px; margin: 24px 0;
+  }
+  .tip svg { flex: 0 0 24px; width: 24px; height: 24px; color: var(--blue-strong); margin-top: 2px; }
+  .tip p { margin: 0; font-size: 16.5px; }
+
+  .note { font-size: 15px !important; color: var(--muted); font-style: italic; }
+
+  /* Llamado a la acción */
+  .cta {
+    margin: 64px 0 40px; padding: 40px; border-radius: 20px; color: var(--white);
+    background: linear-gradient(120deg, var(--blue-strong) 0%, var(--blue-dark) 100%);
+  }
+  .cta h2 { color: var(--white); margin: 0 0 14px; font-size: 28px; }
+  .cta p { margin: 0 0 24px; font-size: 17px; color: #E6EDFD; }
+  .cta .badge-iso {
+    display: inline-flex; align-items: center; gap: 10px; margin-bottom: 24px;
+    font-weight: 600; font-size: 15px; color: var(--white);
+  }
+  .cta .badge-iso svg { width: 26px; height: 26px; }
+  .cta .btn { background: #60A5FA; color: var(--white); padding: 14px 28px; border-radius: 999px; font-size: 17px; }
+  .cta .btn:hover { background: #3B82F6; }
+
+  .sources { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 24px; }
+  .sources h2 { font-size: 18px; margin: 0 0 10px; color: var(--navy); }
+  .sources li { font-size: 15px; }
+
+  /* Pie de página */
+  .site-footer { background: var(--navy); color: #DCE6FB; margin-top: 64px; }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto; padding: 40px 24px;
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: center;
+  }
+  .footer-inner img { height: 34px; width: auto; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+  .footer-links a { color: #DCE6FB; text-decoration: none; font-size: 15px; }
+  .footer-links a:hover { color: var(--white); text-decoration: underline; }
+  .copy { width: 100%; font-size: 14px; color: #A9BCEB; border-top: 1px solid rgba(255,255,255,.15); padding-top: 18px; }
+
+  @media (max-width: 900px) {
+    .main-nav { display: none; }
+  }
+  @media (max-width: 640px) {
+    .header-actions .btn-secondary { display: none; }
+    .toc ol { columns: 1; }
+    .hero-inner { padding: 48px 20px 40px; }
+    .content { padding: 36px 20px 16px; }
+    .cta { padding: 28px 22px; }
+    article p, article li { font-size: 16.5px; }
+  }
+
+  .related { margin: 48px 0 0; }
+  .related h2 { font-size: 22px; margin: 0 0 18px; color: var(--navy); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+  .card {
+    display: flex; flex-direction: column; gap: 10px; padding: 22px;
+    border: 1px solid var(--blue-line); border-radius: var(--radius);
+    background: var(--white); text-decoration: none; color: var(--ink);
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .card:hover { border-color: var(--blue-strong); box-shadow: 0 6px 20px rgba(29,78,216,.10); }
+  .card .cover { width: calc(100% + 44px); max-width: none; height: auto; margin: -22px -22px 6px; border-radius: var(--radius) var(--radius) 0 0; }
+  .card { overflow: hidden; }
+  .card .tag { font-size: 12.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--green-text); }
+  .card h3 { margin: 0; font-size: 17px; line-height: 1.4; color: var(--navy); }
+  .card p { margin: 0; font-size: 15px; color: var(--muted); line-height: 1.55; }
+  .card .more { margin-top: auto; font-size: 14.5px; font-weight: 600; color: var(--blue-strong); }
+  .index-hero .hero-inner { max-width: 1100px; }
+  .index-content { max-width: 1100px; }
+  .index-content .cards { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  article blockquote { margin: 0; padding: 0; border: 0; }
+
+  .related { margin: 48px 0 0; }
+  .related h2 { font-size: 22px; margin: 0 0 18px; color: var(--navy); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+  .card {
+    display: flex; flex-direction: column; gap: 10px; padding: 22px;
+    border: 1px solid var(--blue-line); border-radius: var(--radius);
+    background: var(--white); text-decoration: none; color: var(--ink);
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .card:hover { border-color: var(--blue-strong); box-shadow: 0 6px 20px rgba(29,78,216,.10); }
+  .card .cover { width: calc(100% + 44px); max-width: none; height: auto; margin: -22px -22px 6px; border-radius: var(--radius) var(--radius) 0 0; }
+  .card { overflow: hidden; }
+  .card .tag { font-size: 12.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--green-text); }
+  .card h3 { margin: 0; font-size: 17px; line-height: 1.4; color: var(--navy); }
+  .card p { margin: 0; font-size: 15px; color: var(--muted); line-height: 1.55; }
+  .card .more { margin-top: auto; font-size: 14.5px; font-weight: 600; color: var(--blue-strong); }
+  .index-hero .hero-inner { max-width: 1100px; }
+  .index-content { max-width: 1100px; }
+  .index-content .cards { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  article blockquote { margin: 0; padding: 0; border: 0; }
+
+  /* Diagramas */
+  .diagram {
+    margin: 28px 0; padding: 24px; border: 1px solid var(--blue-line);
+    border-radius: var(--radius); background: #F8FAFF;
+  }
+  .diagram figcaption { margin: 0 0 18px; font-weight: 700; color: var(--navy); font-size: 16px; }
+  .flow { display: flex; align-items: stretch; gap: 0; }
+  .diagram .step {
+    flex: 1 1 0; min-width: 0; background: var(--white); border: 1px solid var(--blue-line);
+    border-radius: 12px; padding: 14px 14px 16px;
+  }
+  .step .n {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; border-radius: 50%; margin-bottom: 8px;
+    background: var(--blue-strong); color: var(--white); font-size: 13px; font-weight: 700;
+  }
+  .step strong { display: block; font-size: 15px; line-height: 1.3; color: var(--navy); margin-bottom: 4px; }
+  .step span.d { display: block; font-size: 13.5px; line-height: 1.45; color: var(--muted); }
+  .arrow { flex: 0 0 26px; display: flex; align-items: center; justify-content: center; color: var(--blue-strong); }
+  .arrow svg { width: 18px; height: 18px; }
+  .diagram .dnote { margin: 16px 0 0; font-size: 14.5px; color: var(--muted); }
+  .hub { display: grid; grid-template-columns: 1fr 40px 1fr; align-items: center; }
+  .hub .hub-sources { display: flex; flex-direction: column; gap: 10px; }
+  .hub .hub-sources .step { padding: 12px 14px; }
+  .hub .center {
+    background: var(--blue-strong); color: var(--white); border-radius: 14px; padding: 22px;
+  }
+  .diagram .hub .center strong { color: var(--white); display: block; font-size: 18px; margin-bottom: 6px; }
+  .hub .center span { font-size: 14.5px; color: #E6EDFD; line-height: 1.5; }
+  @media (max-width: 760px) {
+    .flow { flex-direction: column; }
+    .arrow { flex-basis: 24px; transform: rotate(90deg); }
+    .hub { grid-template-columns: 1fr; }
+    .hub .arrow { transform: rotate(90deg); padding: 6px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="https://medinetapp.com/" aria-label="Medinet, inicio">
+      <img src="https://cdn.grapesjs.com/workspaces/cmhxptjkg1vmqhtj9atld96o3/assets/e4b04e76-b7e1-4c9e-aca3-fbc78c1787a3__logo-medinet.png" alt="Medinet">
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <a href="/soluciones/fichas-clinicas">Soluciones</a>
+      <a href="/especialidades/software-gestion-centro-medico">Especialidades</a>
+      <a href="/gestion-pabellon-quirurgico/tabla-quirurgica">Cirugías</a>
+      <a href="/blog/">Blog</a>
+      <a href="/empresa/nosotros">Empresa</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn" href="https://meetings.hubspot.com/anggelo-latin/demo-medinet">Agenda una demo</a>
+      <a class="btn btn-secondary" href="/contacto">Contáctanos</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">Normativa Chile</span>
+    <h1>Interoperabilidad de fichas clínicas en Chile: qué cambia con la Ley 21.668 y qué es HL7 FHIR</h1>
+    <p class="lead">Desde 2024, la ley chilena exige que las fichas clínicas de prestadores públicos y privados puedan intercambiar información. Para una clínica, eso convierte la interoperabilidad en una condición que su software debe cumplir, no en un extra técnico.</p>
+    <div class="meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>20 de noviembre de 2026</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7 minutos de lectura</span>
+    </div>
+  </div>
+</section>
+
+<main class="content">
+  <nav class="toc" aria-label="Contenido">
+    <h2>En este artículo</h2>
+    <ol><li><a href="#que-es-la-interoperabilidad-de-fichas-clinicas">¿Qué es la interoperabilidad de fichas clínicas?</a></li><li><a href="#que-exige-la-ley-21-668">¿Qué exige la Ley 21.668?</a></li><li><a href="#que-es-hl7-fhir">¿Qué es HL7 FHIR?</a></li><li><a href="#como-saber-si-el-software-de-mi">¿Cómo saber si el software de mi clínica está preparado?</a></li><li><a href="#que-ventajas-tiene-la-interoperabilidad-para-la">¿Qué ventajas tiene la interoperabilidad para la clínica?</a></li><li><a href="#que-hacer-ahora">¿Qué hacer ahora?</a></li></ol>
+  </nav>
+
+  <article>
+<h2 id="que-es-la-interoperabilidad-de-fichas-clinicas">¿Qué es la interoperabilidad de fichas clínicas?</h2>
+<p>Es la capacidad de que los sistemas de distintos prestadores de salud intercambien información clínica y la entiendan de la misma forma. Por ejemplo, que el diagnóstico, las alergias o los medicamentos de un paciente atendido en una clínica puedan llegar al hospital donde se atiende después, sin volver a preguntarlos ni transcribirlos.</p>
+<p>Para que eso ocurra no basta con enviar un PDF: los datos deben viajar en un formato estándar y usar los mismos códigos para diagnósticos, procedimientos y medicamentos.</p>
+<figure class="diagram"><figcaption>Cómo viaja la información entre dos prestadores</figcaption><div class="flow"><div class="step"><span class="n">1</span><strong>Clínica A</strong><span class="d">El equipo registra la atención en su sistema: diagnósticos, alergias, medicamentos.</span></div><div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="step"><span class="n">2</span><strong>Formato estándar HL7 FHIR</strong><span class="d">La información se envía con una estructura y códigos comunes.</span></div><div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="step"><span class="n">3</span><strong>Hospital B</strong><span class="d">Su sistema recibe y entiende los datos sin transcribirlos.</span></div></div><p class="dnote">Si ambos sistemas hablan el mismo estándar, no importa qué proveedor de software use cada uno.</p></figure>
+<h2 id="que-exige-la-ley-21-668">¿Qué exige la Ley 21.668?</h2>
+<p>La <strong>Ley 21.668</strong>, publicada en el Diario Oficial el 28 de mayo de 2024, modificó la Ley 20.584 sobre derechos y deberes de los pacientes. Su objetivo es asegurar la continuidad de la atención, sin importar quién sea el prestador, mediante fichas clínicas interoperables.</p>
+<p>En concreto:</p>
+<ul>
+<li>Los prestadores públicos y privados deben <strong>adoptar medidas para que sus fichas sean interoperables</strong> con otros prestadores.</li>
+<li>Deben <strong>entregar a tiempo la información</strong> que solicite un profesional que participe directamente en la atención del paciente.</li>
+<li>El MINSAL debe <strong>actualizar el reglamento de la ficha clínica</strong> con los estándares técnicos que hagan posible el intercambio.</li>
+</ul>
+<h2 id="que-es-hl7-fhir">¿Qué es HL7 FHIR?</h2>
+<p><strong>HL7 FHIR</strong> (<em>Fast Healthcare Interoperability Resources</em>) es un estándar internacional para intercambiar información de salud entre sistemas. Organiza la información en "recursos" (paciente, profesional, diagnóstico, medicamento, resultado de examen) que cualquier sistema compatible puede enviar, recibir y entender.</p>
+<p>En Chile, la <strong>Unidad de Interoperabilidad del MINSAL</strong> publica guías de implementación basadas en <strong>FHIR R4</strong>, como la Guía de Estándares de Información de Salud y la guía de Atención de Urgencia Interoperable. A su vez, HL7 Chile desarrolla la guía <strong>CL Core</strong>, que adapta los recursos básicos de FHIR a la realidad chilena.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Qué es</th>
+<th>Por qué importa a una clínica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HL7 FHIR R4</td>
+<td>Estándar internacional de intercambio de datos de salud</td>
+<td>Es la base técnica que usa el MINSAL en sus guías</td>
+</tr>
+<tr>
+<td>CL Core</td>
+<td>Guía de HL7 Chile con los perfiles básicos para Chile</td>
+<td>Define cómo representar pacientes, profesionales y prestadores chilenos</td>
+</tr>
+<tr>
+<td>Guías MINSAL</td>
+<td>Guías de implementación para casos específicos, como urgencia</td>
+<td>Indican qué datos intercambiar y en qué formato</td>
+</tr>
+<tr>
+<td>Terminologías</td>
+<td>Códigos estándar como CIE-10 para diagnósticos</td>
+<td>Permiten que todos entiendan lo mismo por cada dato</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="como-saber-si-el-software-de-mi">¿Cómo saber si el software de mi clínica está preparado?</h2>
+<p>Estas preguntas ayudan a evaluar al proveedor actual o a uno nuevo:</p>
+<ol>
+<li>¿El sistema puede exportar e importar información clínica en formato HL7 FHIR R4?</li>
+<li>¿Tiene una API documentada para intercambiar datos con otros sistemas?</li>
+<li>¿Usa terminologías estándar para diagnósticos, procedimientos y medicamentos?</li>
+<li>¿Sigue las guías de implementación del MINSAL y de HL7 Chile?</li>
+<li>¿Registra quién accedió a la ficha y qué información se compartió?</li>
+<li>¿Puede entregar la ficha completa de un paciente si otro prestador la solicita?</li>
+</ol>
+<div class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg><p>Un sistema que guarda la información solo en formatos propios o en documentos escaneados tendrá más dificultades para cumplir con la interoperabilidad que exige la ley.</p></div>
+<h2 id="que-ventajas-tiene-la-interoperabilidad-para-la">¿Qué ventajas tiene la interoperabilidad para la clínica?</h2>
+<p>Más allá de cumplir la ley, la interoperabilidad trae beneficios concretos:</p>
+<ul>
+<li><strong>Menos exámenes repetidos</strong>, porque los resultados previos del paciente están disponibles.</li>
+<li><strong>Atención más segura</strong>, al conocer alergias, diagnósticos y tratamientos anteriores.</li>
+<li><strong>Integración más simple</strong> con laboratorios, centros de imágenes y otros sistemas propios.</li>
+<li><strong>Menos dependencia del proveedor</strong>, porque los datos pueden moverse en un formato estándar.</li>
+</ul>
+<h2 id="que-hacer-ahora">¿Qué hacer ahora?</h2>
+<p>Mientras el MINSAL completa la reglamentación, conviene revisar qué tan preparado está el sistema actual, pedir al proveedor su hoja de ruta de interoperabilidad e incluir el cumplimiento de HL7 FHIR como requisito en cualquier evaluación de un nuevo sistema.</p>
+<p>Para conocer otros criterios de evaluación, revisa <a href="/blog/como-elegir-his-clinica-pabellon-hospitalizacion">Cómo elegir un HIS para una clínica con pabellón y hospitalización</a>.</p>
+<p><em>Este artículo es informativo y no reemplaza asesoría legal.</em></p>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <h2 id="cta-title">¿Tu clínica está evaluando un HIS?</h2>
+      <p>Medinet es un HIS diseñado para clínicas con pabellón, hospitalización y urgencia en Chile y Perú: agenda, ficha clínica, gestión de pabellón y camas, farmacia, cobranza y reportes en un solo sistema. Agenda una demo y revisemos juntos un caso real de tu clínica.</p>
+      <div class="badge-iso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Seguridad certificada ISO 27001</div>
+      <a class="btn" href="https://meetings.hubspot.com/anggelo-latin/demo-medinet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agendar una demo</a>
+    </section>
+
+    <section class="sources"><h2>Fuentes</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.minsal.cl/?p=94253">Ley de interoperabilidad de fichas clínicas publicada en el Diario Oficial – MINSAL</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bcn.cl/leychile/navegar?i=1203827">Ley 21.668 – BCN Ley Chile</a></li>
+<li><a target="_blank" rel="noopener" href="https://build.fhir.org/ig/Minsal-CL/eis/index.html">Guía de Estándares de Información de Salud (FHIR R4) – Unidad de Interoperabilidad MINSAL</a></li>
+<li><a target="_blank" rel="noopener" href="https://build.fhir.org/ig/Minsal-CL/IG_Urgencia/ImplementationGuide-hl7.fhir.cl.minsal.urgencia.html">Atención de Urgencia Interoperable – MINSAL</a></li>
+<li><a target="_blank" rel="noopener" href="https://build.fhir.org/ig/HL7Chile/clcore_ig/ImplementationGuide-hl7.fhir.cl.clcore.html">Guía de implementación CL Core FHIR R4 – HL7 Chile</a></li>
+</ul></section>
+  </article>
+
+  <section class="related" aria-labelledby="rel-title">
+    <h2 id="rel-title">Artículos relacionados</h2>
+    <div class="cards">
+      <a class="card" href="/blog/como-elegir-his-clinica-pabellon-hospitalizacion">
+        <img class="cover" src="/assets/blog/como-elegir-his-clinica-pabellon-hospitalizacion-portada.jpg" alt="" loading="lazy" width="1200" height="630">
+        <span class="tag">Guía para clínicas</span>
+        <h3>Cómo elegir un HIS para una clínica con pabellón y hospitalización: 10 preguntas frecuentes en Chile y Perú</h3>
+        <p>Las 10 preguntas que se hacen gerentes, directores médicos y jefes de TI antes de elegir un HIS en Chile y Perú.</p>
+        <span class="more">Leer artículo →</span>
+      </a>
+      <a class="card" href="/blog/ley-21719-datos-personales-clinicas">
+        <img class="cover" src="/assets/blog/ley-21719-datos-personales-clinicas-portada.jpg" alt="" loading="lazy" width="1200" height="630">
+        <span class="tag">Normativa Chile</span>
+        <h3>Ley 21.719 de datos personales: qué deben preparar las clínicas y centros médicos</h3>
+        <p>Qué cambia para las clínicas con la nueva ley de protección de datos personales de Chile, cómo se tratan los datos de salud, la postergación aprobada a octubre de 2027 y qué hacer desde ya.</p>
+        <span class="more">Leer artículo →</span>
+      </a>
+      <a class="card" href="/blog/indicadores-gestion-pabellon-quirurgico">
+        <img class="cover" src="/assets/blog/indicadores-gestion-pabellon-quirurgico-portada.jpg" alt="" loading="lazy" width="1200" height="630">
+        <span class="tag">Gestión de pabellón</span>
+        <h3>Indicadores de pabellón quirúrgico: cómo medir y mejorar la productividad de la tabla quirúrgica</h3>
+        <p>Los indicadores clave para gestionar un pabellón quirúrgico (utilización, puntualidad, suspensiones y tiempos de recambio), cómo calcularlos y qué hacer con ellos.</p>
+        <span class="more">Leer artículo →</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="https://cdn.grapesjs.com/workspaces/cmhy77jff22nehtj95eqhyyjw/assets/d05e7e45-764c-442a-9686-ba009ba3e9fe__logo-blanco-medinet.png" alt="Medinet">
+    <div class="footer-links">
+      <a href="/blog/">Blog</a>
+      <a href="/empresa/nosotros">Sobre Medinet</a>
+      <a href="/politica-de-alcance-y-calidad">Política de Calidad</a>
+      <a href="/contacto">Contacto</a>
+      <a href="mailto:contacto@medinetapp.com">contacto@medinetapp.com</a>
+      <a href="https://www.linkedin.com/company/medinetapp" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/medinetapp/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="copy">© 2026 Medinet. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
