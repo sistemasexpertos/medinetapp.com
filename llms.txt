@@ -1,0 +1,31 @@
+# Medinet
+
+> Medinet es un sistema de información hospitalaria (HIS) chileno para clínicas con pabellón, hospitalización y urgencia en Chile y Perú. Es desarrollado por Sistemas Expertos e Ingeniería de Software Limitada, con más de 15 años de experiencia en tecnología para la salud, y cuenta con certificaciones ISO 27001 e ISO 9001.
+
+Medinet reúne en una sola plataforma agenda médica, admisión, ficha clínica electrónica, gestión de pabellón y tabla quirúrgica, gestión de camas, farmacia, cobranza, cuenta médica y reportes. Una implementación toma entre 3 y 8 semanas según el tipo de clínica.
+
+## Producto
+
+- [Inicio](https://medinetapp.com/): presentación de la plataforma
+- [Agenda médica](https://medinetapp.com/soluciones/agenda-medica)
+- [Agenda quirúrgica](https://medinetapp.com/gestion-pabellon-quirurgico/agenda-quirurgica)
+- [Tabla quirúrgica](https://medinetapp.com/gestion-pabellon-quirurgico/tabla-quirurgica)
+- [Interoperabilidad en salud](https://medinetapp.com/interoperabilidad-en-salud)
+- [Casos de éxito](https://medinetapp.com/casos-de-exito)
+
+## Guías del blog
+
+- [Cómo elegir un HIS para una clínica con pabellón y hospitalización](https://medinetapp.com/blog/como-elegir-his-clinica-pabellon-hospitalizacion)
+- [Indicadores de pabellón quirúrgico](https://medinetapp.com/blog/indicadores-gestion-pabellon-quirurgico)
+- [Gestión de camas hospitalarias](https://medinetapp.com/blog/gestion-de-camas-indicadores-hospitalarios)
+- [Cuenta médica y cargos no cobrados](https://medinetapp.com/blog/cuenta-medica-cargos-no-cobrados-clinica)
+- [Historia clínica electrónica en Perú: requisitos](https://medinetapp.com/blog/historia-clinica-electronica-peru-requisitos)
+- [Interoperabilidad y HL7 FHIR en Chile](https://medinetapp.com/blog/interoperabilidad-fichas-clinicas-hl7-fhir-chile)
+- [Ley 21.719 de datos personales y clínicas](https://medinetapp.com/blog/ley-21719-datos-personales-clinicas)
+- [Cómo cambiar de sistema clínico sin detener la clínica](https://medinetapp.com/blog/cambiar-sistema-clinico-migracion-datos)
+- [Cómo preparar una licitación para un HIS](https://medinetapp.com/blog/licitacion-compra-his-clinica)
+
+## Empresa
+
+- [Política de Calidad](https://medinetapp.com/politica-de-alcance-y-calidad)
+- [Contacto](https://medinetapp.com/contacto)
